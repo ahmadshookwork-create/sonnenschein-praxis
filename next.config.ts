@@ -1,7 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Static Export für Strato Webhosting (kein Node.js Server)
+  output: "export",
+  trailingSlash: true, // Wichtig für statisches Hosting - erzeugt /kontakt/index.html statt /kontakt.html
+  images: {
+    unoptimized: true,
+  },
+  reactStrictMode: false,
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+  },
+  productionBrowserSourceMaps: false,
 };
 
 export default nextConfig;

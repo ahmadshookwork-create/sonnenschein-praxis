@@ -1,0 +1,1429 @@
+{
+  "name": "🌞 Sonnenschein Praxis - Social Media Carousel Generator",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "0ceef8b0-8f96-4a2b-9a5d-52d7bc6ec386",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "position": [
+        1216,
+        384
+      ],
+      "webhookId": "533d67a6-0a1a-4df3-8e2a-a2221bc2687b",
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "# 🌞 SONNENSCHEIN PRAXIS - BILD-PROMPT GENERATOR MIT DEUTSCHEM TEXT\n\nDu erstellst 5 englische Bild-Prompts für Instagram Carousels. JEDES BILD MUSS DEUTSCHEN TEXT ENTHALTEN!\n\n---\n\n## 🎭 CHARAKTERE - EXAKTE BESCHREIBUNG (IN JEDEM PROMPT!)\n\n### SUNNY (Mädchen):\n```\nyoung 14-year-old girl named Sunny, medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features\n```\n\n### MAX (Junge):\n```\nyoung 12-year-old boy named Max, short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression\n```\n\n---\n\n## 🎨 STIL (IN JEDEM PROMPT!):\n```\nflat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format\n```\n\n## 🎨 FARBEN (IN JEDEM PROMPT!):\n```\ncolor palette: sunshine yellow #FFD93D, warm orange #FF9F45, mint green #6BCB77, soft sky blue #4D96FF, cream white background #FFF8E7\n```\n\n---\n\n## 📱 5-SLIDE STRUKTUR MIT DEUTSCHEM TEXT:\n\n### SLIDE 1 - HOOK\n**Bild:** Sunny + Max zusammen, einer winkt\n**Deutscher Text:** Packende Frage oder Statement zum Thema\n**Text-Position:** Großer Text OBEN im Bild\n**Beispiele:**\n- \"Wusstest du das über ADHS?\"\n- \"5 Zeichen für Schulangst\"\n- \"Dein Kind zieht sich zurück?\"\n\n### SLIDE 2 - PROBLEM\n**Bild:** NUR Max alleine, nachdenklich/verwirrt\n**Deutscher Text:** Das Problem beschreiben\n**Text-Position:** Text OBEN oder RECHTS\n**Beispiele:**\n- \"Ich kann mich nicht konzentrieren...\"\n- \"Warum fühle ich mich so anders?\"\n- \"Schule macht mir Angst\"\n\n### SLIDE 3 - ERKLÄRUNG\n**Bild:** Sunny erklärt, Max hört zu, Infografik-Elemente\n**Deutscher Text:** 2-3 kurze Fakten oder Tipps\n**Text-Position:** Text neben Infografik\n**Beispiele:**\n- \"Das passiert im Gehirn:\"\n- \"3 wichtige Fakten:\"\n- \"Das hilft wirklich:\"\n\n### SLIDE 4 - LÖSUNG\n**Bild:** Beide glücklich, High-Five, Sonnenstrahlen\n**Deutscher Text:** Ermutigende Botschaft\n**Text-Position:** Text OBEN\n**Beispiele:**\n- \"Du bist nicht allein!\"\n- \"Zusammen schaffen wir das!\"\n- \"Es gibt Hilfe!\"\n\n### SLIDE 5 - CTA (Call-to-Action)\n**Bild:** Beide winken, große Sonne\n**Deutscher Text:** Kontakt-Infos\n**Text im Bild:**\n```\n📞 030 615 85 20\n🌐 baselallozy.de\nSonnenschein Praxis\n```\n\n---\n\n## ✅ BEISPIEL-OUTPUT (Thema: \"ADHS bei Kindern\"):\n\n```json\n{\n  \"prompts\": [\n    \"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, no shadows, no 3D, Scandinavian children book aesthetic, young 14-year-old girl Sunny curly brown hair round black glasses yellow hoodie with sun logo beige skin, standing next to young 12-year-old boy Max curly black hair freckles mint green t-shirt with star dark brown skin, both waving at viewer with friendly smiles, large bold German text at top reading 'Wusstest du das über ADHS?' in dark blue color, speech bubble with lightbulb icon, color palette sunshine yellow mint green cream white background, Instagram square 1:1 format\",\n    \n    \"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, no shadows, no 3D, Scandinavian children book aesthetic, young 12-year-old boy Max curly black hair freckles mint green t-shirt with star dark brown skin, sitting alone at desk looking confused and overwhelmed, thought bubbles with scattered puzzle pieces above head, German text in speech bubble reading 'Ich kann mich einfach nicht konzentrieren...' in soft blue color, simple school supplies around, color palette mint green sky blue cream white background, Instagram square 1:1 format\",\n    \n    \"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, no shadows, no 3D, Scandinavian children book aesthetic, young 14-year-old girl Sunny curly brown hair round glasses yellow hoodie with sun logo beige skin standing and pointing at simple whiteboard, young 12-year-old boy Max curly black hair freckles mint green t-shirt dark brown skin sitting and listening with interested expression, whiteboard showing simple brain icon with sparkles, German text reading 'Das passiert im Gehirn:' at top and '1. Mehr Reize 2. Andere Verarbeitung 3. Besondere Stärken' as bullet points, glowing lightbulb, color palette sunshine yellow mint green cream white background, Instagram square 1:1 format\",\n    \n    \"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, no shadows, no 3D, Scandinavian children book aesthetic, young 14-year-old girl Sunny curly brown hair round glasses yellow hoodie beige skin and young 12-year-old boy Max curly black hair freckles mint green t-shirt dark brown skin doing happy high-five with big genuine smiles, sun rays in corner, hearts and stars floating, large bold German text at top reading 'Du bist nicht allein!' in warm orange color, smaller text 'Wir helfen dir!' below, positive hopeful atmosphere, color palette sunshine yellow warm orange mint green cream background, Instagram square 1:1 format\",\n    \n    \"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, no shadows, no 3D, Scandinavian children book aesthetic, young 14-year-old girl Sunny curly brown hair round glasses yellow hoodie beige skin and young 12-year-old boy Max curly black hair freckles mint green t-shirt dark brown skin both waving warmly at viewer, large friendly cartoon sun with smile behind them, German text in center reading 'Sonnenschein Praxis' as title and '📞 030 615 85 20' and '🌐 baselallozy.de' and 'Wir sind für euch da!' below, phone and globe icons, welcoming atmosphere, color palette sunshine yellow warm orange mint green cream white background, Instagram square 1:1 format\"\n  ]\n}\n```\n\n---\n\n## ⚠️ KRITISCHE REGELN:\n\n1. **JEDER Prompt MUSS deutschen Text enthalten** - passend zum Thema!\n2. **JEDER Prompt MUSS die komplette Charakter-Beschreibung enthalten**\n3. **JEDER Prompt MUSS den Illustrations-Stil beschreiben**\n4. **Text im Bild mit 'German text reading \"...\"' beschreiben**\n5. **Slide 5 MUSS IMMER enthalten:** Sonnenschein Praxis, 📞 030 615 85 20, 🌐 baselallozy.de\n6. **Prompts auf ENGLISCH** (für die Bild-AI)\n7. **Deutscher Text im Bild passend zum Thema generieren**\n8. **Sunny = gelbes Hoodie + Brille, Max = grünes T-Shirt + Sommersprossen**\n9. **KEINE realistischen Menschen, KEINE Fotos, KEINE 3D**\n10. **Output NUR als JSON mit \"prompts\" Array**\n\n---\n\n## 📝 TEXT-STIL IM BILD:\n- Kurz und prägnant (max. 5-7 Wörter pro Zeile)\n- Große, lesbare Schrift\n- Farbe: Dunkelblau, Orange oder passend zur Farbpalette\n- Emotionale, direkte Ansprache\n- Duzen (\"du\", nicht \"Sie\")"
+        }
+      },
+      "id": "2eb12d28-927a-4d25-9f1e-d15ff9b0ed50",
+      "name": "Image Prompt Generator",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        1680,
+        176
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "MiniMax-M2",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "e840e72e-6b5e-48be-b473-85a2d241a524",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        1536,
+        384
+      ],
+      "typeVersion": 1.2,
+      "credentials": {
+        "openAiApi": {
+          "id": "mRD24RyzpPSplNZY",
+          "name": "minimax 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "={\n  \"prompts\": [\n    \"{{prompt1}}\",\n    \"{{prompt2}}\",\n    \"{{prompt3}}\",\n    \"{{prompt4}}\",\n    \"{{prompt5}}\"\n  ]\n}"
+      },
+      "id": "d59baedb-2d7f-4ade-905b-dcf2b55ff7d1",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        1856,
+        384
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output.prompts",
+        "options": {}
+      },
+      "id": "bbea398f-3cff-40de-935d-a164ff04715f",
+      "name": "Split Out",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [
+        2016,
+        176
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.kie.ai/api/v1/jobs/createTask",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 024849581e6be59edc9f484b554f9d71"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"nano-banana-pro\",\n  \"input\": {\n    \"prompt\": \"{{ $json['output.prompts'] }}\",\n    \"aspect_ratio\": \"1:1\",\n    \"resolution\": \"1K\",\n    \"output_format\": \"png\"\n  }\n}",
+        "options": {}
+      },
+      "id": "211b9cf0-8884-41cc-9add-b7c7acc155c0",
+      "name": "Nano Banana",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2224,
+        176
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "url": "https://api.kie.ai/api/v1/jobs/recordInfo",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "taskId",
+              "value": "={{ $json.data.taskId }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 024849581e6be59edc9f484b554f9d71"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bc0c4e8a-ca4e-4645-8598-3e832d55f2e3",
+      "name": "Get Nano Banana Image Result",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2640,
+        176
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "jsCode": "// ═══════════════════════════════════════════════════════════════\n// 🌞 ALLE 5 BILDER IN EINEM ARRAY SAMMELN\n// ═══════════════════════════════════════════════════════════════\n\nconst allImageUrls = [];\n\nfor (const item of items) {\n  let imageUrl = null;\n  \n  // Blotato Upload gibt 'url' zurück\n  if (item.json.url) {\n    imageUrl = item.json.url;\n  }\n  // Falls mediaUrl vorhanden\n  else if (item.json.mediaUrl) {\n    imageUrl = item.json.mediaUrl;\n  }\n  // Falls Kie.ai Antwort noch nicht geparst\n  else if (item.json.data && item.json.data.resultJson) {\n    try {\n      const parsed = JSON.parse(item.json.data.resultJson);\n      if (parsed.resultUrls && parsed.resultUrls[0]) {\n        imageUrl = parsed.resultUrls[0];\n      }\n    } catch (e) {\n      // Falls resultJson schon eine URL ist\n      imageUrl = item.json.data.resultJson;\n    }\n  }\n  \n  if (imageUrl) {\n    allImageUrls.push(imageUrl);\n  }\n}\n\nconsole.log('Gesammelte Bilder:', allImageUrls.length);\n\nreturn [{\n  json: {\n    imageUrls: allImageUrls,\n    imageCount: allImageUrls.length,\n    // Für Blotato: kommagetrennte Liste\n    mediaUrlsString: allImageUrls.join(','),\n    // Einzelne URLs\n    slide1: allImageUrls[0] || '',\n    slide2: allImageUrls[1] || '',\n    slide3: allImageUrls[2] || '',\n    slide4: allImageUrls[3] || '',\n    slide5: allImageUrls[4] || ''\n  }\n}];"
+      },
+      "id": "1bba0a68-28ef-4611-8eb4-cf337c519bd0",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        3072,
+        240
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "content": "Chat Trigger\n\nGib hier dein Thema ein:\n- ADHS Tipps\n- Autismus verstehen\n- Schulangst\n- Eltern-Tipps\n- Team vorstellen",
+        "height": 768,
+        "width": 288
+      },
+      "id": "6bed56c2-f9e4-4393-931a-95042d5f96f9",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1152,
+        -48
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "🧠 Image Prompt Generator\n\nGeneriert 5 Carousel-Prompts\nim jugendlichen Illustrationsstil\nfür Sonnenschein Praxis",
+        "height": 768,
+        "width": 528,
+        "color": 5
+      },
+      "id": "f165bb9b-f50e-4108-b044-343f9f50de32",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1456,
+        -48
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "# 🎨 BILD-GENERIERUNG\n\n## Nano Banana (Kie.ai API)\nErstellt Flat Vector Illustrationen\n\n---\n\n## 📝 DEUTSCHER TEXT IN JEDEM BILD!\n\n### Slide 1 - HOOK\n**Text:** Packende Frage\n*\"Wusstest du das über ADHS?\"*\n\n### Slide 2 - PROBLEM\n**Text:** Problem beschreiben\n*\"Ich kann mich nicht konzentrieren...\"*\n\n### Slide 3 - ERKLÄRUNG\n**Text:** Fakten/Tipps\n*\"Das passiert im Gehirn:\"*\n\n### Slide 4 - LÖSUNG\n**Text:** Ermutigung\n*\"Du bist nicht allein!\"*\n\n### Slide 5 - CTA\n**Text:** Kontakt-Infos\n*\"📞 030 615 85 20\"*\n*\"🌐 baselallozy.de\"*\n*\"Sonnenschein Praxis\"*\n\n---\n\n## 🎨 STIL\n- Flat Vector / 2D Cartoon\n- Skandinavischer Kinderbuch-Stil\n- KEINE Schatten, KEINE 3D\n- Pastellfarben\n- Großer, lesbarer Text\n\n## ⏱️ TIMING\n- 60 Sekunden Wartezeit\n- Für Bild-Rendering",
+        "height": 700,
+        "width": 500,
+        "color": 5
+      },
+      "id": "7e33f9f9-ee22-4543-80ef-586799581190",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2000,
+        -48
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "📤 Upload & Merge\n\nBilder hochladen und\nmit Caption zusammenführen",
+        "height": 768,
+        "width": 752,
+        "color": 2
+      },
+      "id": "11702f9e-20a6-42c8-baf0-6dbf2a78411b",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2800,
+        -48
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "📱 Post to Social Media\n\nInstagram, TikTok, LinkedIn\nvia Blotato",
+        "height": 768,
+        "width": 352,
+        "color": 7
+      },
+      "id": "2277fb1f-9da8-4f95-b7a2-693c1cde9f6c",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3568,
+        -48
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "# 🌞 SONNENSCHEIN PRAXIS\n## Automatischer Social Media Generator\n\n---\n\n## 🎭 2 FESTE AVATAR-CHARAKTERE\n\n### SUNNY 🌞 (Mädchen, 14 Jahre)\n| Merkmal | Beschreibung |\n|---------|-------------|\n| Haare | Lockig, mittellang, braun |\n| Gesicht | Runde schwarze Brille |\n| Kleidung | **IMMER** gelbes Hoodie mit Sonnen-Logo |\n| Hautfarbe | Warm-Beige |\n| Rolle | Erklärt, gibt Tipps, macht Mut |\n\n### MAX ⭐ (Junge, 12 Jahre)\n| Merkmal | Beschreibung |\n|---------|-------------|\n| Haare | Kurz, lockig, schwarz |\n| Gesicht | Sommersprossen auf Wangen |\n| Kleidung | **IMMER** mintgrünes T-Shirt mit Stern |\n| Hautfarbe | Dunkelbraun |\n| Rolle | Fragt, zeigt Probleme, lernt |\n\n---\n\n## 🎨 ILLUSTRATIONS-STIL\n- Flat Vector / 2D Cartoon\n- Skandinavischer Kinderbuch-Stil\n- Einfache geometrische Formen\n- **KEINE** Schatten, **KEINE** 3D-Effekte\n- **KEINE** realistischen Menschen\n\n## 🎨 FARBPALETTE\n- 🟡 Sonnenschein-Gelb: #FFD93D\n- 🟠 Warm-Orange: #FF9F45\n- 🟢 Mint-Grün: #6BCB77\n- 🟦 Himmelblau: #4D96FF\n- 🧡 Soft-Pink: #FF6B9D\n- ⚪ Creme-Weiß: #FFF8E7\n\n---\n\n## 📅 AUTOMATISCHER ZEITPLAN\n\n### DIENSTAG 10:00 Uhr\n🧠 **90% Psychologie**\n- ADHS, Autismus, Schulangst\n- Depression, Konzentration\n- Verhalten, Emotionen\n\n🍎 **10% Gesundheit**\n- Ernährung fürs Gehirn\n- Bewegung & Mental Health\n- Schlaf & Konzentration\n\n### FREITAG 10:00 Uhr\n🧠 **90% Psychologie**\n- Achtsamkeit, Resilienz\n- Selbstwert, Emotionen\n- Familien-Beziehungen\n\n🙏 **10% Spiritualität (INDIREKT)**\n- ✅ Dankbarkeit, Hoffnung\n- ✅ Vertrauen, Vergebung\n- ✅ Innerer Frieden, Trost\n- ❌ KEINE religiösen Begriffe!\n\n---\n\n## 📱 5-SLIDE CAROUSEL\n\n| # | Inhalt | Wer? |\n|---|--------|------|\n| 1 | HOOK | Sunny + Max |\n| 2 | PROBLEM | Nur Max |\n| 3 | ERKLÄRUNG | Sunny erklärt |\n| 4 | LÖSUNG | Beide glücklich |\n| 5 | CTA | Beide winken |\n\n---\n\n## 🏥 PRAXIS-INFO\n📍 Blücherstraße 55, 10961 Berlin\n📞 030 615 85 20\n🌐 baselallozy.de\n\n---\n\n## ⚙️ STATUS\n⚠️ Blotato-Nodes noch nicht konfiguriert\n✅ Bild-Prompts: Next Level\n✅ Caption-Generator: Next Level\n✅ Themen-Generator: Next Level",
+        "height": 1400,
+        "width": 600,
+        "color": 4
+      },
+      "id": "ca588ca9-8ab9-4865-9818-f8e32ad1de03",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        96,
+        -160
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "id": "2e5a19dc-1e87-4627-afeb-5ccabd2c9e47",
+      "name": "Wait For Render",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        2432,
+        176
+      ],
+      "webhookId": "0c7f2dd4-2d94-4e1c-a8bd-db46cd113f51",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "id": "f2c51d53-4e80-4356-9656-ba529f0c3f60",
+      "name": "Merge Caption + Images",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        3360,
+        368
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "content": "# 📅 ZEITPLAN\n\n## Schedule Trigger\nLäuft automatisch:\n- **Dienstag** 10:00 Uhr\n- **Freitag** 10:00 Uhr\n\n## Thema Generator\nWählt automatisch ein passendes\nThema basierend auf dem Wochentag.\n\n### Kalenderwochen-Rotation\nJede Woche ein anderes Thema\naus dem Pool - keine Wiederholungen!\n\n---\n\n## 📊 THEMEN-POOL\n\n### DIENSTAG (22 Themen)\n🧠 Psychologie:\n- ADHS (4 Themen)\n- Autismus (4 Themen)\n- Ängste (4 Themen)\n- Depression (3 Themen)\n- Verhalten (3 Themen)\n\n🍎 Gesundheit:\n- Ernährung (1)\n- Bewegung (1)\n- Schlaf (1)\n- Bildschirmzeit (1)\n\n### FREITAG (21 Themen)\n🧠 Psychologie:\n- Achtsamkeit (4 Themen)\n- Selbstwert (4 Themen)\n- Familie (4 Themen)\n- Emotionen (3 Themen)\n\n🙏 Spiritualität (indirekt):\n- Dankbarkeit (1)\n- Hoffnung (2)\n- Vertrauen (1)\n- Vergebung (1)\n- Innerer Frieden (1)\n- Trost (1)",
+        "height": 600,
+        "width": 450,
+        "color": 2
+      },
+      "id": "sticky-schedule",
+      "name": "Sticky Note Schedule",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        704,
+        -48
+      ]
+    },
+    {
+      "parameters": {
+        "numberInputs": 9
+      },
+      "id": "029b0ac1-b4e4-43ef-8040-3174d1c5eb5d",
+      "name": "Error Report",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        5264,
+        112
+      ],
+      "notesInFlow": false,
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "content": "# Setup 2\n1. Open each node\n2. Select your social account\n3. Deactivate platforms you don't need\n3. 👉 **You don't need to do anything else!**",
+        "height": 176,
+        "width": 320,
+        "color": 2
+      },
+      "id": "d5d22d00-9da4-4659-a1f4-ff0aa70177d1",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        4720,
+        -592
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "platform": "tiktok",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "199",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/199",
+          "cachedResultName": "sabrina_ramonov"
+        },
+        "postContentText": "={{ $('AI Writer').item.json.choices[0].message.content.caption }}",
+        "postContentMediaUrls": "={{ $('Create post').item.json.url }}",
+        "postCreateTiktokOptionIsAiGenerated": true,
+        "options": {}
+      },
+      "id": "3690cb57-b1a5-4296-8e01-b7de8768767e",
+      "name": "Tiktok [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "maxTries": 2,
+      "position": [
+        4832,
+        -384
+      ],
+      "retryOnFail": false,
+      "typeVersion": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "platform": "linkedin",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "4590",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/4590",
+          "cachedResultName": "Sabrina Ramonov 🍄"
+        },
+        "postContentText": "={{ $('AI Writer').item.json.choices[0].message.content.caption }}",
+        "postContentMediaUrls": "={{ $('Create post').item.json.url }}",
+        "options": {}
+      },
+      "id": "1dfe4a10-18a7-4c84-a2e3-f812d5b1bfee",
+      "name": "Linkedin [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        4832,
+        -224
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "platform": "facebook",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "369",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/369",
+          "cachedResultName": "Sabrina Ramonov"
+        },
+        "postContentText": "={{ $('AI Writer').item.json.choices[0].message.content.caption }}",
+        "postContentMediaUrls": "={{ $('Create post').item.json.url }}",
+        "facebookPageId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "161711670360847",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/369/subaccounts/161711670360847",
+          "cachedResultName": "Blotato"
+        },
+        "options": {}
+      },
+      "id": "0fc05058-48b8-481f-a4d0-938f60f05558",
+      "name": "Facebook [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        4832,
+        -64
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "accountId": {
+          "__rl": true,
+          "value": "23970",
+          "mode": "id"
+        },
+        "postContentText": "={{ $('Merge Caption + Images').item.json.output.prompts[0] }}",
+        "postContentMediaUrls": "={{ $('Merge Caption + Images').item.json.mediaUrlsString }}",
+        "options": {}
+      },
+      "id": "07df97bc-1c33-4619-a39f-b6dda87e43ef",
+      "name": "Instagram [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "maxTries": 2,
+      "position": [
+        4672,
+        112
+      ],
+      "retryOnFail": true,
+      "typeVersion": 2,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "platform": "twitter",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "38",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/38",
+          "cachedResultName": "Sabrina_Ramonov"
+        },
+        "postContentText": "={{ $('AI Writer').item.json.choices[0].message.content.title }}",
+        "postContentMediaUrls": "={{ $('Create post').item.json.url }}",
+        "options": {}
+      },
+      "id": "827f46b6-7244-4073-a9a2-3ef36a3f1cc7",
+      "name": "Twitter [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        4832,
+        272
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "platform": "youtube",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "111",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/111",
+          "cachedResultName": "Sabrina Ramonov 🍄"
+        },
+        "postContentText": "={{ $('AI Writer').item.json.choices[0].message.content.caption }}",
+        "postContentMediaUrls": "={{ $('Create post').item.json.url }}",
+        "postCreateYoutubeOptionTitle": "={{ $('AI Writer').item.json.choices[0].message.content.title }}",
+        "postCreateYoutubeOptionContainsSyntheticMedia": true,
+        "options": {}
+      },
+      "id": "e7dff02f-d42b-41c0-b241-1d5c6b49e95b",
+      "name": "Youtube [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        4832,
+        432
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "platform": "threads",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "2537",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/2537",
+          "cachedResultName": "sabrina_ramonov"
+        },
+        "postContentText": "={{ $('AI Writer').item.json.choices[0].message.content.title }}",
+        "postContentMediaUrls": "={{ $('Create post').item.json.url }}",
+        "options": {}
+      },
+      "id": "c28e3208-9056-4621-aad3-9b833af31474",
+      "name": "Threads [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        4832,
+        592
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "platform": "bluesky",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "6036",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/6036",
+          "cachedResultName": "sabrinaramonov.bsky.social"
+        },
+        "postContentText": "={{ $('AI Writer').item.json.choices[0].message.content.title }}",
+        "postContentMediaUrls": "={{ $('Create post').item.json.url }}",
+        "options": {}
+      },
+      "id": "12730497-a5ca-45a2-870e-bbd4ef7bb43e",
+      "name": "Bluesky [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        4832,
+        752
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "platform": "pinterest",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "358",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/358",
+          "cachedResultName": "sabrina_ramonov"
+        },
+        "postContentText": "={{ $('AI Writer').item.json.choices[0].message.content.caption }}",
+        "postContentMediaUrls": "={{ $('Create post').item.json.url }}",
+        "pinterestBoardId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "1234"
+        },
+        "options": {}
+      },
+      "id": "13061b22-42d1-4cd4-874c-d86f94310ba4",
+      "name": "Pinterest [BLOTATO]",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        4832,
+        912
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      },
+      "disabled": true,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "accountId": {
+          "__rl": true,
+          "value": "23970",
+          "mode": "id"
+        },
+        "postContentText": "={{ $json.output.prompts[0] }}",
+        "postContentMediaUrls": "={{ $json.mediaUrlsString }}",
+        "options": {}
+      },
+      "id": "5e22c986-9439-440a-9ebb-4c3a5cfa28ee",
+      "name": "Create post",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        4288,
+        256
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "media",
+        "mediaUrl": "={{ JSON.parse($json.data.resultJson).resultUrls[0] }}"
+      },
+      "id": "89bcbd8e-7379-4b84-8abb-79b0a1e7da30",
+      "name": "Upload media",
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "position": [
+        2880,
+        224
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "blotatoApi": {
+          "id": "pvo4RejUrJAI7Hix",
+          "name": "Blotato account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// ═══════════════════════════════════════════════════════════════\n// 🌞 SONNENSCHEIN PRAXIS - AUTOMATISCHER THEMEN-GENERATOR\n// ═══════════════════════════════════════════════════════════════\n\nconst heute = new Date();\nconst wochentag = heute.getDay(); // 0=So, 1=Mo, 2=Di, 3=Mi, 4=Do, 5=Fr, 6=Sa\nconst kalenderwoche = Math.ceil((heute - new Date(heute.getFullYear(), 0, 1)) / 604800000);\n\n// ═══════════════════════════════════════════════════════════════\n// DIENSTAG: 90% Psychologie + 10% Gesundheit\n// ═══════════════════════════════════════════════════════════════\nconst dienstagThemen = [\n  // ADHS (Psychologie)\n  \"ADHS bei Kindern: 5 Zeichen die Eltern oft übersehen\",\n  \"ADHS ist keine Schwäche - sondern eine andere Art zu denken\",\n  \"Hausaufgaben-Chaos bei ADHS: 3 Tipps die wirklich helfen\",\n  \"ADHS und Schule: So unterstützt du dein Kind richtig\",\n  \n  // Autismus (Psychologie)\n  \"Autismus verstehen: Was dein Kind dir nicht sagen kann\",\n  \"Mein Kind ist anders - und das ist wunderbar\",\n  \"Autismus-Spektrum: Stärken erkennen und fördern\",\n  \"Reizüberflutung bei Autismus: So schaffst du sichere Räume\",\n  \n  // Ängste (Psychologie)\n  \"Schulangst überwinden: Der erste Schritt ist der schwerste\",\n  \"Wenn die Angst zu groß wird: Warnsignale bei Kindern\",\n  \"Prüfungsangst besiegen: Sunny und Max zeigen wie\",\n  \"Soziale Ängste bei Kindern: Mehr als nur Schüchternheit\",\n  \n  // Depression (Psychologie)\n  \"Wenn Kinder traurig sind: Depression erkennen\",\n  \"Jugendliche und Depression: Warnsignale ernst nehmen\",\n  \"Antriebslosigkeit bei Jugendlichen: Was Eltern tun können\",\n  \n  // Verhalten (Psychologie)\n  \"Wutausbrüche verstehen: Was dein Kind dir sagen will\",\n  \"Aggressives Verhalten bei Kindern: Ursachen und Hilfe\",\n  \"Wenn Kinder sich zurückziehen: Was steckt dahinter?\",\n  \n  // Gesundheit (10%)\n  \"Brainfood: Ernährung die deinem Kind beim Lernen hilft\",\n  \"Bewegung macht schlau: Sport und mentale Gesundheit\",\n  \"Schlaf und Konzentration: Warum Schlaf so wichtig ist\",\n  \"Bildschirmzeit und Kindergehirn: Was Eltern wissen müssen\"\n];\n\n// ═══════════════════════════════════════════════════════════════\n// FREITAG: 90% Psychologie + 10% Spiritualität (indirekt)\n// ═══════════════════════════════════════════════════════════════\nconst freitagThemen = [\n  // Achtsamkeit & Ruhe (Psychologie)\n  \"Achtsamkeit für Kinder: 3 einfache Übungen für jeden Tag\",\n  \"Stille Momente: Warum Ruhe für Kinder so wichtig ist\",\n  \"Meditation für Kinder: So einfach kann es sein\",\n  \"Atmen gegen Angst: Eine Übung die sofort hilft\",\n  \n  // Selbstwert & Stärke (Psychologie)\n  \"Du bist genug: Selbstwertgefühl bei Kindern stärken\",\n  \"Innere Stärke aufbauen: Resilienz für Kinder\",\n  \"Mut machen: So stärkst du dein Kind von innen\",\n  \"Selbstliebe lernen: Wichtige Botschaften für Jugendliche\",\n  \n  // Familie & Beziehung (Psychologie)\n  \"Familienrituale: Kleine Momente die verbinden\",\n  \"Zuhören lernen: So verstehst du dein Kind besser\",\n  \"Qualitätszeit: Warum 10 Minuten am Tag reichen können\",\n  \"Geschwisterliebe fördern: Tipps für harmonisches Miteinander\",\n  \n  // Emotionen (Psychologie)\n  \"Gefühle benennen: Der erste Schritt zur Heilung\",\n  \"Traurigkeit zulassen: Warum weinen wichtig ist\",\n  \"Wut verstehen: Emotionen sind keine Feinde\",\n  \n  // Spiritualität indirekt (10%)\n  \"Dankbarkeit üben: Das Gute im Alltag sehen\",\n  \"Hoffnung vermitteln: Licht am Ende des Tunnels\",\n  \"Vertrauen lernen: Auch wenn es schwer fällt\",\n  \"Vergebung üben: Loslassen macht frei\",\n  \"Innerer Frieden: Den Sturm im Kopf beruhigen\",\n  \"Glaube an dich selbst: Du schaffst das\",\n  \"Trost spenden: Worte die heilen\"\n];\n\n// ═══════════════════════════════════════════════════════════════\n// THEMA AUSWÄHLEN\n// ═══════════════════════════════════════════════════════════════\nlet thema, fokus, tagestyp, emoji;\n\nif (wochentag === 2) {\n  // DIENSTAG\n  const index = kalenderwoche % dienstagThemen.length;\n  thema = dienstagThemen[index];\n  fokus = \"DIENSTAG: 90% Psychologie + 10% Gesundheit\";\n  tagestyp = \"dienstag\";\n  emoji = \"🧠\";\n} else if (wochentag === 5) {\n  // FREITAG\n  const index = kalenderwoche % freitagThemen.length;\n  thema = freitagThemen[index];\n  fokus = \"FREITAG: 90% Psychologie + 10% Spiritualität\";\n  tagestyp = \"freitag\";\n  emoji = \"🌟\";\n} else {\n  // TEST-MODUS (andere Tage)\n  const alleThemen = [...dienstagThemen, ...freitagThemen];\n  const index = Math.floor(Math.random() * alleThemen.length);\n  thema = alleThemen[index];\n  fokus = \"TEST-MODUS: Zufälliges Thema\";\n  tagestyp = Math.random() > 0.5 ? \"dienstag\" : \"freitag\";\n  emoji = \"🧪\";\n}\n\nreturn [{\n  json: {\n    chatInput: thema,\n    fokus: fokus,\n    tagestyp: tagestyp,\n    emoji: emoji,\n    datum: heute.toLocaleDateString('de-DE'),\n    wochentag: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'][wochentag],\n    kalenderwoche: kalenderwoche\n  }\n}];"
+      },
+      "id": "thema-generator-1",
+      "name": "Thema Generator",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1008,
+        176
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 10 * * 2,5"
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger-1",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        800,
+        176
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Erstelle eine perfekte deutsche Instagram Caption.\n\nThema: {{ $('Thema Generator').item.json.chatInput }}\nFokus: {{ $('Thema Generator').item.json.fokus }}\nTagestyp: {{ $('Thema Generator').item.json.tagestyp }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "# 🌞 SONNENSCHEIN PRAXIS - CAPTION GENERATOR\n\nDu schreibst PERFEKTE deutsche Instagram/TikTok Captions für die Sonnenschein Praxis Dr. Basel Allozy - eine Kinder- und Jugendpsychiatrie in Berlin-Kreuzberg.\n\n---\n\n## 🎭 UNSERE MASKOTTCHEN:\n\n### SUNNY 🌞\n- 14-jähriges Mädchen\n- Trägt runde Brille und gelbes Hoodie\n- Persönlichkeit: Klug, einfühlsam, erklärt geduldig\n- Rolle: Gibt Tipps, teilt Wissen, macht Mut\n\n### MAX ⭐\n- 12-jähriger Junge  \n- Hat Sommersprossen und grünes T-Shirt\n- Persönlichkeit: Neugierig, offen, lernt gerne\n- Rolle: Stellt Fragen, zeigt Probleme, entwickelt sich\n\n---\n\n## 📅 CONTENT-FOKUS JE NACH TAG:\n\n### DIENSTAG (tagestyp: \"dienstag\")\n**90% Psychologie:**\n- ADHS, Autismus, Schulangst, Depression\n- Konzentration, Verhalten, Emotionen\n- Praktische Tipps für Eltern\n- Wissenschaftlich fundiert aber verständlich\n\n**10% Gesundheit:**\n- Ernährung fürs Gehirn\n- Bewegung und Mental Health\n- Schlaf und Konzentration\n- Körper-Geist-Verbindung\n\n### FREITAG (tagestyp: \"freitag\")\n**90% Psychologie:**\n- Achtsamkeit, Selbstwert, Resilienz\n- Emotionale Intelligenz\n- Familien-Beziehungen\n- Innere Stärke aufbauen\n\n**10% Spiritualität (INDIREKT!):**\n- ✅ Dankbarkeit, Hoffnung, Vertrauen\n- ✅ Innerer Frieden, Vergebung, Trost\n- ✅ Glaube an sich selbst, Zuversicht\n- ❌ KEINE direkten religiösen Begriffe (kein \"Gott\", \"beten\", \"Religion\")\n- ❌ KEINE Konfession erwähnen\n\n---\n\n## 📝 CAPTION-STRUKTUR:\n\n### ZEILE 1: HOOK (Aufmerksamkeit)\n- Starkes Emoji + packende Frage oder Aussage\n- Muss sofort neugierig machen\n- Beispiele:\n  - \"🌞 Wusstest du, dass ADHS auch Superkräfte hat?\"\n  - \"⭐ Dein Kind zieht sich zurück? Das könnte der Grund sein...\"\n  - \"🧠 3 Zeichen für Schulangst, die Eltern oft übersehen\"\n\n### ZEILE 2-3: EINLEITUNG (Sunny & Max begrüßen)\n- Sunny und Max \"sprechen\" direkt zum Leser\n- Persönlich und warm\n- Beispiele:\n  - \"Hey! Sunny und Max hier! ✨\"\n  - \"Sunny hier! Heute erkläre ich euch...\"\n  - \"Max hat sich das auch gefragt...\"\n\n### ZEILE 4: SWIPE-AUFFORDERUNG\n- \"Swipe durch und erfahre:\"\n- \"Wisch weiter für:\"\n- \"In den Slides zeigen wir dir:\"\n\n### ZEILE 5-8: INHALT (Bullet Points)\n- 3-4 Punkte mit Emojis\n- Kurz und knackig\n- Beispiele:\n  - \"👉 Was wirklich hinter ADHS steckt\"\n  - \"👉 Warum dein Kind nicht 'faul' ist\"\n  - \"👉 3 Tipps die sofort helfen\"\n  - \"👉 Wann professionelle Hilfe sinnvoll ist\"\n\n### ZEILE 9-10: ERMUTIGUNG (Hoffnung geben)\n- Positive, tröstende Botschaft\n- Beispiele:\n  - \"Jedes Kind ist einzigartig - und das ist wunderbar! ✨\"\n  - \"Du bist nicht allein. Wir sind für euch da! 🌞\"\n  - \"Der erste Schritt ist der wichtigste. 💛\"\n  - \"Zusammen schaffen wir das! ⭐\"\n\n### ZEILE 11-13: CALL-TO-ACTION\n```\n💾 Speicher dir diesen Post!\n📞 Fragen? Ruf uns an: 030 615 85 20\n🌐 Mehr Infos: baselallozy.de\n```\n\n### ZEILE 14+: HASHTAGS (10-12 Stück)\nImmer diese Basis-Hashtags:\n```\n#SonnenscheinPraxis #DrBaselAllozy #Kinderpsychiatrie #Berlin #Kreuzberg #MentaleGesundheit #Elterntipps #WirSindFürEuchDa\n```\n\nPlus 3-4 themenspezifische:\n- ADHS: #ADHS #ADHSKinder #Konzentration #Aufmerksamkeit\n- Autismus: #Autismus #AutismusSpektrum #Neurodiversität\n- Angst: #Schulangst #Kinderangst #Angststörung #Prüfungsangst\n- Familie: #Familientherapie #ElternSein #StarkeKinder\n- Achtsamkeit: #Achtsamkeit #InnereStärke #Selbstfürsorge\n\n---\n\n## ✅ BEISPIEL-CAPTION (DIENSTAG - Psychologie/Gesundheit):\n\n```\n🌞 Wusstest du, dass ADHS auch Superkräfte hat?\n\nHey! Sunny und Max hier! ✨\nHeute räumen wir mit Vorurteilen auf und zeigen euch, was ADHS wirklich bedeutet.\n\nSwipe durch und erfahre:\n👉 Was im Gehirn bei ADHS passiert\n👉 Warum dein Kind nicht \"faul\" oder \"dumm\" ist\n👉 Welche Stärken ADHS-Kinder oft haben\n👉 3 Tipps die im Alltag wirklich helfen\n\nJedes Gehirn arbeitet anders - und das ist völlig okay! 🧠✨\n\nDu bist nicht allein. Wir sind für euch da! 🌞\n\n💾 Speicher dir diesen Post!\n📞 Fragen? Ruf uns an: 030 615 85 20\n🌐 Mehr Infos: baselallozy.de\n\n#SonnenscheinPraxis #DrBaselAllozy #ADHS #ADHSKinder #Kinderpsychiatrie #Berlin #Kreuzberg #MentaleGesundheit #Elterntipps #Konzentration #WirSindFürEuchDa #StarkeKinder\n```\n\n---\n\n## ✅ BEISPIEL-CAPTION (FREITAG - Psychologie/Spiritualität indirekt):\n\n```\n🌟 Dankbarkeit verändert alles.\n\nHey! Sunny hier! ✨\nHeute zeige ich euch, wie eine kleine Übung euer Familienleben verändern kann.\n\nSwipe durch und erfahre:\n👉 Warum Dankbarkeit so kraftvoll ist\n👉 Eine einfache Abend-Übung für die ganze Familie\n👉 Wie Kinder dadurch innere Stärke entwickeln\n👉 Was die Wissenschaft dazu sagt\n\nDas Gute im Alltag zu sehen, gibt uns Kraft für schwere Zeiten. 💛\n\nIhr seid nicht allein. Wir glauben an euch! 🌞\n\n💾 Speicher dir diesen Post!\n📞 Fragen? Ruf uns an: 030 615 85 20\n🌐 Mehr Infos: baselallozy.de\n\n#SonnenscheinPraxis #DrBaselAllozy #Dankbarkeit #InnereStärke #Kinderpsychiatrie #Berlin #Achtsamkeit #Familienzeit #MentaleGesundheit #Elterntipps #WirSindFürEuchDa #Hoffnung\n```\n\n---\n\n## ⚠️ KRITISCHE REGELN:\n\n1. **NUR die fertige Caption ausgeben** - KEINE Erklärungen, KEINE Kommentare\n2. **IMMER auf Deutsch**\n3. **IMMER Sunny 🌞 und/oder Max ⭐ erwähnen**\n4. **IMMER Telefonnummer: 030 615 85 20**\n5. **IMMER Website: baselallozy.de**\n6. **IMMER 10-12 Hashtags am Ende**\n7. **IMMER Speichern-Aufforderung 💾**\n8. **Ton: Warm, freundlich, ermutigend - NIEMALS klinisch oder formal**\n9. **Bei FREITAG: Spirituelle Begriffe NUR indirekt (Hoffnung, Vertrauen, Dankbarkeit)**\n10. **Einfache Sprache - auch für Nicht-Experten verständlich**"
+        }
+      },
+      "id": "b01951e9-4441-436a-a891-6a34eb9ff910",
+      "name": "Image Prompt Generator1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        2352,
+        416
+      ],
+      "typeVersion": 2.2
+    }
+  ],
+  "pinData": {
+    "Upload media": [
+      {
+        "json": {
+          "url": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5a75fc63-1747-4b1a-889a-713f23c0a7e0.png",
+          "id": "bcaab74f-406a-4f52-bd5d-d5699349fcfa"
+        }
+      },
+      {
+        "json": {
+          "url": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5b0fe57a-9435-454f-832a-d5565e59ec60.png",
+          "id": "25156638-a3f2-441f-a3df-14faf992b878"
+        }
+      },
+      {
+        "json": {
+          "url": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/a6197034-d90f-4b73-8cff-7fbf2cb27159.png",
+          "id": "694fa632-6580-4a24-b058-87d65539427a"
+        }
+      },
+      {
+        "json": {
+          "url": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/7765a4c3-08ad-4101-93f7-8dc8c175e02d.png",
+          "id": "c2e22ecf-6b25-4788-b5a9-c273e53ad270"
+        }
+      },
+      {
+        "json": {
+          "url": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/dd2b7fa3-d41c-4e19-a2c4-67052aafed86.png",
+          "id": "6d10bcc7-c053-4983-836e-067decc17c35"
+        }
+      }
+    ],
+    "Get Nano Banana Image Result": [
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "8fdcb90f77cb8045b9c1edb38ad08745",
+            "model": "nano-banana-pro",
+            "state": "success",
+            "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, standing next to young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both waving at viewer with energetic poses, large bold German text at top reading 'Bewegung macht schlau!' in dark blue color, small brain icon with sparkles next to text, sport equipment like ball in background, dynamic feel\\\",\\\"resolution\\\":\\\"1K\\\"}\",\"model\":\"nano-banana-pro\"}",
+            "resultJson": "{\"resultUrls\":[\"https://tempfile.aiquickdraw.com/g/8fdcb90f77cb8045b9c1edb38ad08745_1766413029.png\"]}",
+            "failCode": null,
+            "failMsg": null,
+            "costTime": 26,
+            "completeTime": 1766413031357,
+            "createTime": 1766413005171
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "7e375c9a5a17998add3d234eeb3aa170",
+            "model": "nano-banana-pro",
+            "state": "success",
+            "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, sitting alone at desk looking tired and unfocused, scattered papers and pencils around, thought bubble with fuzzy brain icon and question marks, German text in speech bubble reading 'Ich bin so unruhig...' in soft blue color, stressed posture, indoor classroom setting\\\",\\\"resolution\\\":\\\"1K\\\"}\",\"model\":\"nano-banana-pro\"}",
+            "resultJson": "{\"resultUrls\":[\"https://tempfile.aiquickdraw.com/g/7e375c9a5a17998add3d234eeb3aa170_1766413030.png\"]}",
+            "failCode": null,
+            "failMsg": null,
+            "costTime": 26,
+            "completeTime": 1766413031718,
+            "createTime": 1766413005170
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "8d38b139a89e18d6cc29f2d489a4fbe2",
+            "model": "nano-banana-pro",
+            "state": "success",
+            "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, standing and pointing at simple whiteboard with happy expression, young 12-year-old boy Max with short curly black hair, cute freckles, mint green t-shirt, dark brown skin, sitting and listening with interested expression, whiteboard showing simple brain icon with blood flow arrows and happy chemicals (serotonin, dopamine icons), German text reading 'So hilft Sport dem Gehirn:' at top and '1. Mehr Sauerstoff 2. Glückshormone 3. Bessere Konzentration' as bullet points, lightbulb glowing\\\",\\\"resolution\\\":\\\"1K\\\"}\",\"model\":\"nano-banana-pro\"}",
+            "resultJson": "{\"resultUrls\":[\"https://tempfile.aiquickdraw.com/g/8d38b139a89e18d6cc29f2d489a4fbe2_1766413029.png\"]}",
+            "failCode": null,
+            "failMsg": null,
+            "costTime": 25,
+            "completeTime": 1766413030767,
+            "createTime": 1766413005168
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "55b9fc2ba8c5e5cc4fc4d9e1eb375aa9",
+            "model": "nano-banana-pro",
+            "state": "success",
+            "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both jumping and running together outdoors with huge genuine smiles, sport balls floating around, sun rays, hearts and stars in air, large bold German text at top reading 'Bewegung = Glück!' in warm orange color, smaller text 'Fang heute an!' below, energetic happy atmosphere, outdoor park setting\\\",\\\"resolution\\\":\\\"1K\\\"}\",\"model\":\"nano-banana-pro\"}",
+            "resultJson": "{\"resultUrls\":[\"https://tempfile.aiquickdraw.com/g/55b9fc2ba8c5e5cc4fc4d9e1eb375aa9_1766413032.png\"]}",
+            "failCode": null,
+            "failMsg": null,
+            "costTime": 27,
+            "completeTime": 1766413033837,
+            "createTime": 1766413005613
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "90be03a24bb1402ec3c35b26f2fad06b",
+            "model": "nano-banana-pro",
+            "state": "success",
+            "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both waving warmly at viewer, large friendly cartoon sun with smile behind them, German text in center reading 'Sonnenschein Praxis' as title and '📞 030 615 85 20' and '🌐 baselallozy.de' and 'Bewegung ist Medizin!' below, phone and globe icons, sports equipment around, welcoming supportive atmosphere\\\",\\\"resolution\\\":\\\"1K\\\"}\",\"model\":\"nano-banana-pro\"}",
+            "resultJson": "{\"resultUrls\":[\"https://tempfile.aiquickdraw.com/g/90be03a24bb1402ec3c35b26f2fad06b_1766413030.png\"]}",
+            "failCode": null,
+            "failMsg": null,
+            "costTime": 26,
+            "completeTime": 1766413031993,
+            "createTime": 1766413005177
+          }
+        }
+      }
+    ],
+    "Wait For Render": [
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "8fdcb90f77cb8045b9c1edb38ad08745",
+            "recordId": "8fdcb90f77cb8045b9c1edb38ad08745"
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "7e375c9a5a17998add3d234eeb3aa170",
+            "recordId": "7e375c9a5a17998add3d234eeb3aa170"
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "8d38b139a89e18d6cc29f2d489a4fbe2",
+            "recordId": "8d38b139a89e18d6cc29f2d489a4fbe2"
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "55b9fc2ba8c5e5cc4fc4d9e1eb375aa9",
+            "recordId": "55b9fc2ba8c5e5cc4fc4d9e1eb375aa9"
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "90be03a24bb1402ec3c35b26f2fad06b",
+            "recordId": "90be03a24bb1402ec3c35b26f2fad06b"
+          }
+        }
+      }
+    ],
+    "Nano Banana": [
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "8fdcb90f77cb8045b9c1edb38ad08745",
+            "recordId": "8fdcb90f77cb8045b9c1edb38ad08745"
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "7e375c9a5a17998add3d234eeb3aa170",
+            "recordId": "7e375c9a5a17998add3d234eeb3aa170"
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "8d38b139a89e18d6cc29f2d489a4fbe2",
+            "recordId": "8d38b139a89e18d6cc29f2d489a4fbe2"
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "55b9fc2ba8c5e5cc4fc4d9e1eb375aa9",
+            "recordId": "55b9fc2ba8c5e5cc4fc4d9e1eb375aa9"
+          }
+        }
+      },
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "90be03a24bb1402ec3c35b26f2fad06b",
+            "recordId": "90be03a24bb1402ec3c35b26f2fad06b"
+          }
+        }
+      }
+    ],
+    "Split Out": [
+      {
+        "json": {
+          "output.prompts": "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, standing next to young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both waving at viewer with energetic poses, large bold German text at top reading 'Bewegung macht schlau!' in dark blue color, small brain icon with sparkles next to text, sport equipment like ball in background, dynamic feel"
+        }
+      },
+      {
+        "json": {
+          "output.prompts": "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, sitting alone at desk looking tired and unfocused, scattered papers and pencils around, thought bubble with fuzzy brain icon and question marks, German text in speech bubble reading 'Ich bin so unruhig...' in soft blue color, stressed posture, indoor classroom setting"
+        }
+      },
+      {
+        "json": {
+          "output.prompts": "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, standing and pointing at simple whiteboard with happy expression, young 12-year-old boy Max with short curly black hair, cute freckles, mint green t-shirt, dark brown skin, sitting and listening with interested expression, whiteboard showing simple brain icon with blood flow arrows and happy chemicals (serotonin, dopamine icons), German text reading 'So hilft Sport dem Gehirn:' at top and '1. Mehr Sauerstoff 2. Glückshormone 3. Bessere Konzentration' as bullet points, lightbulb glowing"
+        }
+      },
+      {
+        "json": {
+          "output.prompts": "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both jumping and running together outdoors with huge genuine smiles, sport balls floating around, sun rays, hearts and stars in air, large bold German text at top reading 'Bewegung = Glück!' in warm orange color, smaller text 'Fang heute an!' below, energetic happy atmosphere, outdoor park setting"
+        }
+      },
+      {
+        "json": {
+          "output.prompts": "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both waving warmly at viewer, large friendly cartoon sun with smile behind them, German text in center reading 'Sonnenschein Praxis' as title and '📞 030 615 85 20' and '🌐 baselallozy.de' and 'Bewegung ist Medizin!' below, phone and globe icons, sports equipment around, welcoming supportive atmosphere"
+        }
+      }
+    ],
+    "Image Prompt Generator": [
+      {
+        "json": {
+          "output": {
+            "prompts": [
+              "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, standing next to young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both waving at viewer with energetic poses, large bold German text at top reading 'Bewegung macht schlau!' in dark blue color, small brain icon with sparkles next to text, sport equipment like ball in background, dynamic feel",
+              "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, sitting alone at desk looking tired and unfocused, scattered papers and pencils around, thought bubble with fuzzy brain icon and question marks, German text in speech bubble reading 'Ich bin so unruhig...' in soft blue color, stressed posture, indoor classroom setting",
+              "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, standing and pointing at simple whiteboard with happy expression, young 12-year-old boy Max with short curly black hair, cute freckles, mint green t-shirt, dark brown skin, sitting and listening with interested expression, whiteboard showing simple brain icon with blood flow arrows and happy chemicals (serotonin, dopamine icons), German text reading 'So hilft Sport dem Gehirn:' at top and '1. Mehr Sauerstoff 2. Glückshormone 3. Bessere Konzentration' as bullet points, lightbulb glowing",
+              "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both jumping and running together outdoors with huge genuine smiles, sport balls floating around, sun rays, hearts and stars in air, large bold German text at top reading 'Bewegung = Glück!' in warm orange color, smaller text 'Fang heute an!' below, energetic happy atmosphere, outdoor park setting",
+              "flat vector illustration, minimal 2D cartoon style, simple geometric shapes, soft rounded edges, clean lines, no gradients, no shadows, no 3D effects, Scandinavian children book aesthetic, Instagram square 1:1 format, color palette sunshine yellow #FFD93D warm orange #FF9F45 mint green #6BCB77 soft sky blue #4D96FF cream white background #FFF8E7, young 14-year-old girl Sunny with medium-length curly brown hair, round black-framed glasses, wearing bright yellow hoodie with small embroidered sun logo on left chest, warm beige skin tone, friendly warm smile, soft rounded facial features, young 12-year-old boy Max with short curly black hair, cute freckles scattered across cheeks and nose, wearing mint green t-shirt with small white star print on chest, dark brown skin tone, curious wide eyes, friendly expression, both waving warmly at viewer, large friendly cartoon sun with smile behind them, German text in center reading 'Sonnenschein Praxis' as title and '📞 030 615 85 20' and '🌐 baselallozy.de' and 'Bewegung ist Medizin!' below, phone and globe icons, sports equipment around, welcoming supportive atmosphere"
+            ]
+          }
+        }
+      }
+    ],
+    "Thema Generator": [
+      {
+        "json": {
+          "chatInput": "Bewegung macht schlau: Sport und mentale Gesundheit",
+          "fokus": "TEST-MODUS: Zufälliges Thema",
+          "tagestyp": "freitag",
+          "emoji": "🧪",
+          "datum": "22.12.2025",
+          "wochentag": "Montag",
+          "kalenderwoche": 51
+        }
+      }
+    ],
+    "Schedule Trigger": [
+      {
+        "json": {
+          "timestamp": "2025-12-22T15:14:28.668+01:00",
+          "Readable date": "December 22nd 2025, 3:14:28 pm",
+          "Readable time": "3:14:28 pm",
+          "Day of week": "Monday",
+          "Year": "2025",
+          "Month": "December",
+          "Day of month": "22",
+          "Hour": "15",
+          "Minute": "14",
+          "Second": "28",
+          "Timezone": "Europe/Berlin (UTC+01:00)"
+        }
+      }
+    ],
+    "Image Prompt Generator1": [
+      {
+        "json": {
+          "output": {
+            "prompts": [
+              "🧠🏃‍♂️ Wusstest du, dass 20 Minuten Sport dein Gehirn komplett durchpusten?\n\nHey! Sunny und Max hier! ✨\nHeute zeigen wir euch, wie Bewegung nicht nur den Körper, sondern auch die Seele stärkt.\n\nSwipe durch und erfahre:\n👉 Warum Sport wie ein Reset-Knopf fürs Gehirn wirkt\n👉 Wie Bewegung Depression und Angst natürlich lindert\n👉 Welche Sportarten für Kinder besonders gut sind\n👉 3 einfache Bewegungs-Ideen für den Familienalltag\n\nKörper und Geist arbeiten zusammen - starke Bewegung = starke Psyche! 💪✨\n\nDu schaffst das! Jeder Schritt zählt! 🌞\n\n💾 Speicher dir diesen Post!\n📞 Fragen? Ruf uns an: 030 615 85 20\n🌐 Mehr Infos: baselallozy.de\n\n#SonnenscheinPraxis #DrBaselAllozy #SportMentalGesundheit #Bewegung #Kinderpsychiatrie #Berlin #Kreuzberg #MentaleGesundheit #Elterntipps #Familienfitness #WirSindFürEuchDa #InnereStärke"
+            ]
+          }
+        }
+      }
+    ],
+    "Merge Caption + Images": [
+      {
+        "json": {
+          "imageUrls": [
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5a75fc63-1747-4b1a-889a-713f23c0a7e0.png",
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5b0fe57a-9435-454f-832a-d5565e59ec60.png",
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/a6197034-d90f-4b73-8cff-7fbf2cb27159.png",
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/7765a4c3-08ad-4101-93f7-8dc8c175e02d.png",
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/dd2b7fa3-d41c-4e19-a2c4-67052aafed86.png"
+          ],
+          "imageCount": 5,
+          "mediaUrlsString": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5a75fc63-1747-4b1a-889a-713f23c0a7e0.png,https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5b0fe57a-9435-454f-832a-d5565e59ec60.png,https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/a6197034-d90f-4b73-8cff-7fbf2cb27159.png,https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/7765a4c3-08ad-4101-93f7-8dc8c175e02d.png,https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/dd2b7fa3-d41c-4e19-a2c4-67052aafed86.png",
+          "slide1": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5a75fc63-1747-4b1a-889a-713f23c0a7e0.png",
+          "slide2": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5b0fe57a-9435-454f-832a-d5565e59ec60.png",
+          "slide3": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/a6197034-d90f-4b73-8cff-7fbf2cb27159.png",
+          "slide4": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/7765a4c3-08ad-4101-93f7-8dc8c175e02d.png",
+          "slide5": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/dd2b7fa3-d41c-4e19-a2c4-67052aafed86.png",
+          "output": {
+            "prompts": [
+              "🧠🏃‍♂️ Wusstest du, dass 20 Minuten Sport dein Gehirn komplett durchpusten?\n\nHey! Sunny und Max hier! ✨\nHeute zeigen wir euch, wie Bewegung nicht nur den Körper, sondern auch die Seele stärkt.\n\nSwipe durch und erfahre:\n👉 Warum Sport wie ein Reset-Knopf fürs Gehirn wirkt\n👉 Wie Bewegung Depression und Angst natürlich lindert\n👉 Welche Sportarten für Kinder besonders gut sind\n👉 3 einfache Bewegungs-Ideen für den Familienalltag\n\nKörper und Geist arbeiten zusammen - starke Bewegung = starke Psyche! 💪✨\n\nDu schaffst das! Jeder Schritt zählt! 🌞\n\n💾 Speicher dir diesen Post!\n📞 Fragen? Ruf uns an: 030 615 85 20\n🌐 Mehr Infos: baselallozy.de\n\n#SonnenscheinPraxis #DrBaselAllozy #SportMentalGesundheit #Bewegung #Kinderpsychiatrie #Berlin #Kreuzberg #MentaleGesundheit #Elterntipps #Familienfitness #WirSindFürEuchDa #InnereStärke"
+            ]
+          }
+        },
+        "binary": {}
+      }
+    ],
+    "Code": [
+      {
+        "json": {
+          "imageUrls": [
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5a75fc63-1747-4b1a-889a-713f23c0a7e0.png",
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5b0fe57a-9435-454f-832a-d5565e59ec60.png",
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/a6197034-d90f-4b73-8cff-7fbf2cb27159.png",
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/7765a4c3-08ad-4101-93f7-8dc8c175e02d.png",
+            "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/dd2b7fa3-d41c-4e19-a2c4-67052aafed86.png"
+          ],
+          "imageCount": 5,
+          "mediaUrlsString": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5a75fc63-1747-4b1a-889a-713f23c0a7e0.png,https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5b0fe57a-9435-454f-832a-d5565e59ec60.png,https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/a6197034-d90f-4b73-8cff-7fbf2cb27159.png,https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/7765a4c3-08ad-4101-93f7-8dc8c175e02d.png,https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/dd2b7fa3-d41c-4e19-a2c4-67052aafed86.png",
+          "slide1": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5a75fc63-1747-4b1a-889a-713f23c0a7e0.png",
+          "slide2": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/5b0fe57a-9435-454f-832a-d5565e59ec60.png",
+          "slide3": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/a6197034-d90f-4b73-8cff-7fbf2cb27159.png",
+          "slide4": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/7765a4c3-08ad-4101-93f7-8dc8c175e02d.png",
+          "slide5": "https://database.blotato.io/storage/v1/object/public/public_media/274db3ea-6e8f-492c-851e-23ac9a7bac75/dd2b7fa3-d41c-4e19-a2c4-67052aafed86.png"
+        }
+      }
+    ],
+    "Create post": [
+      {
+        "json": {
+          "postSubmissionId": "59a21e90-73be-4db0-ad69-94868b214fc4"
+        }
+      }
+    ],
+    "Instagram [BLOTATO]": [
+      {
+        "json": {
+          "postSubmissionId": "9ac1dd29-df88-491e-bc18-e3463f47d4dc"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Image Prompt Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompt Generator": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Image Prompt Generator1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Image Prompt Generator",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Image Prompt Generator1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Image Prompt Generator",
+            "type": "ai_outputParser",
+            "index": 0
+          },
+          {
+            "node": "Image Prompt Generator1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Nano Banana",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nano Banana": {
+      "main": [
+        [
+          {
+            "node": "Wait For Render",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait For Render": {
+      "main": [
+        [
+          {
+            "node": "Get Nano Banana Image Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Nano Banana Image Result": {
+      "main": [
+        [
+          {
+            "node": "Upload media",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Caption + Images": {
+      "main": [
+        [
+          {
+            "node": "Create post",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tiktok [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Linkedin [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Facebook [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Instagram [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Twitter [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Youtube [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "Threads [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "Bluesky [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "Pinterest [BLOTATO]": {
+      "main": [
+        [
+          {
+            "node": "Error Report",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "Create post": {
+      "main": [
+        [
+          {
+            "node": "Tiktok [BLOTATO]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Linkedin [BLOTATO]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Facebook [BLOTATO]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Twitter [BLOTATO]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Youtube [BLOTATO]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Threads [BLOTATO]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Bluesky [BLOTATO]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Pinterest [BLOTATO]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Instagram [BLOTATO]",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload media": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Thema Generator": {
+      "main": [
+        [
+          {
+            "node": "Image Prompt Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Thema Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Merge Caption + Images",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompt Generator1": {
+      "main": [
+        [
+          {
+            "node": "Merge Caption + Images",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "0e13872a-18fb-4a48-acb5-c133b10a73eb",
+  "meta": {
+    "instanceId": "e7f4a0a9e930c92d174b93da465abdc4d1ed317b86efbb95f8b70d662a1ade53"
+  },
+  "id": "u82R3TjKZUCZOO1p",
+  "tags": []
+}
