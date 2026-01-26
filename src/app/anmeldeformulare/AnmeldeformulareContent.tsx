@@ -25,15 +25,14 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import GlassCard from "@/components/ui/GlassCard";
 import Button from "@/components/ui/Button";
 
-// Formulare mit externen Links (aktuellste Versionen 2024)
+// Formulare (aktuellste Versionen 2026)
 const forms = [
   {
     id: "anmeldebogen",
     title: "Anmeldebogen",
     description:
       "Grundlegende Informationen zu Ihrem Kind und Ihrer Familie. Dieses Formular ist für alle Ersttermine erforderlich.",
-    pdfUrl:
-      "https://baselallozy.de/wp-content/uploads/2024/10/Anmeldebogen_Sonnenschein-2024.pdf",
+    pdfUrl: "/sonnenschein-praxis/formulare/Anmeldebogen_Sonnenschein-2026.pdf",
     icon: ClipboardList,
     tag: "Pflicht",
     tagVariant: "primary" as const,
@@ -54,8 +53,7 @@ const forms = [
     title: "Schweigepflichtentbindung",
     description:
       "Ermöglicht den Austausch mit anderen behandelnden Ärzten, Therapeuten, Schulen oder Einrichtungen.",
-    pdfUrl:
-      "https://baselallozy.de/wp-content/uploads/2024/10/Schweigepflichtentbindung-2024.pdf",
+    pdfUrl: "/sonnenschein-praxis/formulare/Schweigepflichtentbindung-Stand 15.1.26.pdf",
     icon: FileSignature,
     tag: "Bei Bedarf",
     tagVariant: "secondary" as const,
@@ -69,6 +67,16 @@ const forms = [
       "https://baselallozy.de/wp-content/uploads/2024/10/Vollmacht-bei-gemeinsamem-Sorgerecht-2024.pdf",
     icon: Users,
     tag: "Bei Bedarf",
+    tagVariant: "secondary" as const,
+  },
+  {
+    id: "behandlungsvertrag",
+    title: "Behandlungsvertrag Privatpatienten",
+    description:
+      "Behandlungsvertrag für Privatpatienten und Selbstzahler. Bitte vor dem Ersttermin ausfüllen.",
+    pdfUrl: "/sonnenschein-praxis/formulare/Behandlungsvertrag Privatpatienten.pdf",
+    icon: FileText,
+    tag: "Privatpatienten",
     tagVariant: "secondary" as const,
   },
 ];
