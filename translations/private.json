@@ -1,0 +1,736 @@
+{
+  "private": {
+    "hero": {
+      "badge": {
+        "de": "Privatpraxis",
+        "ar": "العيادة الخاصة"
+      },
+      "title": {
+        "de": "Privatpraxis für PKV & Selbstzahler",
+        "ar": "عيادة خاصة للتأمين الصحي الخاص والدافعين الذاتيين"
+      },
+      "description": {
+        "de": "Individuelle, zeitnahe Behandlung für privatversicherte Patient:innen, Beihilfeberechtigte und Selbstzahler. Hochwertige psychiatrische Versorgung mit kürzeren Wartezeiten.",
+        "ar": "علاج فردي وسريع للمرضى ذوي التأمين الخاص والمستحقين للإعانات والدافعين الذاتيين. رعاية نفسية عالية الجودة مع فترات انتظار أقصر."
+      },
+      "ctaPrimary": {
+        "de": "Privattermin anfragen",
+        "ar": "طلب موعد خاص"
+      },
+      "ctaSecondary": {
+        "de": "Gesetzlich versichert?",
+        "ar": "مؤمن قانونياً؟"
+      }
+    },
+    "benefits": [
+      {
+        "id": "waitTime",
+        "title": {
+          "de": "Kürzere Wartezeiten",
+          "ar": "فترات انتظار أقصر"
+        },
+        "description": {
+          "de": "Schnellere Terminvergabe für Privatpatienten und Selbstzahler.",
+          "ar": "حجز مواعيد أسرع للمرضى الخاصين والدافعين الذاتيين."
+        }
+      },
+      {
+        "id": "billing",
+        "title": {
+          "de": "Transparente Abrechnung",
+          "ar": "فواتير شفافة"
+        },
+        "description": {
+          "de": "Klare Preisstruktur nach GOÄ mit detaillierter Rechnung.",
+          "ar": "هيكل أسعار واضح وفقاً لجدول رسوم الأطباء مع فاتورة مفصلة."
+        }
+      },
+      {
+        "id": "services",
+        "title": {
+          "de": "Erweiterte Leistungen",
+          "ar": "خدمات موسعة"
+        },
+        "description": {
+          "de": "Zusätzliche diagnostische und therapeutische Optionen.",
+          "ar": "خيارات تشخيصية وعلاجية إضافية."
+        }
+      }
+    ],
+    "location": {
+      "sectionTitle": {
+        "de": "Standort Privatpraxis",
+        "ar": "موقع العيادة الخاصة"
+      },
+      "note": {
+        "de": "Die Privatpraxis befindet sich in derselben Straße, einige Hausnummern weiter.",
+        "ar": "تقع العيادة الخاصة في نفس الشارع، على بعد عدة أرقام منازل."
+      },
+      "openInMaps": {
+        "de": "In Google Maps öffnen",
+        "ar": "فتح في خرائط جوجل"
+      },
+      "transport": {
+        "uBahn": {
+          "title": {
+            "de": "U-Bahn & S-Bahn",
+            "ar": "المترو والقطار الخفيف"
+          },
+          "uBahnLabel": {
+            "de": "U-Bahn:",
+            "ar": "المترو:"
+          },
+          "uBahnValue": {
+            "de": "U6, U7 – Mehringdamm",
+            "ar": "U6, U7 – ميرينغدام"
+          },
+          "sBahnLabel": {
+            "de": "S-Bahn:",
+            "ar": "القطار الخفيف:"
+          },
+          "sBahnValue": {
+            "de": "S1, S2 – Yorckstraße",
+            "ar": "S1, S2 – يوركشتراسه"
+          }
+        },
+        "bus": {
+          "title": {
+            "de": "Bus",
+            "ar": "الحافلة"
+          },
+          "label": {
+            "de": "Linien:",
+            "ar": "الخطوط:"
+          },
+          "value": {
+            "de": "M19, 140 – Blücherstraße",
+            "ar": "M19, 140 – بلوخرشتراسه"
+          }
+        },
+        "parking": {
+          "title": {
+            "de": "Parken",
+            "ar": "مواقف السيارات"
+          },
+          "description": {
+            "de": "Begrenzte Parkplätze vorhanden. Öffentliche Verkehrsmittel empfohlen.",
+            "ar": "مواقف سيارات محدودة متوفرة. يُنصح باستخدام وسائل النقل العام."
+          }
+        },
+        "accessibility": {
+          "title": {
+            "de": "Barrierefreiheit",
+            "ar": "إمكانية الوصول"
+          },
+          "description": {
+            "de": "Die Praxis ist barrierefrei erreichbar.",
+            "ar": "يمكن الوصول إلى العيادة بسهولة لذوي الاحتياجات الخاصة."
+          }
+        }
+      }
+    },
+    "vrTherapy": {
+      "sectionTitle": {
+        "de": "Virtual-Reality-Therapien",
+        "ar": "العلاج بالواقع الافتراضي"
+      },
+      "subtitle": {
+        "de": "Innovative Behandlungsmethoden",
+        "ar": "طرق علاجية مبتكرة"
+      },
+      "badges": {
+        "innovative": {
+          "de": "Innovativ",
+          "ar": "مبتكر"
+        },
+        "interactive": {
+          "de": "Interaktiv",
+          "ar": "تفاعلي"
+        },
+        "gentle": {
+          "de": "Schonend",
+          "ar": "لطيف"
+        }
+      },
+      "notice": {
+        "title": {
+          "de": "Hinweis",
+          "ar": "ملاحظة"
+        },
+        "text": {
+          "de": "Nicht Bestandteil der KV-Leistungen, nur auf Wunsch verfügbar.",
+          "ar": "ليس جزءاً من خدمات التأمين الصحي القانوني، متاح فقط عند الطلب."
+        }
+      },
+      "surcharge": {
+        "de": "Zuschlag für VR-Brille: +35 € pro Sitzung",
+        "ar": "رسوم إضافية لنظارة الواقع الافتراضي: +35 يورو لكل جلسة"
+      },
+      "therapies": [
+        {
+          "id": "vr-konfrontation",
+          "title": {
+            "de": "VR-Konfrontationstherapie",
+            "ar": "العلاج بالمواجهة بالواقع الافتراضي"
+          },
+          "description": {
+            "de": "Behandlung von Ängsten und Phobien in einer sicheren, virtuellen Umgebung.",
+            "ar": "علاج المخاوف والرهاب في بيئة افتراضية آمنة."
+          },
+          "basePrice": "120 €",
+          "vrSurcharge": "+35 €"
+        },
+        {
+          "id": "vr-emdr",
+          "title": {
+            "de": "VR-EMDR",
+            "ar": "إعادة المعالجة بحركة العين بالواقع الافتراضي"
+          },
+          "description": {
+            "de": "Eye Movement Desensitization & Reprocessing – effektive Trauma-Verarbeitung mit VR-Unterstützung.",
+            "ar": "إزالة التحسس وإعادة المعالجة بحركة العين - معالجة فعالة للصدمات بدعم الواقع الافتراضي."
+          },
+          "basePrice": "120 €",
+          "vrSurcharge": "+35 €"
+        },
+        {
+          "id": "vr-kip",
+          "title": {
+            "de": "VR-KIP",
+            "ar": "العلاج النفسي التخيلي بالواقع الافتراضي"
+          },
+          "description": {
+            "de": "Katathym-imaginative Psychotherapie – Arbeit mit inneren Bildern zur Bewältigung von Blockaden.",
+            "ar": "العلاج النفسي التخيلي - العمل مع الصور الداخلية للتغلب على العوائق."
+          },
+          "basePrice": "120 €",
+          "vrSurcharge": "+35 €"
+        }
+      ]
+    },
+    "serviceModules": {
+      "sectionTitle": {
+        "de": "Unsere Leistungen",
+        "ar": "خدماتنا"
+      },
+      "sectionDescription": {
+        "de": "Umfassendes Angebot für privatversicherte Familien und Selbstzahler.",
+        "ar": "عرض شامل للعائلات ذات التأمين الخاص والدافعين الذاتيين."
+      },
+      "modules": [
+        {
+          "id": "diagnostik",
+          "title": {
+            "de": "Diagnostik",
+            "ar": "التشخيص"
+          },
+          "description": {
+            "de": "Umfassende psychiatrische und psychologische Diagnostik mit standardisierten Testverfahren.",
+            "ar": "تشخيص نفسي وعقلي شامل باستخدام اختبارات معيارية."
+          },
+          "services": [
+            {
+              "de": "Anamnese & Exploration",
+              "ar": "التاريخ الطبي والاستكشاف"
+            },
+            {
+              "de": "Entwicklungsdiagnostik",
+              "ar": "تشخيص التطور"
+            },
+            {
+              "de": "Intelligenz- & Leistungstests",
+              "ar": "اختبارات الذكاء والأداء"
+            },
+            {
+              "de": "ADHS-Diagnostik",
+              "ar": "تشخيص اضطراب فرط الحركة ونقص الانتباه"
+            }
+          ]
+        },
+        {
+          "id": "einzeltherapie",
+          "title": {
+            "de": "Einzeltherapie",
+            "ar": "العلاج الفردي"
+          },
+          "description": {
+            "de": "Individuelle psychotherapeutische Behandlung für Kinder und Jugendliche.",
+            "ar": "علاج نفسي فردي للأطفال والمراهقين."
+          },
+          "services": [
+            {
+              "de": "Verhaltenstherapie",
+              "ar": "العلاج السلوكي"
+            },
+            {
+              "de": "Kognitive Therapie",
+              "ar": "العلاج المعرفي"
+            },
+            {
+              "de": "Spieltherapie",
+              "ar": "العلاج باللعب"
+            },
+            {
+              "de": "Traumatherapie",
+              "ar": "علاج الصدمات"
+            }
+          ]
+        },
+        {
+          "id": "gruppentherapie",
+          "title": {
+            "de": "Gruppentherapie",
+            "ar": "العلاج الجماعي"
+          },
+          "description": {
+            "de": "Therapeutische Gruppen zur Förderung sozialer Kompetenzen.",
+            "ar": "مجموعات علاجية لتعزيز المهارات الاجتماعية."
+          },
+          "services": [
+            {
+              "de": "Soziales Kompetenztraining",
+              "ar": "تدريب المهارات الاجتماعية"
+            },
+            {
+              "de": "ADHS-Gruppen",
+              "ar": "مجموعات اضطراب فرط الحركة"
+            },
+            {
+              "de": "Angstbewältigung",
+              "ar": "التغلب على القلق"
+            },
+            {
+              "de": "Emotionsregulation",
+              "ar": "تنظيم العواطف"
+            }
+          ]
+        },
+        {
+          "id": "familienarbeit",
+          "title": {
+            "de": "Familien- & Elternarbeit",
+            "ar": "العمل مع الأسرة والوالدين"
+          },
+          "description": {
+            "de": "Systemische Arbeit mit der Familie und Beratung für Eltern.",
+            "ar": "عمل منهجي مع الأسرة واستشارات للوالدين."
+          },
+          "services": [
+            {
+              "de": "Familientherapie",
+              "ar": "العلاج الأسري"
+            },
+            {
+              "de": "Elternberatung",
+              "ar": "استشارات الوالدين"
+            },
+            {
+              "de": "Paarberatung",
+              "ar": "استشارات الأزواج"
+            },
+            {
+              "de": "Netzwerkgespräche",
+              "ar": "محادثات الشبكة"
+            }
+          ]
+        },
+        {
+          "id": "kreativtherapien",
+          "title": {
+            "de": "Kreativtherapien",
+            "ar": "العلاج الإبداعي"
+          },
+          "description": {
+            "de": "Kunsttherapeutische Methoden für nonverbalen Ausdruck.",
+            "ar": "طرق العلاج بالفن للتعبير غير اللفظي."
+          },
+          "services": [
+            {
+              "de": "Kunsttherapie",
+              "ar": "العلاج بالفن"
+            },
+            {
+              "de": "Gestaltungstherapie",
+              "ar": "العلاج بالتصميم"
+            },
+            {
+              "de": "Kreative Ausdrucksformen",
+              "ar": "أشكال التعبير الإبداعي"
+            }
+          ]
+        },
+        {
+          "id": "logopaedie",
+          "title": {
+            "de": "Logopädie",
+            "ar": "علاج النطق"
+          },
+          "description": {
+            "de": "Behandlung von Sprach- und Sprechstörungen.",
+            "ar": "علاج اضطرابات اللغة والكلام."
+          },
+          "services": [
+            {
+              "de": "Sprachentwicklung",
+              "ar": "تطور اللغة"
+            },
+            {
+              "de": "Artikulation",
+              "ar": "النطق"
+            },
+            {
+              "de": "Stottern",
+              "ar": "التأتأة"
+            },
+            {
+              "de": "Mehrsprachige Therapie",
+              "ar": "العلاج متعدد اللغات"
+            }
+          ]
+        }
+      ]
+    },
+    "pricing": {
+      "sectionTitle": {
+        "de": "Preise & Abrechnung",
+        "ar": "الأسعار والفواتير"
+      },
+      "sectionDescription": {
+        "de": "Transparente Preise nach Gebührenordnung für Ärzte (GOÄ). Die tatsächlichen Kosten können je nach Aufwand variieren.",
+        "ar": "أسعار شفافة وفقاً لجدول رسوم الأطباء. قد تختلف التكاليف الفعلية حسب الجهد المبذول."
+      },
+      "patientTypes": {
+        "gkv": {
+          "title": {
+            "de": "GKV-Patient:innen",
+            "ar": "مرضى التأمين الصحي القانوني"
+          },
+          "description": {
+            "de": "Abrechnung über Ihre Krankenkasse.",
+            "ar": "الفواتير عبر شركة التأمين الصحي الخاصة بك."
+          },
+          "link": {
+            "de": "Mehr Info",
+            "ar": "مزيد من المعلومات"
+          }
+        },
+        "pkv": {
+          "title": {
+            "de": "PKV-Patient:innen",
+            "ar": "مرضى التأمين الصحي الخاص"
+          },
+          "description": {
+            "de": "Terminvereinbarung gegen Vorkasse. Sie erhalten eine Rechnung zur Einreichung bei Ihrer PKV.",
+            "ar": "حجز الموعد مقابل دفعة مسبقة. ستتلقى فاتورة لتقديمها لشركة التأمين الخاصة بك."
+          }
+        },
+        "selfPay": {
+          "title": {
+            "de": "Selbstzahler",
+            "ar": "الدافعون الذاتيون"
+          },
+          "description": {
+            "de": "Terminvereinbarung gegen Vorkasse. Direkte Zahlung zu unseren Selbstzahler-Tarifen.",
+            "ar": "حجز الموعد مقابل دفعة مسبقة. الدفع المباشر وفقاً لتعريفات الدافعين الذاتيين."
+          }
+        }
+      },
+      "prepaymentNotice": {
+        "title": {
+          "de": "Hinweis zur Terminvereinbarung",
+          "ar": "ملاحظة حول حجز المواعيد"
+        },
+        "text": {
+          "de": "Für Privatpatient:innen und Selbstzahler ist bei der Terminvereinbarung eine Vorkasse erforderlich. Die Zahlung erfolgt vor dem Termin. Bei Absage bis 24 Stunden vor dem Termin wird der Betrag vollständig erstattet.",
+          "ar": "يُطلب من المرضى الخاصين والدافعين الذاتيين دفعة مسبقة عند حجز الموعد. يتم الدفع قبل الموعد. في حالة الإلغاء حتى 24 ساعة قبل الموعد، يتم استرداد المبلغ بالكامل."
+        }
+      },
+      "tableHeaders": {
+        "service": {
+          "de": "Leistung",
+          "ar": "الخدمة"
+        },
+        "duration": {
+          "de": "Dauer",
+          "ar": "المدة"
+        },
+        "pkv": {
+          "de": "PKV",
+          "ar": "التأمين الخاص"
+        },
+        "selfPay": {
+          "de": "Selbstzahler",
+          "ar": "الدافع الذاتي"
+        }
+      },
+      "items": [
+        {
+          "id": "erstgespraech",
+          "service": {
+            "de": "Erstgespräch / Anamnese",
+            "ar": "الجلسة الأولى / التاريخ الطبي"
+          },
+          "description": {
+            "de": "Ausführliches Erstgespräch mit Erhebung der Vorgeschichte, aktueller Symptomatik und Behandlungszielen.",
+            "ar": "جلسة أولى مفصلة مع جمع التاريخ المرضي والأعراض الحالية وأهداف العلاج."
+          },
+          "pkvPrice": "120–180 €",
+          "selfPayPrice": "150 €",
+          "duration": {
+            "de": "50–60 Min.",
+            "ar": "50-60 دقيقة"
+          },
+          "goaeReference": "GOÄ 1, 4, 34"
+        },
+        {
+          "id": "diagnostik",
+          "service": {
+            "de": "Psychiatrische Diagnostik",
+            "ar": "التشخيص النفسي"
+          },
+          "description": {
+            "de": "Umfassende diagnostische Abklärung inkl. standardisierter Testverfahren.",
+            "ar": "تقييم تشخيصي شامل يشمل اختبارات معيارية."
+          },
+          "pkvPrice": "200–400 €",
+          "selfPayPrice": "300 €",
+          "duration": {
+            "de": "90–120 Min.",
+            "ar": "90-120 دقيقة"
+          },
+          "goaeReference": "GOÄ 801, 855, 856, 857"
+        },
+        {
+          "id": "einzeltherapie",
+          "service": {
+            "de": "Einzeltherapie",
+            "ar": "العلاج الفردي"
+          },
+          "description": {
+            "de": "Psychotherapeutische Einzelsitzung für Kinder oder Jugendliche.",
+            "ar": "جلسة علاج نفسي فردية للأطفال أو المراهقين."
+          },
+          "pkvPrice": "100–140 €",
+          "selfPayPrice": "120 €",
+          "duration": {
+            "de": "50 Min.",
+            "ar": "50 دقيقة"
+          },
+          "goaeReference": "GOÄ 870"
+        },
+        {
+          "id": "gruppentherapie",
+          "service": {
+            "de": "Gruppentherapie",
+            "ar": "العلاج الجماعي"
+          },
+          "description": {
+            "de": "Therapeutische Gruppensitzung mit 4–8 Teilnehmern.",
+            "ar": "جلسة علاج جماعية مع 4-8 مشاركين."
+          },
+          "pkvPrice": "50–70 €",
+          "selfPayPrice": "60 €",
+          "duration": {
+            "de": "90 Min.",
+            "ar": "90 دقيقة"
+          },
+          "goaeReference": "GOÄ 871"
+        },
+        {
+          "id": "elternberatung",
+          "service": {
+            "de": "Elternberatung",
+            "ar": "استشارة الوالدين"
+          },
+          "description": {
+            "de": "Beratungsgespräch mit den Eltern (ohne Kind).",
+            "ar": "جلسة استشارية مع الوالدين (بدون الطفل)."
+          },
+          "pkvPrice": "80–120 €",
+          "selfPayPrice": "100 €",
+          "duration": {
+            "de": "50 Min.",
+            "ar": "50 دقيقة"
+          },
+          "goaeReference": "GOÄ 4, 34"
+        },
+        {
+          "id": "familiengespraech",
+          "service": {
+            "de": "Familiengespräch",
+            "ar": "جلسة عائلية"
+          },
+          "description": {
+            "de": "Therapeutisches Gespräch mit der gesamten Familie.",
+            "ar": "جلسة علاجية مع جميع أفراد الأسرة."
+          },
+          "pkvPrice": "150–200 €",
+          "selfPayPrice": "180 €",
+          "duration": {
+            "de": "60–90 Min.",
+            "ar": "60-90 دقيقة"
+          },
+          "goaeReference": "GOÄ 817"
+        },
+        {
+          "id": "kunsttherapie",
+          "service": {
+            "de": "Kunsttherapie",
+            "ar": "العلاج بالفن"
+          },
+          "description": {
+            "de": "Kreativtherapeutische Einzelsitzung.",
+            "ar": "جلسة علاج إبداعي فردية."
+          },
+          "pkvPrice": "80–100 €",
+          "selfPayPrice": "90 €",
+          "duration": {
+            "de": "50 Min.",
+            "ar": "50 دقيقة"
+          }
+        },
+        {
+          "id": "logopaedie",
+          "service": {
+            "de": "Logopädie",
+            "ar": "علاج النطق"
+          },
+          "description": {
+            "de": "Logopädische Behandlung bei Sprach- und Sprechstörungen.",
+            "ar": "علاج النطق لاضطرابات اللغة والكلام."
+          },
+          "pkvPrice": "60–80 €",
+          "selfPayPrice": "70 €",
+          "duration": {
+            "de": "45 Min.",
+            "ar": "45 دقيقة"
+          }
+        },
+        {
+          "id": "attest",
+          "service": {
+            "de": "Ärztliches Attest",
+            "ar": "شهادة طبية"
+          },
+          "description": {
+            "de": "Ausstellung eines ärztlichen Attests oder Gutachtens.",
+            "ar": "إصدار شهادة أو تقرير طبي."
+          },
+          "pkvPrice": "30–50 €",
+          "selfPayPrice": "40 €",
+          "goaeReference": "GOÄ 70, 75"
+        },
+        {
+          "id": "bericht",
+          "service": {
+            "de": "Ausführlicher Bericht",
+            "ar": "تقرير مفصل"
+          },
+          "description": {
+            "de": "Erstellung eines ausführlichen ärztlichen Berichts für Schule, Jugendamt o. ä.",
+            "ar": "إعداد تقرير طبي مفصل للمدرسة أو مكتب رعاية الشباب أو ما شابه."
+          },
+          "pkvPrice": "80–150 €",
+          "selfPayPrice": "100 €",
+          "goaeReference": "GOÄ 75, 80"
+        }
+      ],
+      "tableFooter": {
+        "de": "Hinweis: Alle Preise sind Bruttobeträge. Die Abrechnung erfolgt nach der Gebührenordnung für Ärzte (GOÄ). Der tatsächliche Betrag kann je nach Behandlungsaufwand und Steigerungsfaktor variieren.",
+        "ar": "ملاحظة: جميع الأسعار شاملة الضريبة. تتم الفواتير وفقاً لجدول رسوم الأطباء. قد يختلف المبلغ الفعلي حسب جهد العلاج وعامل الزيادة."
+      }
+    },
+    "faq": {
+      "sectionTitle": {
+        "de": "Häufige Fragen zur Abrechnung",
+        "ar": "الأسئلة الشائعة حول الفواتير"
+      },
+      "items": [
+        {
+          "question": {
+            "de": "Wie erfolgt die Abrechnung bei privat Versicherten (PKV)?",
+            "ar": "كيف تتم الفواتير للمؤمنين بالتأمين الخاص؟"
+          },
+          "answer": {
+            "de": "Die Abrechnung erfolgt nach der Gebührenordnung für Ärzte (GOÄ). Sie erhalten eine Rechnung, die Sie bei Ihrer privaten Krankenversicherung zur Erstattung einreichen. Die Erstattungshöhe hängt von Ihrem Versicherungstarif ab. Wir empfehlen, vor Behandlungsbeginn die Kostenübernahme mit Ihrer Versicherung zu klären.",
+            "ar": "تتم الفواتير وفقاً لجدول رسوم الأطباء. ستتلقى فاتورة لتقديمها لشركة التأمين الخاصة للاسترداد. يعتمد مبلغ الاسترداد على تعريفة التأمين الخاصة بك. نوصي بتوضيح تغطية التكاليف مع شركة التأمين قبل بدء العلاج."
+          }
+        },
+        {
+          "question": {
+            "de": "Was kostet die Behandlung für Selbstzahler?",
+            "ar": "ما هي تكلفة العلاج للدافعين الذاتيين؟"
+          },
+          "answer": {
+            "de": "Als Selbstzahler erhalten Sie unsere Leistungen zu festgelegten Honorarsätzen. Die genauen Kosten hängen von Art und Umfang der Behandlung ab. Gerne erstellen wir Ihnen vor Behandlungsbeginn einen Kostenvoranschlag.",
+            "ar": "كدافع ذاتي، ستتلقى خدماتنا بأسعار محددة. تعتمد التكاليف الدقيقة على نوع ونطاق العلاج. يسعدنا تقديم تقدير للتكلفة قبل بدء العلاج."
+          }
+        },
+        {
+          "question": {
+            "de": "Übernimmt die private Krankenversicherung die Kosten vollständig?",
+            "ar": "هل يغطي التأمين الصحي الخاص التكاليف بالكامل؟"
+          },
+          "answer": {
+            "de": "Die Kostenerstattung hängt von Ihrem individuellen Versicherungstarif ab. In der Regel werden die Kosten für ärztliche und psychotherapeutische Leistungen anteilig oder vollständig erstattet. Psychiatrische Behandlungen sind meist ohne vorherige Genehmigung möglich.",
+            "ar": "يعتمد استرداد التكاليف على تعريفة التأمين الفردية الخاصة بك. عادةً ما يتم استرداد تكاليف الخدمات الطبية والعلاج النفسي جزئياً أو كلياً. عادة ما تكون العلاجات النفسية ممكنة دون موافقة مسبقة."
+          }
+        },
+        {
+          "question": {
+            "de": "Muss ich in Vorleistung gehen?",
+            "ar": "هل يجب أن أدفع مقدماً؟"
+          },
+          "answer": {
+            "de": "Ja, als PKV-Patient oder Selbstzahler begleichen Sie zunächst unsere Rechnung. Die Erstattung erfolgt dann durch Ihre Versicherung. Wir stellen Ihnen eine detaillierte Rechnung aus, die Sie einreichen können.",
+            "ar": "نعم، كمريض تأمين خاص أو دافع ذاتي، تقوم بدفع فاتورتنا أولاً. ثم يتم الاسترداد من قبل شركة التأمين الخاصة بك. نقدم لك فاتورة مفصلة يمكنك تقديمها."
+          }
+        },
+        {
+          "question": {
+            "de": "Kann ich als Beihilfeberechtigter behandelt werden?",
+            "ar": "هل يمكن علاجي كمستحق للإعانة؟"
+          },
+          "answer": {
+            "de": "Ja, selbstverständlich. Die Abrechnung erfolgt ebenfalls nach GOÄ. Sie reichen unsere Rechnung bei Ihrer Beihilfestelle und ggf. Ihrer privaten Zusatzversicherung ein.",
+            "ar": "نعم، بالطبع. تتم الفواتير أيضاً وفقاً لجدول رسوم الأطباء. تقدم فاتورتنا لمكتب الإعانات الخاص بك وإذا لزم الأمر لتأمينك التكميلي الخاص."
+          }
+        },
+        {
+          "question": {
+            "de": "Was ist bei nicht wahrgenommenen Terminen?",
+            "ar": "ماذا يحدث في حالة عدم حضور المواعيد؟"
+          },
+          "answer": {
+            "de": "Bitte sagen Sie vereinbarte Termine mindestens 24 Stunden vorher ab. Bei kurzfristiger Absage oder Nichterscheinen ohne Absage berechnen wir ein Ausfallhonorar, das nicht von der Versicherung erstattet wird.",
+            "ar": "يرجى إلغاء المواعيد المحجوزة قبل 24 ساعة على الأقل. في حالة الإلغاء المتأخر أو عدم الحضور دون إلغاء، نفرض رسوم غياب لا تُسترد من قبل شركة التأمين."
+          }
+        },
+        {
+          "question": {
+            "de": "Gibt es die Möglichkeit von Ratenzahlung?",
+            "ar": "هل هناك إمكانية للدفع بالتقسيط؟"
+          },
+          "answer": {
+            "de": "In besonderen Situationen können wir individuelle Zahlungsvereinbarungen treffen. Sprechen Sie uns gerne darauf an.",
+            "ar": "في حالات خاصة، يمكننا ترتيب اتفاقيات دفع فردية. لا تتردد في التحدث إلينا حول هذا الأمر."
+          }
+        }
+      ]
+    },
+    "cta": {
+      "title": {
+        "de": "Termin in der Privatpraxis vereinbaren",
+        "ar": "حجز موعد في العيادة الخاصة"
+      },
+      "description": {
+        "de": "Kontaktieren Sie uns für einen zeitnahen Termin. Wir beraten Sie gerne zu Kosten und Erstattungsmöglichkeiten.",
+        "ar": "تواصل معنا لحجز موعد قريب. يسعدنا تقديم المشورة حول التكاليف وإمكانيات الاسترداد."
+      },
+      "button": {
+        "de": "Privattermin anfragen",
+        "ar": "طلب موعد خاص"
+      }
+    }
+  }
+}

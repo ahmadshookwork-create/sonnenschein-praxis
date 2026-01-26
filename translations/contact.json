@@ -1,0 +1,400 @@
+{
+  "contact": {
+    "hero": {
+      "badge": {
+        "de": "Kontakt",
+        "ar": "اتصل بنا"
+      },
+      "title": {
+        "de": "Wir freuen uns auf Ihre Nachricht",
+        "ar": "نتطلع إلى رسالتكم"
+      },
+      "subtitle": {
+        "de": "Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Kontaktieren Sie uns – wir sind gerne für Sie da.",
+        "ar": "هل لديكم أسئلة أو ترغبون في حجز موعد؟ تواصلوا معنا - نحن هنا لمساعدتكم."
+      }
+    },
+    "quickActions": {
+      "bookAppointment": {
+        "title": {
+          "de": "Termin buchen",
+          "ar": "حجز موعد"
+        },
+        "subtitle": {
+          "de": "Per E-Mail anfragen",
+          "ar": "الاستفسار عبر البريد الإلكتروني"
+        }
+      },
+      "cancelAppointment": {
+        "title": {
+          "de": "Termin absagen",
+          "ar": "إلغاء الموعد"
+        },
+        "subtitle": {
+          "de": "Bitte frühzeitig melden",
+          "ar": "يرجى الإبلاغ مبكراً"
+        }
+      }
+    },
+    "form": {
+      "title": {
+        "de": "Terminanfrage / Nachricht",
+        "ar": "طلب موعد / رسالة"
+      },
+      "name": {
+        "label": {
+          "de": "Name *",
+          "ar": "الاسم *"
+        },
+        "placeholder": {
+          "de": "Ihr Name",
+          "ar": "اسمكم"
+        },
+        "error": {
+          "de": "Bitte geben Sie Ihren Namen ein",
+          "ar": "يرجى إدخال اسمكم"
+        }
+      },
+      "email": {
+        "label": {
+          "de": "E-Mail *",
+          "ar": "البريد الإلكتروني *"
+        },
+        "placeholder": {
+          "de": "ihre@email.de",
+          "ar": "بريدكم@email.de"
+        },
+        "errors": {
+          "required": {
+            "de": "Bitte geben Sie Ihre E-Mail-Adresse ein",
+            "ar": "يرجى إدخال عنوان بريدكم الإلكتروني"
+          },
+          "invalid": {
+            "de": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+            "ar": "يرجى إدخال عنوان بريد إلكتروني صالح"
+          }
+        }
+      },
+      "phone": {
+        "label": {
+          "de": "Telefon",
+          "ar": "الهاتف"
+        },
+        "placeholder": {
+          "de": "+49 123 456789",
+          "ar": "+49 123 456789"
+        }
+      },
+      "insuranceType": {
+        "label": {
+          "de": "Versicherungsart",
+          "ar": "نوع التأمين"
+        },
+        "placeholder": {
+          "de": "Bitte wählen...",
+          "ar": "يرجى الاختيار..."
+        }
+      },
+      "message": {
+        "label": {
+          "de": "Ihr Anliegen *",
+          "ar": "طلبكم *"
+        },
+        "placeholder": {
+          "de": "Beschreiben Sie kurz Ihr Anliegen oder nennen Sie uns Terminwünsche...",
+          "ar": "صفوا طلبكم بإيجاز أو أخبرونا بتفضيلات الموعد..."
+        },
+        "error": {
+          "de": "Bitte geben Sie eine Nachricht ein",
+          "ar": "يرجى إدخال رسالة"
+        }
+      },
+      "submit": {
+        "default": {
+          "de": "Jetzt Kontakt aufnehmen",
+          "ar": "تواصل معنا الآن"
+        },
+        "loading": {
+          "de": "Wird gesendet...",
+          "ar": "جارٍ الإرسال..."
+        }
+      },
+      "success": {
+        "title": {
+          "de": "Nachricht erfolgreich gesendet!",
+          "ar": "تم إرسال الرسالة بنجاح!"
+        },
+        "message": {
+          "de": "Vielen Dank für Ihre Anfrage. Wir melden uns schnellstmöglich bei Ihnen.",
+          "ar": "شكراً لاستفساركم. سنتواصل معكم في أقرب وقت ممكن."
+        }
+      },
+      "error": {
+        "de": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder rufen Sie uns an.",
+        "ar": "حدث خطأ. يرجى المحاولة مرة أخرى أو الاتصال بنا."
+      },
+      "notSpecified": {
+        "de": "Nicht angegeben",
+        "ar": "غير محدد"
+      }
+    },
+    "info": {
+      "contactDetails": {
+        "title": {
+          "de": "Kontaktdaten",
+          "ar": "بيانات الاتصال"
+        },
+        "address": {
+          "de": "Adresse",
+          "ar": "العنوان"
+        },
+        "phone": {
+          "de": "Telefon",
+          "ar": "الهاتف"
+        },
+        "email": {
+          "de": "E-Mail",
+          "ar": "البريد الإلكتروني"
+        }
+      },
+      "openingHours": {
+        "title": {
+          "de": "Öffnungszeiten",
+          "ar": "ساعات العمل"
+        },
+        "closed": {
+          "de": "Geschlossen",
+          "ar": "مغلق"
+        },
+        "phoneConsultation": {
+          "title": {
+            "de": "Telefonische Sprechzeiten",
+            "ar": "ساعات الاستشارة الهاتفية"
+          }
+        }
+      },
+      "reviews": {
+        "title": {
+          "de": "Bewertungen",
+          "ar": "التقييمات"
+        },
+        "googleReviews": {
+          "de": "Google Bewertungen ansehen",
+          "ar": "عرض تقييمات جوجل"
+        },
+        "shareExperience": {
+          "de": "Teilen Sie Ihre Erfahrungen mit anderen Familien!",
+          "ar": "شاركوا تجاربكم مع العائلات الأخرى!"
+        }
+      }
+    },
+    "directions": {
+      "title": {
+        "de": "Anfahrt & Lage",
+        "ar": "الوصول والموقع"
+      },
+      "subtitle": {
+        "de": "Unsere Praxis ist gut mit öffentlichen Verkehrsmitteln erreichbar.",
+        "ar": "يمكن الوصول إلى عيادتنا بسهولة بواسطة وسائل النقل العام."
+      },
+      "openInGoogleMaps": {
+        "de": "In Google Maps öffnen",
+        "ar": "فتح في خرائط جوجل"
+      },
+      "transport": {
+        "uBahnSBahn": {
+          "de": "U-Bahn & S-Bahn",
+          "ar": "مترو الأنفاق والقطار"
+        },
+        "bus": {
+          "de": "Bus",
+          "ar": "الحافلة"
+        },
+        "busLines": {
+          "de": "Linien:",
+          "ar": "الخطوط:"
+        },
+        "parking": {
+          "de": "Parken",
+          "ar": "مواقف السيارات"
+        },
+        "accessibility": {
+          "de": "Barrierefreiheit",
+          "ar": "إمكانية الوصول"
+        }
+      }
+    },
+    "emergency": {
+      "badge": {
+        "de": "Im Notfall",
+        "ar": "في حالات الطوارئ"
+      },
+      "title": {
+        "de": "Notfallnummern & Hilfe",
+        "ar": "أرقام الطوارئ والمساعدة"
+      },
+      "subtitle": {
+        "de": "Bei akuten Krisen oder Notfällen außerhalb unserer Sprechzeiten erreichen Sie folgende Stellen.",
+        "ar": "في حالات الأزمات الحادة أو الطوارئ خارج ساعات العمل، يمكنكم الاتصال بالجهات التالية."
+      },
+      "services": {
+        "fireRescue": {
+          "title": {
+            "de": "Feuerwehr / Rettungsdienst",
+            "ar": "الإطفاء / خدمة الإنقاذ"
+          },
+          "description": {
+            "de": "Bei akuter Lebensgefahr",
+            "ar": "في حالة الخطر على الحياة"
+          }
+        },
+        "vivantesChildPsychiatry": {
+          "title": {
+            "de": "Vivantes Kinder-Psychiatrie",
+            "ar": "طب نفس الأطفال - فيفانتس"
+          },
+          "description": {
+            "de": "Kinder-Notaufnahme Neukölln",
+            "ar": "طوارئ الأطفال نويكولن"
+          }
+        },
+        "berlinCrisisService": {
+          "title": {
+            "de": "Berliner Krisendienst",
+            "ar": "خدمة الأزمات في برلين"
+          },
+          "description": {
+            "de": "24h erreichbar, alle Bezirke",
+            "ar": "متاح على مدار الساعة، جميع المناطق"
+          }
+        },
+        "childEmergency": {
+          "title": {
+            "de": "Kindernotdienst",
+            "ar": "خدمة طوارئ الأطفال"
+          },
+          "description": {
+            "de": "Für Kinder in Notlagen",
+            "ar": "للأطفال في حالات الطوارئ"
+          }
+        },
+        "youthEmergency": {
+          "title": {
+            "de": "Jugendnotdienst",
+            "ar": "خدمة طوارئ الشباب"
+          },
+          "description": {
+            "de": "Für Jugendliche in Krisen",
+            "ar": "للمراهقين في الأزمات"
+          }
+        },
+        "girlsEmergency": {
+          "title": {
+            "de": "Mädchennotdienst",
+            "ar": "خدمة طوارئ الفتيات"
+          },
+          "description": {
+            "de": "Für Mädchen und junge Frauen",
+            "ar": "للفتيات والشابات"
+          }
+        },
+        "childProtection": {
+          "title": {
+            "de": "Kinderschutz-Hotline",
+            "ar": "خط حماية الطفل"
+          },
+          "description": {
+            "de": "Bei Verdacht auf Kindeswohlgefährdung",
+            "ar": "عند الاشتباه في تعرض الطفل للخطر"
+          }
+        },
+        "nummerGegenKummer": {
+          "title": {
+            "de": "Nummer gegen Kummer",
+            "ar": "رقم ضد الهموم"
+          },
+          "description": {
+            "de": "Kostenlos & anonym für Kinder",
+            "ar": "مجاني ومجهول للأطفال"
+          }
+        },
+        "parentHotline": {
+          "title": {
+            "de": "Elterntelefon",
+            "ar": "هاتف الوالدين"
+          },
+          "description": {
+            "de": "Kostenlose Beratung für Eltern – Mo–Fr 9–17 Uhr, Di+Do bis 19 Uhr",
+            "ar": "استشارة مجانية للوالدين - الإثنين-الجمعة 9-17، الثلاثاء والخميس حتى 19"
+          }
+        }
+      },
+      "religiousCounseling": {
+        "title": {
+          "de": "Religiöse Notfallseelsorge",
+          "ar": "الرعاية الروحية الدينية الطارئة"
+        },
+        "muslim": {
+          "title": {
+            "de": "Muslimische Seelsorge",
+            "ar": "الرعاية الروحية الإسلامية"
+          },
+          "description": {
+            "de": "Muslimisches SeelsorgeTelefon (MuTeS)",
+            "ar": "هاتف الرعاية الروحية الإسلامية (MuTeS)"
+          },
+          "hours": {
+            "de": "täglich 16–23 Uhr",
+            "ar": "يومياً من 16 إلى 23"
+          }
+        },
+        "jewish": {
+          "title": {
+            "de": "Jüdische Seelsorge",
+            "ar": "الرعاية الروحية اليهودية"
+          },
+          "description": {
+            "de": "Zentralwohlfahrtsstelle der Juden",
+            "ar": "مركز الرعاية المركزي لليهود"
+          },
+          "hours": {
+            "de": "24h erreichbar, kostenlos",
+            "ar": "متاح على مدار الساعة، مجاني"
+          }
+        },
+        "christian": {
+          "title": {
+            "de": "Christliche Seelsorge",
+            "ar": "الرعاية الروحية المسيحية"
+          },
+          "description": {
+            "de": "Telefonseelsorge (ev. & kath.)",
+            "ar": "الرعاية الروحية الهاتفية (بروتستانت وكاثوليك)"
+          },
+          "hours": {
+            "de": "24h erreichbar, kostenlos",
+            "ar": "متاح على مدار الساعة، مجاني"
+          }
+        }
+      }
+    },
+    "emailSubjects": {
+      "newContactRequest": {
+        "de": "Neue Kontaktanfrage - Praxis Dr. Allozy",
+        "ar": "طلب اتصال جديد - عيادة د. اللوزي"
+      },
+      "contactRequest": {
+        "de": "Kontaktanfrage - Praxis Dr. Allozy",
+        "ar": "طلب اتصال - عيادة د. اللوزي"
+      },
+      "appointmentBooking": {
+        "de": "Terminbuchung",
+        "ar": "حجز موعد"
+      },
+      "appointmentCancellation": {
+        "de": "Terminabsage",
+        "ar": "إلغاء الموعد"
+      }
+    }
+  }
+}

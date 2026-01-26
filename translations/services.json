@@ -1,0 +1,616 @@
+{
+  "services": {
+    "pageTitle": {
+      "de": "Leistungen",
+      "ar": "الخدمات"
+    },
+    "heroTitle": {
+      "de": "Umfassende Versorgung für alle Altersgruppen",
+      "ar": "رعاية شاملة لجميع الفئات العمرية"
+    },
+    "heroDescription": {
+      "de": "Von der Diagnostik über verschiedene Therapieformen bis zur Familienberatung – wir bieten ein breites Spektrum an Leistungen für Kinder, Jugendliche und ihre Familien.",
+      "ar": "من التشخيص إلى أشكال العلاج المختلفة وصولاً إلى الاستشارات الأسرية - نقدم مجموعة واسعة من الخدمات للأطفال والمراهقين وعائلاتهم."
+    },
+    "specializations": {
+      "sectionBadge": {
+        "de": "Unsere Schwerpunkte",
+        "ar": "تخصصاتنا"
+      },
+      "title": {
+        "de": "Spezialisierte Diagnostik",
+        "ar": "التشخيص المتخصص"
+      },
+      "description": {
+        "de": "Wir sind spezialisiert auf die umfassende Diagnostik von Autismus-Spektrum-Störungen und Teilleistungsstörungen – für eine fundierte Grundlage der Behandlung.",
+        "ar": "نحن متخصصون في التشخيص الشامل لاضطرابات طيف التوحد واضطرابات التعلم الجزئية - لتوفير أساس متين للعلاج."
+      },
+      "autismDiagnostics": {
+        "title": {
+          "de": "Autismusdiagnostik",
+          "ar": "تشخيص التوحد"
+        },
+        "description": {
+          "de": "Umfassende Diagnostik von Autismus-Spektrum-Störungen (ASS) bei Kindern und Jugendlichen nach aktuellen Leitlinien mit standardisierten Verfahren.",
+          "ar": "تشخيص شامل لاضطرابات طيف التوحد لدى الأطفال والمراهقين وفقاً للإرشادات الحالية باستخدام إجراءات موحدة."
+        },
+        "items": [
+          {
+            "de": "ADOS-2 (Autism Diagnostic Observation Schedule)",
+            "ar": "ADOS-2 (جدول مراقبة تشخيص التوحد)"
+          },
+          {
+            "de": "ADI-R (Diagnostisches Interview)",
+            "ar": "ADI-R (المقابلة التشخيصية)"
+          },
+          {
+            "de": "Entwicklungsanamnese",
+            "ar": "التاريخ التطوري"
+          },
+          {
+            "de": "Verhaltensbeobachtung",
+            "ar": "مراقبة السلوك"
+          },
+          {
+            "de": "Differentialdiagnostik",
+            "ar": "التشخيص التفريقي"
+          },
+          {
+            "de": "Ausführlicher Befundbericht",
+            "ar": "تقرير تشخيصي مفصل"
+          }
+        ]
+      },
+      "partialPerformanceDisorders": {
+        "title": {
+          "de": "Teilleistungsstörungsdiagnostik",
+          "ar": "تشخيص اضطرابات التعلم الجزئية"
+        },
+        "description": {
+          "de": "Fundierte Diagnostik von Lese-Rechtschreib-Störungen (LRS), Dyskalkulie und anderen Teilleistungsstörungen für gezielte Förderung.",
+          "ar": "تشخيص متين لاضطرابات القراءة والكتابة وعسر الحساب واضطرابات التعلم الجزئية الأخرى للدعم المستهدف."
+        },
+        "items": [
+          {
+            "de": "Lese-Rechtschreib-Diagnostik (LRS)",
+            "ar": "تشخيص اضطرابات القراءة والكتابة"
+          },
+          {
+            "de": "Dyskalkulie-Diagnostik (Rechenstörung)",
+            "ar": "تشخيص عسر الحساب (اضطراب الحساب)"
+          },
+          {
+            "de": "Standardisierte Leistungstests",
+            "ar": "اختبارات الأداء الموحدة"
+          },
+          {
+            "de": "Intelligenzdiagnostik",
+            "ar": "تشخيص الذكاء"
+          },
+          {
+            "de": "Ausschluss von Seh-/Hörstörungen",
+            "ar": "استبعاد اضطرابات البصر والسمع"
+          },
+          {
+            "de": "Förderempfehlungen für Schule",
+            "ar": "توصيات الدعم للمدرسة"
+          }
+        ]
+      }
+    },
+    "treatmentOffers": {
+      "title": {
+        "de": "Unsere Behandlungsangebote",
+        "ar": "عروض العلاج لدينا"
+      },
+      "description": {
+        "de": "Individuell abgestimmte Diagnostik und Therapie nach aktuellen wissenschaftlichen Standards.",
+        "ar": "تشخيص وعلاج مصمم بشكل فردي وفقاً للمعايير العلمية الحالية."
+      }
+    },
+    "targetGroups": {
+      "sectionTitle": {
+        "de": "Für wen wir da sind",
+        "ar": "من نخدمهم"
+      },
+      "sectionDescription": {
+        "de": "Spezialisierte Behandlung für verschiedene Alters- und Zielgruppen.",
+        "ar": "علاج متخصص لمختلف الفئات العمرية والمستهدفة."
+      },
+      "commonIssuesTitle": {
+        "de": "Häufige Themen und Störungsbilder:",
+        "ar": "المواضيع الشائعة والاضطرابات:"
+      },
+      "matchingServicesTitle": {
+        "de": "Passende Leistungen für",
+        "ar": "الخدمات المناسبة لـ"
+      }
+    },
+    "cta": {
+      "title": {
+        "de": "Welche Behandlung ist die richtige?",
+        "ar": "أي علاج هو المناسب؟"
+      },
+      "description": {
+        "de": "Im Erstgespräch klären wir gemeinsam, welche Leistungen für Ihr Kind und Ihre Familie am besten geeignet sind.",
+        "ar": "في الاستشارة الأولى نحدد معاً الخدمات الأنسب لطفلك وعائلتك."
+      },
+      "primaryButton": {
+        "de": "Erstgespräch vereinbaren",
+        "ar": "حجز موعد الاستشارة الأولى"
+      },
+      "secondaryButton": {
+        "de": "Team kennenlernen",
+        "ar": "تعرف على الفريق"
+      }
+    },
+    "items": [
+      {
+        "id": "diagnostik",
+        "title": {
+          "de": "Psychiatrische Diagnostik",
+          "ar": "التشخيص النفسي"
+        },
+        "description": {
+          "de": "Umfassende Diagnostik von psychischen Erkrankungen bei Kindern und Jugendlichen nach aktuellen wissenschaftlichen Standards.",
+          "ar": "تشخيص شامل للاضطرابات النفسية لدى الأطفال والمراهقين وفقاً للمعايير العلمية الحالية."
+        },
+        "details": [
+          {
+            "de": "Ausführliche Anamnese und Exploration",
+            "ar": "التاريخ المرضي والاستكشاف المفصل"
+          },
+          {
+            "de": "Standardisierte Testverfahren",
+            "ar": "إجراءات الاختبار الموحدة"
+          },
+          {
+            "de": "Autismusdiagnostik (ASS)",
+            "ar": "تشخيص التوحد (اضطراب طيف التوحد)"
+          },
+          {
+            "de": "Teilleistungsstörungsdiagnostik (LRS, Dyskalkulie)",
+            "ar": "تشخيص اضطرابات التعلم الجزئية (عسر القراءة، عسر الحساب)"
+          },
+          {
+            "de": "Entwicklungsdiagnostik",
+            "ar": "تشخيص النمو والتطور"
+          },
+          {
+            "de": "Intelligenz- und Leistungsdiagnostik",
+            "ar": "تشخيص الذكاء والأداء"
+          },
+          {
+            "de": "Aufmerksamkeits- und Konzentrationstests",
+            "ar": "اختبارات الانتباه والتركيز"
+          },
+          {
+            "de": "Persönlichkeitsdiagnostik",
+            "ar": "تشخيص الشخصية"
+          }
+        ]
+      },
+      {
+        "id": "einzeltherapie",
+        "title": {
+          "de": "Einzeltherapie",
+          "ar": "العلاج الفردي"
+        },
+        "description": {
+          "de": "Individuelle psychotherapeutische Behandlung für Kinder und Jugendliche mit verschiedenen psychischen Störungsbildern.",
+          "ar": "علاج نفسي فردي للأطفال والمراهقين الذين يعانون من اضطرابات نفسية مختلفة."
+        },
+        "details": [
+          {
+            "de": "Verhaltenstherapie",
+            "ar": "العلاج السلوكي"
+          },
+          {
+            "de": "Spieltherapeutische Elemente",
+            "ar": "عناصر العلاج باللعب"
+          },
+          {
+            "de": "Kognitive Therapieverfahren",
+            "ar": "أساليب العلاج المعرفي"
+          },
+          {
+            "de": "Traumatherapie",
+            "ar": "علاج الصدمات النفسية"
+          },
+          {
+            "de": "Angst- und Zwangsstörungen",
+            "ar": "اضطرابات القلق والوسواس القهري"
+          },
+          {
+            "de": "ADHS-Behandlung",
+            "ar": "علاج اضطراب فرط الحركة وتشتت الانتباه"
+          }
+        ]
+      },
+      {
+        "id": "gruppentherapie",
+        "title": {
+          "de": "Gruppentherapie",
+          "ar": "العلاج الجماعي"
+        },
+        "description": {
+          "de": "Therapeutische Gruppen für Kinder und Jugendliche zur Förderung sozialer Kompetenzen und gegenseitiger Unterstützung.",
+          "ar": "مجموعات علاجية للأطفال والمراهقين لتعزيز المهارات الاجتماعية والدعم المتبادل."
+        },
+        "details": [
+          {
+            "de": "Soziales Kompetenztraining",
+            "ar": "تدريب المهارات الاجتماعية"
+          },
+          {
+            "de": "Emotionsregulationsgruppen",
+            "ar": "مجموعات تنظيم المشاعر"
+          },
+          {
+            "de": "ADHS-Gruppen",
+            "ar": "مجموعات فرط الحركة وتشتت الانتباه"
+          },
+          {
+            "de": "Angstbewältigungsgruppen",
+            "ar": "مجموعات التغلب على القلق"
+          },
+          {
+            "de": "Selbstwertgruppen",
+            "ar": "مجموعات تقدير الذات"
+          },
+          {
+            "de": "Altersgerechte Gruppeneinteilung",
+            "ar": "تقسيم المجموعات حسب العمر"
+          }
+        ]
+      },
+      {
+        "id": "elternberatung",
+        "title": {
+          "de": "Elternberatung",
+          "ar": "استشارات الوالدين"
+        },
+        "description": {
+          "de": "Professionelle Beratung und Unterstützung für Eltern bei Erziehungsfragen und im Umgang mit psychischen Belastungen ihrer Kinder.",
+          "ar": "استشارات ودعم مهني للوالدين في مسائل التربية والتعامل مع الضغوط النفسية لأطفالهم."
+        },
+        "details": [
+          {
+            "de": "Erziehungsberatung",
+            "ar": "استشارات التربية"
+          },
+          {
+            "de": "Psychoedukation",
+            "ar": "التثقيف النفسي"
+          },
+          {
+            "de": "Unterstützung bei familiären Belastungen",
+            "ar": "الدعم في حالات الضغوط العائلية"
+          },
+          {
+            "de": "Anleitung zu therapeutischen Übungen",
+            "ar": "إرشادات للتمارين العلاجية"
+          },
+          {
+            "de": "Netzwerkgespräche mit Schule/Kita",
+            "ar": "التواصل مع المدرسة/الروضة"
+          },
+          {
+            "de": "Krisenintervention",
+            "ar": "التدخل في الأزمات"
+          }
+        ]
+      },
+      {
+        "id": "familientherapie",
+        "title": {
+          "de": "Familientherapie",
+          "ar": "العلاج الأسري"
+        },
+        "description": {
+          "de": "Systemische Arbeit mit der gesamten Familie zur Verbesserung der Kommunikation und Lösung von Konflikten.",
+          "ar": "العمل المنظومي مع الأسرة بأكملها لتحسين التواصل وحل النزاعات."
+        },
+        "details": [
+          {
+            "de": "Systemische Familientherapie",
+            "ar": "العلاج الأسري المنظومي"
+          },
+          {
+            "de": "Kommunikationstraining",
+            "ar": "تدريب مهارات التواصل"
+          },
+          {
+            "de": "Konfliktlösung",
+            "ar": "حل النزاعات"
+          },
+          {
+            "de": "Stärkung familiärer Ressourcen",
+            "ar": "تعزيز الموارد العائلية"
+          },
+          {
+            "de": "Begleitung bei Trennungssituationen",
+            "ar": "المرافقة في حالات الانفصال"
+          },
+          {
+            "de": "Interkulturelle Familienberatung",
+            "ar": "استشارات أسرية متعددة الثقافات"
+          }
+        ]
+      },
+      {
+        "id": "kunsttherapie",
+        "title": {
+          "de": "Kunsttherapie",
+          "ar": "العلاج بالفن"
+        },
+        "description": {
+          "de": "Kreative Therapiemethoden für Kinder und Jugendliche, die über künstlerischen Ausdruck Zugang zu Emotionen finden.",
+          "ar": "أساليب علاجية إبداعية للأطفال والمراهقين للوصول إلى المشاعر من خلال التعبير الفني."
+        },
+        "details": [
+          {
+            "de": "Malen und Zeichnen",
+            "ar": "الرسم والتلوين"
+          },
+          {
+            "de": "Plastisches Gestalten",
+            "ar": "التشكيل والنحت"
+          },
+          {
+            "de": "Collage-Techniken",
+            "ar": "تقنيات الكولاج"
+          },
+          {
+            "de": "Nonverbale Ausdrucksmöglichkeiten",
+            "ar": "وسائل التعبير غير اللفظي"
+          },
+          {
+            "de": "Förderung von Kreativität",
+            "ar": "تعزيز الإبداع"
+          },
+          {
+            "de": "Verarbeitung von Traumata",
+            "ar": "معالجة الصدمات النفسية"
+          }
+        ]
+      },
+      {
+        "id": "logopaedie",
+        "title": {
+          "de": "Logopädie",
+          "ar": "علاج النطق واللغة"
+        },
+        "description": {
+          "de": "Behandlung von Sprach-, Sprech- und Kommunikationsstörungen bei Kindern und Jugendlichen.",
+          "ar": "علاج اضطرابات اللغة والنطق والتواصل لدى الأطفال والمراهقين."
+        },
+        "details": [
+          {
+            "de": "Sprachentwicklungsstörungen",
+            "ar": "اضطرابات تطور اللغة"
+          },
+          {
+            "de": "Artikulationsstörungen",
+            "ar": "اضطرابات النطق"
+          },
+          {
+            "de": "Stottern und Poltern",
+            "ar": "التأتأة والتلعثم"
+          },
+          {
+            "de": "Mutismus",
+            "ar": "الصمت الانتقائي"
+          },
+          {
+            "de": "Sprachförderung",
+            "ar": "تعزيز اللغة"
+          },
+          {
+            "de": "Mehrsprachige Therapie",
+            "ar": "العلاج متعدد اللغات"
+          }
+        ]
+      },
+      {
+        "id": "medikation",
+        "title": {
+          "de": "Medikamentöse Behandlung",
+          "ar": "العلاج الدوائي"
+        },
+        "description": {
+          "de": "Bei Bedarf sorgfältig abgewogene medikamentöse Therapie als Teil eines ganzheitlichen Behandlungskonzepts.",
+          "ar": "علاج دوائي مدروس بعناية عند الحاجة كجزء من مفهوم علاجي شامل."
+        },
+        "details": [
+          {
+            "de": "ADHS-Medikation",
+            "ar": "أدوية فرط الحركة وتشتت الانتباه"
+          },
+          {
+            "de": "Antidepressiva bei Jugendlichen",
+            "ar": "مضادات الاكتئاب للمراهقين"
+          },
+          {
+            "de": "Angstlösende Medikamente",
+            "ar": "أدوية مضادة للقلق"
+          },
+          {
+            "de": "Regelmäßige Kontrollen",
+            "ar": "فحوصات دورية منتظمة"
+          },
+          {
+            "de": "Engmaschige Betreuung",
+            "ar": "متابعة طبية مكثفة"
+          },
+          {
+            "de": "Aufklärung über Nebenwirkungen",
+            "ar": "التوعية بالآثار الجانبية"
+          }
+        ]
+      }
+    ],
+    "targetGroupDescriptions": {
+      "kinder": {
+        "title": {
+          "de": "Kinder",
+          "ar": "الأطفال"
+        },
+        "ageRange": {
+          "de": "0–12 Jahre",
+          "ar": "0-12 سنة"
+        },
+        "description": {
+          "de": "Behandlung von psychischen Störungen im Kindesalter mit altersgerechten, spielerischen Methoden und enger Einbeziehung der Eltern.",
+          "ar": "علاج الاضطرابات النفسية في مرحلة الطفولة بأساليب مناسبة للعمر وطرق لعب علاجية مع إشراك الوالدين بشكل وثيق."
+        },
+        "commonIssues": [
+          {
+            "de": "ADHS und Konzentrationsprobleme",
+            "ar": "فرط الحركة ومشاكل التركيز"
+          },
+          {
+            "de": "Ängste und Phobien",
+            "ar": "المخاوف والرهاب"
+          },
+          {
+            "de": "Trennungsängste",
+            "ar": "قلق الانفصال"
+          },
+          {
+            "de": "Entwicklungsverzögerungen",
+            "ar": "تأخر النمو والتطور"
+          },
+          {
+            "de": "Emotionale Störungen",
+            "ar": "الاضطرابات العاطفية"
+          },
+          {
+            "de": "Verhaltensauffälligkeiten",
+            "ar": "السلوكيات غير الطبيعية"
+          }
+        ]
+      },
+      "jugendliche": {
+        "title": {
+          "de": "Jugendliche",
+          "ar": "المراهقون"
+        },
+        "ageRange": {
+          "de": "13–21 Jahre",
+          "ar": "13-21 سنة"
+        },
+        "description": {
+          "de": "Spezialisierte Behandlung für Jugendliche und junge Erwachsene mit Verständnis für die besonderen Herausforderungen dieser Lebensphase.",
+          "ar": "علاج متخصص للمراهقين والشباب مع فهم التحديات الخاصة بهذه المرحلة العمرية."
+        },
+        "commonIssues": [
+          {
+            "de": "Depressionen",
+            "ar": "الاكتئاب"
+          },
+          {
+            "de": "Angststörungen",
+            "ar": "اضطرابات القلق"
+          },
+          {
+            "de": "Essstörungen",
+            "ar": "اضطرابات الأكل"
+          },
+          {
+            "de": "Selbstverletzendes Verhalten",
+            "ar": "إيذاء النفس"
+          },
+          {
+            "de": "Schulvermeidung",
+            "ar": "تجنب المدرسة"
+          },
+          {
+            "de": "Identitätsfragen",
+            "ar": "أسئلة الهوية"
+          }
+        ]
+      },
+      "eltern": {
+        "title": {
+          "de": "Eltern",
+          "ar": "الوالدون"
+        },
+        "ageRange": {
+          "de": "",
+          "ar": ""
+        },
+        "description": {
+          "de": "Umfassende Beratung und Unterstützung für Eltern, um sie in ihrer Erziehungsrolle zu stärken und bei Belastungen zu entlasten.",
+          "ar": "استشارات ودعم شامل للوالدين لتعزيز دورهم التربوي وتخفيف الضغوط عنهم."
+        },
+        "commonIssues": [
+          {
+            "de": "Erziehungsunsicherheiten",
+            "ar": "عدم اليقين في التربية"
+          },
+          {
+            "de": "Umgang mit Verhaltensauffälligkeiten",
+            "ar": "التعامل مع السلوكيات غير الطبيعية"
+          },
+          {
+            "de": "Überlastung und Burnout",
+            "ar": "الإرهاق والاحتراق النفسي"
+          },
+          {
+            "de": "Konflikte mit Kindern/Jugendlichen",
+            "ar": "النزاعات مع الأطفال/المراهقين"
+          },
+          {
+            "de": "Trennungssituationen",
+            "ar": "حالات الانفصال"
+          },
+          {
+            "de": "Psychische Erkrankung des Kindes",
+            "ar": "المرض النفسي للطفل"
+          }
+        ]
+      },
+      "familien": {
+        "title": {
+          "de": "Familien",
+          "ar": "العائلات"
+        },
+        "ageRange": {
+          "de": "",
+          "ar": ""
+        },
+        "description": {
+          "de": "Systemische Arbeit mit dem gesamten Familiensystem zur Verbesserung des Zusammenlebens und der Kommunikation.",
+          "ar": "العمل المنظومي مع النظام الأسري بأكمله لتحسين التعايش والتواصل."
+        },
+        "commonIssues": [
+          {
+            "de": "Kommunikationsprobleme",
+            "ar": "مشاكل التواصل"
+          },
+          {
+            "de": "Familiäre Konflikte",
+            "ar": "النزاعات العائلية"
+          },
+          {
+            "de": "Geschwisterrivalität",
+            "ar": "التنافس بين الأشقاء"
+          },
+          {
+            "de": "Patchwork-Situationen",
+            "ar": "حالات الأسر المختلطة"
+          },
+          {
+            "de": "Kulturelle Herausforderungen",
+            "ar": "التحديات الثقافية"
+          },
+          {
+            "de": "Belastende Lebensereignisse",
+            "ar": "الأحداث الحياتية المجهدة"
+          }
+        ]
+      }
+    }
+  }
+}

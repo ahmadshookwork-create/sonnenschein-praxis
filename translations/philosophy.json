@@ -1,0 +1,99 @@
+{
+  "philosophy": {
+    "sectionLabel": {
+      "de": "Unsere Philosophie",
+      "ar": "فلسفتنا"
+    },
+    "title": {
+      "de": "Professionelle Hilfe mit Herz und Verstand",
+      "ar": "مساعدة مهنية بالقلب والعقل"
+    },
+    "titleHighlight": {
+      "de": "Herz und Verstand",
+      "ar": "القلب والعقل"
+    },
+    "description": {
+      "de": "In der Praxis Dr. Allozy verbinden wir fachärztliche Kompetenz mit einem tiefen Verständnis für die individuellen Bedürfnisse jeder Familie. Unser multiprofessionelles Team arbeitet Hand in Hand, um die bestmögliche Versorgung zu gewährleisten.",
+      "ar": "في عيادة الدكتور اللوزي، نجمع بين الكفاءة الطبية المتخصصة والفهم العميق للاحتياجات الفردية لكل عائلة. يعمل فريقنا متعدد التخصصات يداً بيد لضمان أفضل رعاية ممكنة."
+    },
+    "points": {
+      "culturallySensitive": {
+        "title": {
+          "de": "Kultursensible Behandlung",
+          "ar": "علاج يراعي الخصوصية الثقافية"
+        },
+        "description": {
+          "de": "Wir verstehen die Bedeutung kultureller Hintergründe und bieten Behandlung, die verschiedene kulturelle Kontexte respektiert und integriert.",
+          "ar": "نحن نفهم أهمية الخلفيات الثقافية ونقدم علاجاً يحترم ويدمج السياقات الثقافية المختلفة."
+        }
+      },
+      "scientificallyBased": {
+        "title": {
+          "de": "Wissenschaftlich fundiert",
+          "ar": "قائم على أسس علمية"
+        },
+        "description": {
+          "de": "Unsere Therapien basieren auf aktuellen wissenschaftlichen Erkenntnissen und bewährten Behandlungsmethoden der Kinder- und Jugendpsychiatrie.",
+          "ar": "تستند علاجاتنا إلى أحدث المعارف العلمية وطرق العلاج المُثبتة في الطب النفسي للأطفال والمراهقين."
+        }
+      },
+      "holisticApproach": {
+        "title": {
+          "de": "Ganzheitlicher Ansatz",
+          "ar": "نهج شامل"
+        },
+        "description": {
+          "de": "Wir betrachten das Kind im Kontext seiner Familie und seines sozialen Umfelds. Elternarbeit und Familientherapie sind feste Bestandteile unserer Behandlung.",
+          "ar": "ننظر إلى الطفل في سياق عائلته ومحيطه الاجتماعي. العمل مع الوالدين والعلاج الأسري جزء أساسي من علاجنا."
+        }
+      },
+      "trustfulAtmosphere": {
+        "title": {
+          "de": "Vertrauensvolle Atmosphäre",
+          "ar": "جو من الثقة"
+        },
+        "description": {
+          "de": "In unserer Praxis schaffen wir eine warme, einladende Umgebung, in der sich Kinder, Jugendliche und Eltern sicher und verstanden fühlen.",
+          "ar": "نخلق في عيادتنا بيئة دافئة ومرحّبة يشعر فيها الأطفال والمراهقون والآباء بالأمان والتفهّم."
+        }
+      }
+    },
+    "quote": {
+      "text": {
+        "de": "Jedes Kind verdient es, gehört und verstanden zu werden.",
+        "ar": "كل طفل يستحق أن يُسمع ويُفهم."
+      },
+      "author": {
+        "de": "Dr. med. Basel Allozy",
+        "ar": "د. باسل اللوزي"
+      }
+    },
+    "imageAlt": {
+      "de": "Praxis Dr. Allozy - Freundliches Sprechzimmer",
+      "ar": "عيادة الدكتور اللوزي - غرفة استشارة ودية"
+    },
+    "stats": {
+      "teamMembers": {
+        "value": "15+",
+        "label": {
+          "de": "Team-Mitglieder",
+          "ar": "أعضاء الفريق"
+        }
+      },
+      "languages": {
+        "value": "10+",
+        "label": {
+          "de": "Sprachen",
+          "ar": "لغات"
+        }
+      },
+      "engagement": {
+        "value": "∞",
+        "label": {
+          "de": "Engagement",
+          "ar": "التزام"
+        }
+      }
+    }
+  }
+}

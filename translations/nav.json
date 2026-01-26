@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": {
+      "de": "Startseite",
+      "ar": "الصفحة الرئيسية"
+    },
+    "services": {
+      "de": "Leistungen",
+      "ar": "الخدمات"
+    },
+    "team": {
+      "de": "Team",
+      "ar": "الفريق الطبي"
+    },
+    "gkv": {
+      "de": "GKV",
+      "ar": "التأمين الصحي القانوني"
+    },
+    "privatePractice": {
+      "de": "Privatpraxis",
+      "ar": "العيادة الخاصة"
+    },
+    "forms": {
+      "de": "Formulare",
+      "ar": "النماذج"
+    },
+    "career": {
+      "de": "Karriere",
+      "ar": "الوظائف"
+    },
+    "contact": {
+      "de": "Kontakt",
+      "ar": "اتصل بنا"
+    }
+  },
+  "cta": {
+    "requestAppointment": {
+      "de": "Termin anfragen",
+      "ar": "طلب موعد"
+    }
+  },
+  "accessibility": {
+    "skipToContent": {
+      "de": "Zum Hauptinhalt springen",
+      "ar": "انتقل إلى المحتوى الرئيسي"
+    },
+    "closeMenu": {
+      "de": "Menü schließen",
+      "ar": "إغلاق القائمة"
+    },
+    "openMenu": {
+      "de": "Menü öffnen",
+      "ar": "فتح القائمة"
+    }
+  },
+  "branding": {
+    "practiceName": {
+      "de": "Praxis Dr. Allozy",
+      "ar": "عيادة د. اللوزي"
+    },
+    "specialty": {
+      "de": "Kinder- & Jugendpsychiatrie",
+      "ar": "الطب النفسي للأطفال والمراهقين"
+    }
+  },
+  "dropdown": {
+    "sectionTitle": {
+      "de": "Unsere Schwerpunkte",
+      "ar": "تخصصاتنا"
+    },
+    "autismDiagnostics": {
+      "title": {
+        "de": "Autismusdiagnostik",
+        "ar": "تشخيص التوحد"
+      },
+      "description": {
+        "de": "Umfassende ASS-Diagnostik nach Leitlinien mit ADOS-2 und ADI-R",
+        "ar": "تشخيص شامل لاضطراب طيف التوحد وفق الإرشادات الطبية باستخدام ADOS-2 و ADI-R"
+      }
+    },
+    "learningDisorders": {
+      "title": {
+        "de": "Teilleistungsstörungen",
+        "ar": "اضطرابات التعلم الجزئية"
+      },
+      "description": {
+        "de": "LRS- und Dyskalkulie-Diagnostik für gezielte Förderung",
+        "ar": "تشخيص عسر القراءة وعسر الحساب للدعم الموجه"
+      }
+    },
+    "allServices": {
+      "title": {
+        "de": "Alle Leistungen",
+        "ar": "جميع الخدمات"
+      },
+      "description": {
+        "de": "Unser vollständiges Behandlungsspektrum im Überblick",
+        "ar": "نظرة شاملة على جميع خدماتنا العلاجية"
+      }
+    }
+  }
+}

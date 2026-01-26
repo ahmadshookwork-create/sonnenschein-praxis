@@ -1,0 +1,292 @@
+{
+  "privacy": {
+    "meta": {
+      "title": {
+        "de": "Datenschutzerklärung",
+        "ar": "سياسة الخصوصية"
+      },
+      "description": {
+        "de": "Datenschutzerklärung der Praxis Dr. Allozy Dr. med. Basel Allozy - Kinder- und Jugendpsychiatrie Berlin.",
+        "ar": "سياسة الخصوصية لعيادة الدكتور اللوزي - الدكتور باسل اللوزي - طب نفس الأطفال والمراهقين برلين."
+      }
+    },
+    "header": {
+      "badge": {
+        "de": "Datenschutz",
+        "ar": "حماية البيانات"
+      },
+      "title": {
+        "de": "Datenschutzerklärung",
+        "ar": "سياسة الخصوصية"
+      },
+      "subtitle": {
+        "de": "Informationen zum Schutz Ihrer persönlichen Daten bei der Nutzung unserer Website.",
+        "ar": "معلومات حول حماية بياناتك الشخصية عند استخدام موقعنا الإلكتروني."
+      }
+    },
+    "section1": {
+      "title": {
+        "de": "1. Datenschutz auf einen Blick",
+        "ar": "1. نظرة عامة على حماية البيانات"
+      },
+      "generalNotice": {
+        "title": {
+          "de": "Allgemeine Hinweise",
+          "ar": "ملاحظات عامة"
+        },
+        "content": {
+          "de": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.",
+          "ar": "توفر الملاحظات التالية نظرة عامة بسيطة حول ما يحدث لبياناتك الشخصية عند زيارة هذا الموقع. البيانات الشخصية هي جميع البيانات التي يمكن من خلالها التعرف عليك شخصياً."
+        }
+      }
+    },
+    "section2": {
+      "title": {
+        "de": "2. Verantwortliche Stelle",
+        "ar": "2. الجهة المسؤولة"
+      },
+      "content": {
+        "de": "Verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
+        "ar": "الجهة المسؤولة عن معالجة البيانات على هذا الموقع هي:"
+      },
+      "practiceName": {
+        "de": "Praxis Dr. Allozy",
+        "ar": "عيادة الدكتور اللوزي"
+      },
+      "doctorName": {
+        "de": "Dr. med. Basel Allozy",
+        "ar": "د. باسل اللوزي"
+      },
+      "phone": {
+        "de": "Telefon:",
+        "ar": "الهاتف:"
+      },
+      "email": {
+        "de": "E-Mail:",
+        "ar": "البريد الإلكتروني:"
+      }
+    },
+    "section3": {
+      "title": {
+        "de": "3. Datenerfassung auf dieser Website",
+        "ar": "3. جمع البيانات على هذا الموقع"
+      },
+      "serverLogs": {
+        "title": {
+          "de": "Server-Log-Dateien",
+          "ar": "ملفات سجل الخادم"
+        },
+        "content": {
+          "de": "Der Provider dieser Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:",
+          "ar": "يقوم مزود هذه الصفحات بجمع وتخزين المعلومات تلقائياً في ما يسمى بملفات سجل الخادم، والتي يرسلها متصفحك إلينا تلقائياً. وهي:"
+        },
+        "items": {
+          "browserType": {
+            "de": "Browsertyp und Browserversion",
+            "ar": "نوع المتصفح وإصداره"
+          },
+          "operatingSystem": {
+            "de": "Verwendetes Betriebssystem",
+            "ar": "نظام التشغيل المستخدم"
+          },
+          "referrerUrl": {
+            "de": "Referrer URL",
+            "ar": "عنوان URL المُحيل"
+          },
+          "hostname": {
+            "de": "Hostname des zugreifenden Rechners",
+            "ar": "اسم المضيف للجهاز المتصل"
+          },
+          "serverTime": {
+            "de": "Uhrzeit der Serveranfrage",
+            "ar": "وقت طلب الخادم"
+          },
+          "ipAddress": {
+            "de": "IP-Adresse",
+            "ar": "عنوان IP"
+          }
+        },
+        "legalBasis": {
+          "de": "Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.",
+          "ar": "لا يتم دمج هذه البيانات مع مصادر بيانات أخرى. يتم جمع هذه البيانات على أساس المادة 6 الفقرة 1 البند و من اللائحة العامة لحماية البيانات."
+        }
+      },
+      "contactForm": {
+        "title": {
+          "de": "Kontaktformular",
+          "ar": "نموذج الاتصال"
+        },
+        "content": {
+          "de": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.",
+          "ar": "إذا أرسلت إلينا استفسارات عبر نموذج الاتصال، فسيتم تخزين بياناتك من نموذج الاستفسار بما في ذلك بيانات الاتصال التي قدمتها لغرض معالجة الاستفسار وفي حالة الأسئلة اللاحقة. لن نشارك هذه البيانات دون موافقتك."
+        },
+        "legalBasis": {
+          "de": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist.",
+          "ar": "تتم معالجة هذه البيانات على أساس المادة 6 الفقرة 1 البند ب من اللائحة العامة لحماية البيانات، إذا كان استفسارك يتعلق بتنفيذ عقد أو ضروري لتنفيذ إجراءات ما قبل التعاقد."
+        }
+      },
+      "applicationForm": {
+        "title": {
+          "de": "Bewerbungsformular",
+          "ar": "نموذج التقديم للوظائف"
+        },
+        "content": {
+          "de": "Die über das Bewerbungsformular übermittelten Daten werden ausschließlich zur Bearbeitung Ihrer Bewerbung verwendet. Die Daten werden nach Abschluss des Bewerbungsverfahrens gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+          "ar": "يتم استخدام البيانات المرسلة عبر نموذج التقديم حصرياً لمعالجة طلبك. سيتم حذف البيانات بعد انتهاء إجراءات التقديم، ما لم تكن هناك التزامات قانونية بالاحتفاظ بها."
+        }
+      }
+    },
+    "section4": {
+      "title": {
+        "de": "4. Besondere Kategorien personenbezogener Daten (Patientendaten)",
+        "ar": "4. الفئات الخاصة من البيانات الشخصية (بيانات المرضى)"
+      },
+      "intro": {
+        "de": "Als ärztliche Praxis verarbeiten wir Gesundheitsdaten unserer Patienten. Diese unterliegen einem besonderen Schutz nach Art. 9 DSGVO und der ärztlichen Schweigepflicht (§ 203 StGB).",
+        "ar": "بصفتنا عيادة طبية، نقوم بمعالجة البيانات الصحية لمرضانا. تخضع هذه البيانات لحماية خاصة وفقاً للمادة 9 من اللائحة العامة لحماية البيانات والسرية الطبية (المادة 203 من القانون الجنائي)."
+      },
+      "importantNotes": {
+        "title": {
+          "de": "Wichtige Hinweise:",
+          "ar": "ملاحظات هامة:"
+        },
+        "items": {
+          "dataCollection": {
+            "de": "Patientendaten werden ausschließlich im Rahmen der ärztlichen Behandlung erhoben und verarbeitet.",
+            "ar": "يتم جمع ومعالجة بيانات المرضى حصرياً في إطار العلاج الطبي."
+          },
+          "legalBasis": {
+            "de": "Die Verarbeitung erfolgt auf Grundlage von Art. 9 Abs. 2 lit. h DSGVO (Gesundheitsversorgung).",
+            "ar": "تتم المعالجة على أساس المادة 9 الفقرة 2 البند ح من اللائحة العامة لحماية البيانات (الرعاية الصحية)."
+          },
+          "retention": {
+            "de": "Patientendaten werden nach den gesetzlichen Aufbewahrungsfristen (mind. 10 Jahre) gespeichert.",
+            "ar": "يتم تخزين بيانات المرضى وفقاً لفترات الاحتفاظ القانونية (10 سنوات على الأقل)."
+          },
+          "disclosure": {
+            "de": "Eine Weitergabe erfolgt nur mit Ihrer Einwilligung oder wenn gesetzlich vorgeschrieben.",
+            "ar": "لا يتم الإفصاح عن البيانات إلا بموافقتك أو عندما يكون ذلك مطلوباً قانونياً."
+          }
+        }
+      }
+    },
+    "section5": {
+      "title": {
+        "de": "5. Ihre Rechte",
+        "ar": "5. حقوقك"
+      },
+      "intro": {
+        "de": "Sie haben jederzeit das Recht:",
+        "ar": "لديك الحق في أي وقت في:"
+      },
+      "rights": {
+        "information": {
+          "title": {
+            "de": "Auskunft",
+            "ar": "الاستعلام"
+          },
+          "desc": {
+            "de": "über Ihre bei uns gespeicherten Daten zu erhalten (Art. 15 DSGVO)",
+            "ar": "الحصول على معلومات حول البيانات المخزنة لدينا (المادة 15 من اللائحة العامة لحماية البيانات)"
+          }
+        },
+        "correction": {
+          "title": {
+            "de": "Berichtigung",
+            "ar": "التصحيح"
+          },
+          "desc": {
+            "de": "unrichtiger Daten zu verlangen (Art. 16 DSGVO)",
+            "ar": "المطالبة بتصحيح البيانات غير الصحيحة (المادة 16 من اللائحة العامة لحماية البيانات)"
+          }
+        },
+        "deletion": {
+          "title": {
+            "de": "Löschung",
+            "ar": "الحذف"
+          },
+          "desc": {
+            "de": "Ihrer Daten zu verlangen (Art. 17 DSGVO)",
+            "ar": "المطالبة بحذف بياناتك (المادة 17 من اللائحة العامة لحماية البيانات)"
+          }
+        },
+        "restriction": {
+          "title": {
+            "de": "Einschränkung",
+            "ar": "تقييد المعالجة"
+          },
+          "desc": {
+            "de": "der Verarbeitung zu verlangen (Art. 18 DSGVO)",
+            "ar": "المطالبة بتقييد المعالجة (المادة 18 من اللائحة العامة لحماية البيانات)"
+          }
+        },
+        "portability": {
+          "title": {
+            "de": "Datenübertragbarkeit",
+            "ar": "نقل البيانات"
+          },
+          "desc": {
+            "de": "zu verlangen (Art. 20 DSGVO)",
+            "ar": "المطالبة بنقل البيانات (المادة 20 من اللائحة العامة لحماية البيانات)"
+          }
+        },
+        "objection": {
+          "title": {
+            "de": "Widerspruch",
+            "ar": "الاعتراض"
+          },
+          "desc": {
+            "de": "gegen die Verarbeitung einzulegen (Art. 21 DSGVO)",
+            "ar": "تقديم اعتراض على المعالجة (المادة 21 من اللائحة العامة لحماية البيانات)"
+          }
+        }
+      },
+      "supervisoryAuthority": {
+        "de": "Sie haben außerdem das Recht, sich bei einer Aufsichtsbehörde zu beschweren (Art. 77 DSGVO).",
+        "ar": "لديك أيضاً الحق في تقديم شكوى إلى هيئة رقابية (المادة 77 من اللائحة العامة لحماية البيانات)."
+      },
+      "supervisoryAuthorityLabel": {
+        "de": "Aufsichtsbehörde",
+        "ar": "الهيئة الرقابية"
+      }
+    },
+    "section6": {
+      "title": {
+        "de": "6. Cookies",
+        "ar": "6. ملفات تعريف الارتباط"
+      },
+      "content": {
+        "de": "Diese Website verwendet technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind. Eine gesonderte Einwilligung ist hierfür nicht erforderlich (Art. 6 Abs. 1 lit. f DSGVO).",
+        "ar": "يستخدم هذا الموقع ملفات تعريف الارتباط الضرورية تقنياً والمطلوبة لتشغيل الموقع. لا يلزم الحصول على موافقة منفصلة لذلك (المادة 6 الفقرة 1 البند و من اللائحة العامة لحماية البيانات)."
+      },
+      "noMarketing": {
+        "de": "Wir verwenden keine Marketing- oder Analyse-Cookies.",
+        "ar": "نحن لا نستخدم ملفات تعريف الارتباط التسويقية أو التحليلية."
+      }
+    },
+    "section7": {
+      "title": {
+        "de": "7. SSL-/TLS-Verschlüsselung",
+        "ar": "7. تشفير SSL/TLS"
+      },
+      "content": {
+        "de": "Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von 'http://' auf 'https://' wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.",
+        "ar": "يستخدم هذا الموقع تشفير SSL/TLS لأسباب أمنية ولحماية نقل المحتوى السري. يمكنك التعرف على الاتصال المشفر من خلال تغيير شريط العنوان في المتصفح من \"http://\" إلى \"https://\" ومن خلال رمز القفل في شريط المتصفح."
+      }
+    },
+    "section8": {
+      "title": {
+        "de": "8. Änderungen dieser Datenschutzerklärung",
+        "ar": "8. تغييرات سياسة الخصوصية هذه"
+      },
+      "content": {
+        "de": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen umzusetzen.",
+        "ar": "نحتفظ بالحق في تعديل سياسة الخصوصية هذه لضمان توافقها دائماً مع المتطلبات القانونية الحالية أو لتنفيذ التغييرات على خدماتنا."
+      },
+      "lastUpdated": {
+        "de": "Stand: Dezember 2024",
+        "ar": "آخر تحديث: ديسمبر 2024"
+      }
+    }
+  }
+}

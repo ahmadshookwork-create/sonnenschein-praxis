@@ -15,6 +15,7 @@ import {
   Stethoscope,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const navLinks = [
   { href: "/", label: "Startseite" },
@@ -201,8 +202,9 @@ export default function Navigation() {
               )}
             </div>
 
-            {/* CTA Button + Mobile Toggle */}
+            {/* Language Switcher + CTA Button + Mobile Toggle */}
             <div className="flex items-center gap-3">
+              <LanguageSwitcher className="hidden sm:flex" />
               <Link
                 href="/kontakt"
                 className="hidden sm:flex items-center gap-2 btn-primary text-sm"
@@ -298,8 +300,9 @@ export default function Navigation() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.05 }}
-                  className="pt-4"
+                  className="pt-4 space-y-3"
                 >
+                  <LanguageSwitcher className="justify-center" />
                   <Link
                     href="/kontakt"
                     onClick={() => setIsOpen(false)}

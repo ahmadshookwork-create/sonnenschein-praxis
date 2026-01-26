@@ -1,0 +1,32 @@
+{
+  "common": {
+    "buttons": {
+      "submit": { "de": "Absenden", "ar": "إرسال" },
+      "cancel": { "de": "Abbrechen", "ar": "إلغاء" },
+      "back": { "de": "Zurück", "ar": "رجوع" },
+      "next": { "de": "Weiter", "ar": "التالي" },
+      "readMore": { "de": "Mehr erfahren", "ar": "اقرأ المزيد" },
+      "contact": { "de": "Kontakt", "ar": "اتصل بنا" },
+      "appointment": { "de": "Termin vereinbaren", "ar": "حجز موعد" }
+    },
+    "labels": {
+      "phone": { "de": "Telefon", "ar": "هاتف" },
+      "email": { "de": "E-Mail", "ar": "البريد الإلكتروني" },
+      "address": { "de": "Adresse", "ar": "العنوان" },
+      "hours": { "de": "Öffnungszeiten", "ar": "ساعات العمل" },
+      "languages": { "de": "Sprachen", "ar": "اللغات" }
+    },
+    "days": {
+      "monday": { "de": "Montag", "ar": "الإثنين" },
+      "tuesday": { "de": "Dienstag", "ar": "الثلاثاء" },
+      "wednesday": { "de": "Mittwoch", "ar": "الأربعاء" },
+      "thursday": { "de": "Donnerstag", "ar": "الخميس" },
+      "friday": { "de": "Freitag", "ar": "الجمعة" }
+    },
+    "messages": {
+      "required": { "de": "Pflichtfeld", "ar": "حقل مطلوب" },
+      "success": { "de": "Erfolgreich gesendet", "ar": "تم الإرسال بنجاح" },
+      "error": { "de": "Ein Fehler ist aufgetreten", "ar": "حدث خطأ" }
+    }
+  }
+}

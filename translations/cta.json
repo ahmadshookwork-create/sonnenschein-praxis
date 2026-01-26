@@ -1,0 +1,28 @@
+{
+  "cta": {
+    "title": {
+      "de": "Wir sind für Sie da",
+      "ar": "نحن هنا من أجلكم"
+    },
+    "description": {
+      "de": "Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Unser Team freut sich auf Ihre Kontaktaufnahme.",
+      "ar": "هل لديكم أسئلة أو ترغبون في حجز موعد؟ فريقنا يتطلع للتواصل معكم."
+    },
+    "buttonAppointment": {
+      "de": "Termin anfragen",
+      "ar": "طلب موعد"
+    },
+    "buttonTeam": {
+      "de": "Team kennenlernen",
+      "ar": "تعرّف على الفريق"
+    },
+    "callPrompt": {
+      "de": "Oder rufen Sie uns an:",
+      "ar": "أو اتصلوا بنا:"
+    },
+    "phoneNumber": {
+      "de": "030 / 123 456 78",
+      "ar": "030 / 123 456 78"
+    }
+  }
+}

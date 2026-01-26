@@ -1,0 +1,213 @@
+{
+  "forms": {
+    "pageTitle": {
+      "de": "Anmeldeformulare",
+      "ar": "نماذج التسجيل"
+    },
+    "badge": {
+      "de": "Formulare & Fragebögen",
+      "ar": "النماذج والاستبيانات"
+    },
+    "heroDescription": {
+      "de": "Für einen reibungslosen Ablauf bitten wir Sie, die erforderlichen Formulare vor Ihrem Ersttermin herunterzuladen und ausgefüllt mitzubringen. So können wir uns optimal auf Ihr Anliegen vorbereiten.",
+      "ar": "لضمان سير العملية بسلاسة، نرجو منكم تحميل النماذج المطلوبة قبل موعدكم الأول وإحضارها معبأة. بهذه الطريقة يمكننا الاستعداد بشكل أمثل لمتطلباتكم."
+    },
+    "importantNotice": {
+      "title": {
+        "de": "Wichtiger Hinweis",
+        "ar": "ملاحظة مهمة"
+      },
+      "text": {
+        "de": "Wir empfehlen, dass möglichst beide Sorgeberechtigten gemeinsam mit dem Kind zum Ersttermin erscheinen. Falls dies nicht möglich ist, nutzen Sie bitte die Vollmacht für den abwesenden Elternteil.",
+        "ar": "نوصي بحضور كلا الوالدين أو الأوصياء مع الطفل في الموعد الأول إن أمكن. إذا لم يكن ذلك ممكناً، يرجى استخدام التوكيل للوالد الغائب."
+      }
+    },
+    "downloadSection": {
+      "title": {
+        "de": "Formulare herunterladen",
+        "ar": "تحميل النماذج"
+      },
+      "description": {
+        "de": "Klicken Sie auf die Schaltflächen, um die PDFs zu öffnen oder herunterzuladen.",
+        "ar": "انقر على الأزرار لفتح ملفات PDF أو تحميلها."
+      }
+    },
+    "buttons": {
+      "openPdf": {
+        "de": "PDF öffnen",
+        "ar": "فتح PDF"
+      },
+      "download": {
+        "de": "Download",
+        "ar": "تحميل"
+      },
+      "contact": {
+        "de": "Kontakt aufnehmen",
+        "ar": "تواصل معنا"
+      }
+    },
+    "tags": {
+      "required": {
+        "de": "Pflicht",
+        "ar": "إلزامي"
+      },
+      "ifNeeded": {
+        "de": "Bei Bedarf",
+        "ar": "عند الحاجة"
+      },
+      "privatePatients": {
+        "de": "Privatpatienten",
+        "ar": "المرضى الخاصون"
+      }
+    },
+    "items": [
+      {
+        "id": "anmeldebogen",
+        "title": {
+          "de": "Anmeldebogen",
+          "ar": "نموذج التسجيل"
+        },
+        "description": {
+          "de": "Grundlegende Informationen zu Ihrem Kind und Ihrer Familie. Dieses Formular ist für alle Ersttermine erforderlich.",
+          "ar": "معلومات أساسية عن طفلكم وعائلتكم. هذا النموذج مطلوب لجميع المواعيد الأولى."
+        }
+      },
+      {
+        "id": "entwicklungsfragebogen",
+        "title": {
+          "de": "Fragebogen zur Entwicklung des Kindes",
+          "ar": "استبيان تطور الطفل"
+        },
+        "description": {
+          "de": "Detaillierte Fragen zur Entwicklungsgeschichte Ihres Kindes. Hilft uns, ein umfassendes Bild zu erhalten.",
+          "ar": "أسئلة تفصيلية حول تاريخ نمو طفلكم. يساعدنا في الحصول على صورة شاملة."
+        }
+      },
+      {
+        "id": "schweigepflichtentbindung",
+        "title": {
+          "de": "Schweigepflichtentbindung",
+          "ar": "إعفاء من السرية المهنية"
+        },
+        "description": {
+          "de": "Ermöglicht den Austausch mit anderen behandelnden Ärzten, Therapeuten, Schulen oder Einrichtungen.",
+          "ar": "يتيح التواصل مع الأطباء المعالجين الآخرين والمعالجين والمدارس أو المؤسسات."
+        }
+      },
+      {
+        "id": "vollmacht-sorgerecht",
+        "title": {
+          "de": "Vollmacht bei gemeinsamem Sorgerecht",
+          "ar": "توكيل في حالة الحضانة المشتركة"
+        },
+        "description": {
+          "de": "Erforderlich, wenn nur ein Elternteil zum Termin erscheinen kann. Muss vom abwesenden Elternteil unterschrieben werden.",
+          "ar": "مطلوب عندما يمكن لأحد الوالدين فقط الحضور للموعد. يجب أن يوقعه الوالد الغائب."
+        }
+      },
+      {
+        "id": "behandlungsvertrag",
+        "title": {
+          "de": "Behandlungsvertrag Privatpatienten",
+          "ar": "عقد العلاج للمرضى الخاصين"
+        },
+        "description": {
+          "de": "Behandlungsvertrag für Privatpatienten und Selbstzahler. Bitte vor dem Ersttermin ausfüllen.",
+          "ar": "عقد العلاج للمرضى الخاصين والدافعين ذاتياً. يرجى ملؤه قبل الموعد الأول."
+        }
+      }
+    ],
+    "instructions": {
+      "sectionTitle": {
+        "de": "So funktioniert's",
+        "ar": "كيف يعمل ذلك"
+      },
+      "sectionDescription": {
+        "de": "In drei einfachen Schritten sind Sie bestens vorbereitet.",
+        "ar": "في ثلاث خطوات بسيطة ستكونون مستعدين تماماً."
+      },
+      "steps": [
+        {
+          "title": {
+            "de": "Herunterladen",
+            "ar": "تحميل"
+          },
+          "description": {
+            "de": "Laden Sie die benötigten Formulare als PDF herunter.",
+            "ar": "قم بتحميل النماذج المطلوبة بصيغة PDF."
+          }
+        },
+        {
+          "title": {
+            "de": "Ausfüllen & Unterschreiben",
+            "ar": "التعبئة والتوقيع"
+          },
+          "description": {
+            "de": "Füllen Sie die Formulare in Ruhe zu Hause aus. Beide Sorgeberechtigten sollten unterschreiben.",
+            "ar": "قوموا بملء النماذج بهدوء في المنزل. يجب على كلا الوصيين التوقيع."
+          }
+        },
+        {
+          "title": {
+            "de": "Zum Termin mitbringen",
+            "ar": "إحضارها للموعد"
+          },
+          "description": {
+            "de": "Bringen Sie die ausgefüllten Unterlagen zum Erstgespräch mit oder senden Sie diese vorab per Post.",
+            "ar": "أحضروا المستندات المعبأة إلى الموعد الأول أو أرسلوها مسبقاً عبر البريد."
+          }
+        }
+      ]
+    },
+    "checklist": {
+      "sectionTitle": {
+        "de": "Checkliste für den Ersttermin",
+        "ar": "قائمة التحقق للموعد الأول"
+      },
+      "sectionDescription": {
+        "de": "Diese Unterlagen sollten Sie zum Untersuchungstermin mitbringen.",
+        "ar": "هذه المستندات التي يجب عليكم إحضارها لموعد الفحص."
+      },
+      "items": [
+        {
+          "de": "Elektronische Versicherungskarte des Kindes",
+          "ar": "بطاقة التأمين الإلكترونية للطفل"
+        },
+        {
+          "de": "Ausgefüllte Fragebögen und Zustimmung aller Sorgeberechtigten",
+          "ar": "الاستبيانات المعبأة وموافقة جميع الأوصياء"
+        },
+        {
+          "de": "Gelbes Untersuchungsheft (U-Heft)",
+          "ar": "دفتر الفحص الأصفر (U-Heft)"
+        },
+        {
+          "de": "Vorbefunde (Krankenhausberichte, schulpsychologische Gutachten)",
+          "ar": "النتائج السابقة (تقارير المستشفى، التقييمات النفسية المدرسية)"
+        },
+        {
+          "de": "Berichte aus Kita oder Schule (falls vorhanden)",
+          "ar": "تقارير من الروضة أو المدرسة (إن وجدت)"
+        },
+        {
+          "de": "Aktuelle Zeugnisse",
+          "ar": "الشهادات الحالية"
+        },
+        {
+          "de": "Überweisung vom Kinderarzt/Hausarzt (falls vorhanden)",
+          "ar": "تحويل من طبيب الأطفال/الطبيب العام (إن وجد)"
+        }
+      ]
+    },
+    "cta": {
+      "title": {
+        "de": "Fragen zu den Formularen?",
+        "ar": "أسئلة حول النماذج؟"
+      },
+      "description": {
+        "de": "Bei Unklarheiten oder Fragen zu den Anmeldeunterlagen stehen wir Ihnen gerne zur Verfügung.",
+        "ar": "في حال وجود أي استفسارات أو أسئلة حول مستندات التسجيل، نحن هنا لمساعدتكم."
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "footer": {
+    "partners": {
+      "badge": {
+        "de": "Unsere Partner",
+        "ar": "شركاؤنا"
+      },
+      "title": {
+        "de": "Kooperationen & Netzwerk",
+        "ar": "التعاون والشبكات"
+      },
+      "subtitle": {
+        "de": "Gemeinsam für die beste Versorgung unserer jungen Patient:innen",
+        "ar": "معًا من أجل أفضل رعاية لمرضانا الصغار"
+      },
+      "partnerDescriptions": {
+        "deutschArabischeGesellschaft": {
+          "de": "Deutsch-Arabische Gesellschaft",
+          "ar": "الجمعية الألمانية العربية"
+        },
+        "kinderJugendpsychiatrie": {
+          "de": "Kinder- & Jugendpsychiatrie",
+          "ar": "الطب النفسي للأطفال والمراهقين"
+        },
+        "universitaetsmedizin": {
+          "de": "Universitätsmedizin",
+          "ar": "الطب الجامعي"
+        }
+      }
+    },
+    "brand": {
+      "practiceName": {
+        "de": "Praxis Dr. Allozy",
+        "ar": "عيادة د. اللوزي"
+      },
+      "doctorName": {
+        "de": "Dr. med. Basel Allozy",
+        "ar": "د. باسل اللوزي"
+      },
+      "description": {
+        "de": "Kinder- und Jugendpsychiatrie und Psychotherapie in Berlin. Mehrsprachiges, kultursensibles Team für Ihre Familien.",
+        "ar": "الطب النفسي والعلاج النفسي للأطفال والمراهقين في برلين. فريق متعدد اللغات وحساس ثقافيًا لعائلاتكم."
+      }
+    },
+    "quickLinks": {
+      "title": {
+        "de": "Schnellzugriff",
+        "ar": "روابط سريعة"
+      },
+      "links": {
+        "startseite": {
+          "de": "Startseite",
+          "ar": "الصفحة الرئيسية"
+        },
+        "leistungen": {
+          "de": "Leistungen",
+          "ar": "الخدمات"
+        },
+        "team": {
+          "de": "Unser Team",
+          "ar": "فريقنا"
+        },
+        "gkv": {
+          "de": "Kassenpatient:innen (GKV)",
+          "ar": "مرضى التأمين الصحي العام"
+        },
+        "privatpraxis": {
+          "de": "Privatpraxis / Selbstzahler",
+          "ar": "العيادة الخاصة / الدفع الذاتي"
+        },
+        "karriere": {
+          "de": "Karriere",
+          "ar": "الوظائف"
+        },
+        "kontakt": {
+          "de": "Kontakt",
+          "ar": "اتصل بنا"
+        }
+      }
+    },
+    "contact": {
+      "title": {
+        "de": "Kontakt",
+        "ar": "اتصل بنا"
+      }
+    },
+    "reviews": {
+      "title": {
+        "de": "Bewertungen",
+        "ar": "التقييمات"
+      },
+      "googleReviews": {
+        "de": "Google Bewertungen",
+        "ar": "تقييمات جوجل"
+      },
+      "feedbackMessage": {
+        "de": "Ihre Meinung ist uns wichtig! Teilen Sie Ihre Erfahrungen mit anderen Familien.",
+        "ar": "رأيكم يهمنا! شاركوا تجاربكم مع العائلات الأخرى."
+      }
+    },
+    "bottomBar": {
+      "copyright": {
+        "de": "Praxis Dr. Allozy. Mit ♥ für Familien.",
+        "ar": "عيادة د. اللوزي. بكل ♥ للعائلات."
+      },
+      "forFamilies": {
+        "de": "für Familien",
+        "ar": "للعائلات"
+      },
+      "impressum": {
+        "de": "Impressum",
+        "ar": "البيانات القانونية"
+      },
+      "datenschutz": {
+        "de": "Datenschutz",
+        "ar": "سياسة الخصوصية"
+      }
+    }
+  }
+}

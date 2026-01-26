@@ -1,0 +1,118 @@
+{
+  "spotlight": {
+    "title": {
+      "de": "Praxisleitung",
+      "ar": "إدارة العيادة"
+    },
+    "labels": {
+      "yearsExperience": {
+        "de": "Jahre Erfahrung",
+        "ar": "سنوات الخبرة"
+      },
+      "practiceFoundation": {
+        "de": "Praxisgründung",
+        "ar": "تأسيس العيادة"
+      },
+      "requestAppointment": {
+        "de": "Termin anfragen",
+        "ar": "طلب موعد"
+      },
+      "viewServices": {
+        "de": "Leistungen ansehen",
+        "ar": "عرض الخدمات"
+      },
+      "focusAreas": {
+        "de": "Schwerpunkte",
+        "ar": "مجالات التركيز"
+      },
+      "career": {
+        "de": "Werdegang",
+        "ar": "المسيرة المهنية"
+      },
+      "showLess": {
+        "de": "Weniger anzeigen",
+        "ar": "عرض أقل"
+      },
+      "showMore": {
+        "de": "Mehr anzeigen",
+        "ar": "عرض المزيد"
+      },
+      "engagementResearch": {
+        "de": "Engagement & Forschung",
+        "ar": "المشاركة والبحث"
+      },
+      "member": {
+        "de": "Mitglied",
+        "ar": "عضو"
+      }
+    },
+    "profileBullets": {
+      "childPsychiatrist": {
+        "de": "Facharzt für Kinder- und Jugendpsychiatrie",
+        "ar": "طبيب متخصص في الطب النفسي للأطفال والمراهقين"
+      },
+      "depthPsychotherapy": {
+        "de": "Tiefenpsychologisch fundierte Psychotherapie",
+        "ar": "العلاج النفسي القائم على علم النفس العميق"
+      },
+      "integrativeTherapy": {
+        "de": "Integrative, individualisierte Therapiekonzepte",
+        "ar": "مفاهيم علاجية تكاملية ومخصصة"
+      },
+      "culturalCare": {
+        "de": "Kultursensible Versorgung für Familien",
+        "ar": "رعاية مراعية للثقافات للعائلات"
+      }
+    },
+    "timeline": {
+      "medStudy": {
+        "de": "Medizinstudium Charité Berlin abgeschlossen",
+        "ar": "إتمام دراسة الطب في شاريتيه برلين"
+      },
+      "specialistRecognition": {
+        "de": "Facharztanerkennung KJP + Psychotherapie",
+        "ar": "الاعتراف بالتخصص في الطب النفسي للأطفال والمراهقين + العلاج النفسي"
+      },
+      "doctorate": {
+        "de": "Promotion zum Dr. med.",
+        "ar": "الحصول على درجة الدكتوراه في الطب"
+      },
+      "dgsfSupervisor": {
+        "de": "DGSF Supervisor (Systemische Therapie)",
+        "ar": "مشرف DGSF (العلاج النظامي)"
+      },
+      "emdrTherapist": {
+        "de": "EMDR-Therapeut (Traumatherapie)",
+        "ar": "معالج EMDR (علاج الصدمات)"
+      },
+      "practiceFoundation": {
+        "de": "Gründung Praxis Dr. Allozy Berlin",
+        "ar": "تأسيس عيادة د. اللوزي برلين"
+      }
+    },
+    "badges": {
+      "specialistSince": {
+        "de": "Facharzt seit 2012",
+        "ar": "طبيب متخصص منذ 2012"
+      },
+      "dgsfSupervisor": {
+        "de": "DGSF Supervisor",
+        "ar": "مشرف DGSF"
+      },
+      "emdr": {
+        "de": "EMDR",
+        "ar": "EMDR"
+      },
+      "tfpKip": {
+        "de": "TFP / KIP",
+        "ar": "TFP / KIP"
+      }
+    },
+    "engagement": {
+      "description": {
+        "de": "Mitgründer BALSAM (DAGP e.V.) – Rehabilitation traumatisierter geflüchteter Kinder. Forschungsfokus auf integrative, methodenübergreifende Psychotherapiekonzepte.",
+        "ar": "مؤسس مشارك لـ BALSAM (DAGP e.V.) – إعادة تأهيل الأطفال اللاجئين المصابين بصدمات نفسية. التركيز البحثي على مفاهيم العلاج النفسي التكاملية والمتعددة المناهج."
+      }
+    }
+  }
+}

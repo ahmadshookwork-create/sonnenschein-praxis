@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "badge": {
+      "de": "Kinder- und Jugendpsychiatrie in Berlin",
+      "ar": "الطب النفسي للأطفال والمراهقين في برلين"
+    },
+    "logoAlt": {
+      "de": "Praxis Dr. Allozy Logo",
+      "ar": "شعار عيادة د. اللوزي"
+    },
+    "title": {
+      "de": "Praxis Dr. Allozy",
+      "ar": "عيادة د. اللوزي"
+    },
+    "doctorName": {
+      "de": "Dr. med. Basel Allozy",
+      "ar": "د. باسل اللوزي"
+    },
+    "subtitle": {
+      "de": "Mehrsprachige, kultursensible psychiatrische und psychotherapeutische Behandlung für Kinder, Jugendliche und Familien in einem vertrauensvollen Umfeld.",
+      "ar": "علاج نفسي وعلاج نفسي متعدد اللغات ومراعٍ للثقافات للأطفال والمراهقين والعائلات في بيئة موثوقة."
+    },
+    "insuranceCards": {
+      "statutory": {
+        "title": {
+          "de": "Gesetzlich versichert",
+          "ar": "التأمين الصحي العام"
+        },
+        "description": {
+          "de": "Informationen für Kassenpatient:innen (GKV)",
+          "ar": "معلومات للمرضى المؤمنين بالتأمين الصحي العام"
+        },
+        "cta": {
+          "de": "Mehr erfahren",
+          "ar": "اعرف المزيد"
+        }
+      },
+      "private": {
+        "title": {
+          "de": "Privat / Selbstzahler",
+          "ar": "تأمين خاص / دفع ذاتي"
+        },
+        "description": {
+          "de": "Privatpraxis für PKV & Selbstzahler",
+          "ar": "عيادة خاصة للتأمين الخاص والدفع الذاتي"
+        },
+        "cta": {
+          "de": "Mehr erfahren",
+          "ar": "اعرف المزيد"
+        }
+      }
+    },
+    "ctaButtons": {
+      "appointment": {
+        "de": "Termin anfragen",
+        "ar": "طلب موعد"
+      },
+      "team": {
+        "de": "Team kennenlernen",
+        "ar": "تعرف على الفريق"
+      }
+    }
+  }
+}

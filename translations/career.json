@@ -1,0 +1,360 @@
+{
+  "career": {
+    "badge": {
+      "de": "Karriere",
+      "ar": "الوظائف"
+    },
+    "title": {
+      "de": "Werden Sie Teil unseres Teams",
+      "ar": "انضم إلى فريقنا"
+    },
+    "subtitle": {
+      "de": "Wir suchen engagierte Kolleg:innen, die unser multiprofessionelles Team verstärken möchten. Bei uns arbeiten Sie in einem wertschätzenden, kulturell vielfältigen Umfeld.",
+      "ar": "نبحث عن زملاء ملتزمين يرغبون في تعزيز فريقنا متعدد التخصصات. لدينا ستعمل في بيئة تقديرية ومتنوعة ثقافياً."
+    },
+    "positions": {
+      "sectionTitle": {
+        "de": "Aktuelle Stellenangebote",
+        "ar": "الوظائف الشاغرة الحالية"
+      },
+      "sectionSubtitle": {
+        "de": "Diese Positionen sind derzeit offen. Wir freuen uns auch über Initiativbewerbungen!",
+        "ar": "هذه الوظائف متاحة حالياً. نرحب أيضاً بالطلبات التلقائية!"
+      },
+      "applyNow": {
+        "de": "Jetzt bewerben",
+        "ar": "قدم الآن"
+      },
+      "items": [
+        {
+          "id": "mfa",
+          "title": {
+            "de": "Medizinische/r Fachangestellte/r (MFA) bzw. Arzthelfer/in",
+            "ar": "مساعد/ة طبي/ة (MFA) أو مساعد/ة طبيب"
+          },
+          "type": {
+            "de": "Vollzeit/Teilzeit",
+            "ar": "دوام كامل/جزئي"
+          },
+          "description": {
+            "de": "Für Kinder- und Jugendpsychiater und -psychotherapeuten in eigener Praxis gesucht.",
+            "ar": "مطلوب للعمل مع طبيب نفسي ومعالج نفسي للأطفال والمراهقين في عيادة خاصة."
+          },
+          "requirements": [
+            {
+              "de": "Abgeschlossene MFA-Ausbildung",
+              "ar": "تدريب MFA مكتمل"
+            },
+            {
+              "de": "Erfahrung in der Arztpraxis von Vorteil",
+              "ar": "الخبرة في العيادة الطبية ميزة إضافية"
+            },
+            {
+              "de": "Freundliches und einfühlsames Auftreten",
+              "ar": "سلوك ودود ومتعاطف"
+            },
+            {
+              "de": "Gute Kommunikationsfähigkeiten",
+              "ar": "مهارات تواصل جيدة"
+            },
+            {
+              "de": "EDV-Kenntnisse",
+              "ar": "معرفة بالحاسوب"
+            }
+          ]
+        },
+        {
+          "id": "kjp-therapeut",
+          "title": {
+            "de": "Kinder- und Jugendlichenpsychotherapeut*in (m/w/d)",
+            "ar": "معالج/ة نفسي/ة للأطفال والمراهقين (ذ/أ)"
+          },
+          "type": {
+            "de": "Vollzeit/Teilzeit",
+            "ar": "دوام كامل/جزئي"
+          },
+          "description": {
+            "de": "Mit Approbation oder in fortgeschrittener Ausbildung (MIT Behandlungserlaubnis) gesucht.",
+            "ar": "مطلوب مع ترخيص أو في تدريب متقدم (مع إذن علاج)."
+          },
+          "requirements": [
+            {
+              "de": "Approbation als KJ-Psychotherapeut*in oder fortgeschrittene Ausbildung",
+              "ar": "ترخيص كمعالج نفسي للأطفال والمراهقين أو تدريب متقدم"
+            },
+            {
+              "de": "Behandlungserlaubnis erforderlich",
+              "ar": "إذن العلاج مطلوب"
+            },
+            {
+              "de": "Freude an der Arbeit mit Kindern und Jugendlichen",
+              "ar": "الاستمتاع بالعمل مع الأطفال والمراهقين"
+            },
+            {
+              "de": "Teamorientierte Arbeitsweise",
+              "ar": "أسلوب عمل موجه نحو الفريق"
+            },
+            {
+              "de": "Interesse an kultursensible Therapie",
+              "ar": "اهتمام بالعلاج المراعي للثقافات"
+            }
+          ]
+        }
+      ]
+    },
+    "positionOptions": [
+      {
+        "value": "",
+        "label": {
+          "de": "Bitte wählen...",
+          "ar": "يرجى الاختيار..."
+        }
+      },
+      {
+        "value": "mfa",
+        "label": {
+          "de": "Medizinische/r Fachangestellte/r (MFA)",
+          "ar": "مساعد/ة طبي/ة (MFA)"
+        }
+      },
+      {
+        "value": "kjp-therapeut",
+        "label": {
+          "de": "Kinder- und Jugendlichenpsychotherapeut*in",
+          "ar": "معالج/ة نفسي/ة للأطفال والمراهقين"
+        }
+      },
+      {
+        "value": "andere",
+        "label": {
+          "de": "Andere / Initiativbewerbung",
+          "ar": "أخرى / طلب تلقائي"
+        }
+      }
+    ],
+    "benefits": [
+      {
+        "icon": "Users",
+        "title": {
+          "de": "Multiprofessionelles Team",
+          "ar": "فريق متعدد التخصصات"
+        },
+        "description": {
+          "de": "Arbeiten Sie mit Fachärzten, Psychologen, Therapeuten und Pädagogen zusammen.",
+          "ar": "اعمل مع أطباء متخصصين وعلماء نفس ومعالجين ومربين."
+        }
+      },
+      {
+        "icon": "Globe",
+        "title": {
+          "de": "Mehrsprachiges Umfeld",
+          "ar": "بيئة متعددة اللغات"
+        },
+        "description": {
+          "de": "Über 10 Sprachen in unserem Team – kulturelle Vielfalt als Stärke.",
+          "ar": "أكثر من 10 لغات في فريقنا - التنوع الثقافي كقوة."
+        }
+      },
+      {
+        "icon": "GraduationCap",
+        "title": {
+          "de": "Fortbildung & Supervision",
+          "ar": "التدريب والإشراف"
+        },
+        "description": {
+          "de": "Regelmäßige Team-Supervisionen und Unterstützung bei Fortbildungen.",
+          "ar": "إشراف جماعي منتظم ودعم في التدريب المستمر."
+        }
+      },
+      {
+        "icon": "Heart",
+        "title": {
+          "de": "Wertschätzende Atmosphäre",
+          "ar": "أجواء تقديرية"
+        },
+        "description": {
+          "de": "Respektvolles Miteinander und flache Hierarchien.",
+          "ar": "تعامل محترم وهياكل تنظيمية مسطحة."
+        }
+      }
+    ],
+    "form": {
+      "title": {
+        "de": "Bewerbung senden",
+        "ar": "إرسال الطلب"
+      },
+      "subtitle": {
+        "de": "Füllen Sie das Formular aus und laden Sie Ihre Unterlagen hoch.",
+        "ar": "املأ النموذج وقم بتحميل مستنداتك."
+      },
+      "fields": {
+        "name": {
+          "label": {
+            "de": "Name *",
+            "ar": "الاسم *"
+          },
+          "placeholder": {
+            "de": "Ihr vollständiger Name",
+            "ar": "اسمك الكامل"
+          }
+        },
+        "email": {
+          "label": {
+            "de": "E-Mail *",
+            "ar": "البريد الإلكتروني *"
+          },
+          "placeholder": {
+            "de": "ihre@email.de",
+            "ar": "بريدك@email.de"
+          }
+        },
+        "phone": {
+          "label": {
+            "de": "Telefon",
+            "ar": "الهاتف"
+          },
+          "placeholder": {
+            "de": "+49 123 456789",
+            "ar": "+49 123 456789"
+          }
+        },
+        "position": {
+          "label": {
+            "de": "Gewünschte Position *",
+            "ar": "الوظيفة المطلوبة *"
+          }
+        },
+        "languages": {
+          "label": {
+            "de": "Sprachkenntnisse",
+            "ar": "المهارات اللغوية"
+          },
+          "placeholder": {
+            "de": "z.B. Deutsch (Muttersprache), Englisch (fließend), Arabisch (gut)",
+            "ar": "مثال: الألمانية (لغة أم)، الإنجليزية (بطلاقة)، العربية (جيد)"
+          }
+        },
+        "message": {
+          "label": {
+            "de": "Anschreiben / Kurze Vorstellung *",
+            "ar": "رسالة التقديم / تقديم موجز *"
+          },
+          "placeholder": {
+            "de": "Erzählen Sie uns kurz von sich und warum Sie bei uns arbeiten möchten...",
+            "ar": "أخبرنا بإيجاز عن نفسك ولماذا تريد العمل معنا..."
+          }
+        },
+        "files": {
+          "label": {
+            "de": "Lebenslauf & Unterlagen",
+            "ar": "السيرة الذاتية والمستندات"
+          },
+          "dropzone": {
+            "de": "Dateien hier ablegen oder klicken zum Hochladen",
+            "ar": "اسحب الملفات هنا أو انقر للتحميل"
+          },
+          "hint": {
+            "de": "PDF, DOC, DOCX, JPG, PNG (max. 10MB pro Datei)",
+            "ar": "PDF، DOC، DOCX، JPG، PNG (بحد أقصى 10 ميجابايت لكل ملف)"
+          }
+        }
+      },
+      "submit": {
+        "de": "Bewerbung absenden",
+        "ar": "إرسال الطلب"
+      },
+      "submitting": {
+        "de": "Wird gesendet...",
+        "ar": "جاري الإرسال..."
+      },
+      "success": {
+        "title": {
+          "de": "Bewerbung erfolgreich gesendet!",
+          "ar": "تم إرسال الطلب بنجاح!"
+        },
+        "message": {
+          "de": "Vielen Dank für Ihr Interesse. Wir werden uns zeitnah bei Ihnen melden.",
+          "ar": "شكراً لاهتمامك. سنتواصل معك قريباً."
+        }
+      },
+      "error": {
+        "de": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+        "ar": "حدث خطأ. يرجى المحاولة مرة أخرى."
+      },
+      "validation": {
+        "nameRequired": {
+          "de": "Bitte geben Sie Ihren Namen ein",
+          "ar": "يرجى إدخال اسمك"
+        },
+        "emailRequired": {
+          "de": "Bitte geben Sie Ihre E-Mail-Adresse ein",
+          "ar": "يرجى إدخال بريدك الإلكتروني"
+        },
+        "emailInvalid": {
+          "de": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+          "ar": "يرجى إدخال بريد إلكتروني صالح"
+        },
+        "positionRequired": {
+          "de": "Bitte wählen Sie eine Position aus",
+          "ar": "يرجى اختيار وظيفة"
+        },
+        "messageRequired": {
+          "de": "Bitte geben Sie eine kurze Nachricht ein",
+          "ar": "يرجى إدخال رسالة قصيرة"
+        },
+        "fileTooLarge": {
+          "de": "Datei ist zu groß (max. 10MB pro Datei)",
+          "ar": "الملف كبير جداً (بحد أقصى 10 ميجابايت لكل ملف)"
+        },
+        "fileTypeNotAllowed": {
+          "de": "Dateityp nicht erlaubt",
+          "ar": "نوع الملف غير مسموح"
+        }
+      },
+      "email": {
+        "subject": {
+          "de": "Bewerbung: {position} - Praxis Dr. Allozy",
+          "ar": "طلب توظيف: {position} - عيادة د. العلوزي"
+        },
+        "body": {
+          "applicationFor": {
+            "de": "Bewerbung für",
+            "ar": "طلب توظيف لـ"
+          },
+          "name": {
+            "de": "Name",
+            "ar": "الاسم"
+          },
+          "email": {
+            "de": "E-Mail",
+            "ar": "البريد الإلكتروني"
+          },
+          "phone": {
+            "de": "Telefon",
+            "ar": "الهاتف"
+          },
+          "notProvided": {
+            "de": "Nicht angegeben",
+            "ar": "غير محدد"
+          },
+          "languageSkills": {
+            "de": "Sprachkenntnisse",
+            "ar": "المهارات اللغوية"
+          },
+          "coverLetter": {
+            "de": "Anschreiben",
+            "ar": "رسالة التقديم"
+          },
+          "attachFilesNote": {
+            "de": "HINWEIS: Bitte hängen Sie folgende Dateien manuell an diese E-Mail an:",
+            "ar": "ملاحظة: يرجى إرفاق الملفات التالية يدوياً بهذا البريد الإلكتروني:"
+          },
+          "attachDocumentsNote": {
+            "de": "HINWEIS: Bitte hängen Sie Ihren Lebenslauf und weitere Unterlagen an diese E-Mail an.",
+            "ar": "ملاحظة: يرجى إرفاق سيرتك الذاتية والمستندات الأخرى بهذا البريد الإلكتروني."
+          }
+        }
+      }
+    }
+  }
+}

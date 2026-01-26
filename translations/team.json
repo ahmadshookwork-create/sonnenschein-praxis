@@ -1,0 +1,338 @@
+{
+  "team": {
+    "title": {
+      "de": "Unser Team",
+      "ar": "فريقنا"
+    },
+    "subtitle": {
+      "de": "Ein multiprofessionelles Team für Ihre Familie",
+      "ar": "فريق متعدد التخصصات لعائلتك"
+    },
+    "description": {
+      "de": "Unser engagiertes Team vereint Fachärzte, Psychotherapeuten und therapeutische Fachkräfte mit unterschiedlichen Spezialisierungen und Sprachkenntnissen.",
+      "ar": "يجمع فريقنا المتفاني بين الأطباء المتخصصين والمعالجين النفسيين والكوادر العلاجية المتخصصة ذوي التخصصات والكفاءات اللغوية المتنوعة."
+    },
+    "sectionTitle": {
+      "de": "Unser Team",
+      "ar": "فريقنا"
+    },
+    "sectionSubtitle": {
+      "de": "Fachärzte, Psychotherapeuten und therapeutische Fachkräfte mit vielfältigen Spezialisierungen",
+      "ar": "أطباء متخصصون ومعالجون نفسيون وكوادر علاجية متخصصة بتخصصات متنوعة"
+    },
+    "languages": {
+      "title": {
+        "de": "Sprachen unserer Praxis",
+        "ar": "لغات عيادتنا"
+      },
+      "subtitle": {
+        "de": "Behandlung in über {count} Sprachen möglich",
+        "ar": "العلاج متاح بأكثر من {count} لغة"
+      }
+    },
+    "filter": {
+      "showing": {
+        "de": "Zeige {count} Teammitglieder mit Sprachkenntnissen in",
+        "ar": "عرض {count} من أعضاء الفريق الذين يتحدثون"
+      },
+      "remove": {
+        "de": "Filter entfernen",
+        "ar": "إزالة الفلتر"
+      },
+      "noResults": {
+        "de": "Keine Teammitglieder mit dieser Sprache gefunden.",
+        "ar": "لم يتم العثور على أعضاء فريق يتحدثون هذه اللغة."
+      }
+    },
+    "stats": {
+      "members": {
+        "de": "Teammitglieder",
+        "ar": "أعضاء الفريق"
+      },
+      "languages": {
+        "de": "Sprachen",
+        "ar": "اللغات"
+      },
+      "specializations": {
+        "de": "Fachrichtungen",
+        "ar": "التخصصات"
+      },
+      "experience": {
+        "de": "Jahre Erfahrung",
+        "ar": "سنوات الخبرة"
+      }
+    },
+    "career": {
+      "title": {
+        "de": "Teil unseres Teams werden?",
+        "ar": "هل ترغب في الانضمام إلى فريقنا؟"
+      },
+      "description": {
+        "de": "Wir suchen engagierte Kolleg:innen, die unser multiprofessionelles Team verstärken möchten. Ob Facharzt, Psychotherapeut:in oder therapeutische Fachkraft – bei uns arbeiten Sie in einem wertschätzenden, vielfältigen Umfeld.",
+        "ar": "نبحث عن زملاء متفانين يرغبون في تعزيز فريقنا متعدد التخصصات. سواء كنت طبيباً متخصصاً أو معالجاً نفسياً أو كادراً علاجياً متخصصاً - لدينا ستعمل في بيئة تقديرية ومتنوعة."
+      },
+      "cta": {
+        "de": "Offene Stellen ansehen",
+        "ar": "عرض الوظائف الشاغرة"
+      },
+      "tags": {
+        "supervision": {
+          "de": "Supervision",
+          "ar": "الإشراف المهني"
+        },
+        "training": {
+          "de": "Fortbildungen",
+          "ar": "التدريب المستمر"
+        },
+        "multiprofessional": {
+          "de": "Multiprofessionell",
+          "ar": "متعدد التخصصات"
+        },
+        "multilingual": {
+          "de": "Mehrsprachig",
+          "ar": "متعدد اللغات"
+        }
+      }
+    },
+    "roles": {
+      "arzt": {
+        "de": "Arzt",
+        "ar": "طبيب"
+      },
+      "therapeut": {
+        "de": "Therapeut",
+        "ar": "معالج"
+      },
+      "fachkraft": {
+        "de": "Fachkraft",
+        "ar": "متخصص"
+      },
+      "verwaltung": {
+        "de": "Verwaltung",
+        "ar": "إدارة"
+      },
+      "ausbildung": {
+        "de": "In Ausbildung",
+        "ar": "في التدريب"
+      }
+    },
+    "languageNames": {
+      "Deutsch": {
+        "de": "Deutsch",
+        "ar": "الألمانية"
+      },
+      "Englisch": {
+        "de": "Englisch",
+        "ar": "الإنجليزية"
+      },
+      "Arabisch": {
+        "de": "Arabisch",
+        "ar": "العربية"
+      },
+      "Türkisch": {
+        "de": "Türkisch",
+        "ar": "التركية"
+      },
+      "Russisch": {
+        "de": "Russisch",
+        "ar": "الروسية"
+      },
+      "Polnisch": {
+        "de": "Polnisch",
+        "ar": "البولندية"
+      },
+      "Bosnisch": {
+        "de": "Bosnisch",
+        "ar": "البوسنية"
+      },
+      "Kroatisch": {
+        "de": "Kroatisch",
+        "ar": "الكرواتية"
+      },
+      "Serbisch": {
+        "de": "Serbisch",
+        "ar": "الصربية"
+      },
+      "Spanisch": {
+        "de": "Spanisch",
+        "ar": "الإسبانية"
+      },
+      "Französisch": {
+        "de": "Französisch",
+        "ar": "الفرنسية"
+      },
+      "Persisch": {
+        "de": "Persisch",
+        "ar": "الفارسية"
+      }
+    },
+    "members": {
+      "basel-allozy": {
+        "name": "Dr. med. Basel Allozy",
+        "role": {
+          "de": "Facharzt für Kinder- und Jugendpsychiatrie und Psychotherapie",
+          "ar": "أخصائي الطب النفسي للأطفال والمراهقين والعلاج النفسي"
+        },
+        "subtitle": {
+          "de": "Praxisinhaber, Systemischer Coach und Supervisor (DGSF)",
+          "ar": "مالك العيادة، مدرب نظامي ومشرف معتمد (DGSF)"
+        },
+        "bio": {
+          "de": "Praxisleitung mit langjähriger Erfahrung in der Behandlung von Kindern und Jugendlichen. Spezialisiert auf kultursensible psychiatrische Versorgung.",
+          "ar": "مدير العيادة مع خبرة طويلة في علاج الأطفال والمراهقين. متخصص في الرعاية النفسية المراعية للثقافات."
+        },
+        "fullBio": {
+          "de": "Dr. med. Basel Allozy leitet die Praxis mit über 15 Jahren Erfahrung in der Kinder- und Jugendpsychiatrie. Als Facharzt und zertifizierter systemischer Coach (DGSF) verbindet er fundierte medizinische Expertise mit einem ganzheitlichen Therapieansatz. Seine Schwerpunkte umfassen tiefenpsychologisch fundierte Psychotherapie (TFP), Katathym Imaginative Psychotherapie (KIP) sowie EMDR-Behandlungen. Besonders am Herzen liegt ihm die kultursensible und mehrsprachige Versorgung von Familien mit Migrationshintergrund.",
+          "ar": "يدير الدكتور باسل اللوزي العيادة بخبرة تزيد عن 15 عاماً في الطب النفسي للأطفال والمراهقين. بصفته طبيباً متخصصاً ومدرباً نظامياً معتمداً (DGSF)، فهو يجمع بين الخبرة الطبية الراسخة ونهج علاجي شامل. تشمل تخصصاته العلاج النفسي العميق (TFP)، والعلاج النفسي التخيلي (KIP)، وعلاج EMDR. يهتم بشكل خاص بتقديم الرعاية المراعية للثقافات والمتعددة اللغات للعائلات ذات الخلفيات المهاجرة."
+        },
+        "highlights": {
+          "de": [
+            "Über 15 Jahre Berufserfahrung",
+            "Systemischer Coach & Supervisor (DGSF)",
+            "Schwerpunkt TFP, KIP & EMDR",
+            "Kultursensible Behandlung",
+            "Mehrsprachig (Deutsch, Arabisch)",
+            "Praxisinhaber seit 2015"
+          ],
+          "ar": [
+            "أكثر من 15 عاماً من الخبرة المهنية",
+            "مدرب نظامي ومشرف معتمد (DGSF)",
+            "تخصص في TFP و KIP و EMDR",
+            "علاج مراعٍ للثقافات",
+            "متعدد اللغات (الألمانية، العربية)",
+            "مالك العيادة منذ 2015"
+          ]
+        }
+      },
+      "christian-montivero": {
+        "name": "C. Montivero",
+        "role": {
+          "de": "Arzt in Weiterbildung",
+          "ar": "طبيب في التدريب التخصصي"
+        },
+        "subtitle": {
+          "de": "Weiterbildung zum FA für Kinder- und Jugendpsychiatrie",
+          "ar": "تدريب تخصصي في الطب النفسي للأطفال والمراهقين"
+        },
+        "bio": {
+          "de": "Arzt in der Facharztweiterbildung für Kinder- und Jugendpsychiatrie.",
+          "ar": "طبيب في التدريب التخصصي للطب النفسي للأطفال والمراهقين."
+        }
+      },
+      "anna-kosel": {
+        "name": "A. Kosel",
+        "role": {
+          "de": "Kinder- und Jugendlichenpsychotherapeutin",
+          "ar": "معالجة نفسية للأطفال والمراهقين"
+        },
+        "bio": {
+          "de": "Approbierte Psychotherapeutin mit Schwerpunkt auf verhaltenstherapeutische Behandlung von Kindern und Jugendlichen.",
+          "ar": "معالجة نفسية معتمدة متخصصة في العلاج السلوكي للأطفال والمراهقين."
+        }
+      },
+      "linus-sagert": {
+        "name": "L. Sagert",
+        "role": {
+          "de": "Psychotherapeut",
+          "ar": "معالج نفسي"
+        },
+        "bio": {
+          "de": "Psychotherapeut mit Fokus auf moderne, evidenzbasierte Therapieverfahren.",
+          "ar": "معالج نفسي يركز على أساليب العلاج الحديثة القائمة على الأدلة."
+        }
+      },
+      "amina-jeleskovic-ozturk": {
+        "name": "A. Jeleskovic-Öztürk",
+        "role": {
+          "de": "Psychologin B. Sc.",
+          "ar": "أخصائية نفسية - بكالوريوس"
+        },
+        "bio": {
+          "de": "Psychologin mit Expertise in psychologischer Diagnostik und Beratung.",
+          "ar": "أخصائية نفسية ذات خبرة في التشخيص النفسي والاستشارات."
+        }
+      },
+      "mahmoud-alsioufy": {
+        "name": "M. Alsiofy",
+        "role": {
+          "de": "Psychologische Fachkraft",
+          "ar": "متخصص نفسي"
+        },
+        "bio": {
+          "de": "Unterstützung in psychologischer Betreuung und Beratung.",
+          "ar": "دعم في الرعاية النفسية والاستشارات."
+        }
+      },
+      "lina-prochaska": {
+        "name": "L. Prochaska",
+        "role": {
+          "de": "KJ-Psychotherapeutin VT i.A.",
+          "ar": "معالجة نفسية للأطفال والمراهقين (علاج سلوكي) - قيد التدريب"
+        },
+        "bio": {
+          "de": "Kinder- und Jugendlichenpsychotherapeutin in Ausbildung mit verhaltenstherapeutischer Ausrichtung.",
+          "ar": "معالجة نفسية للأطفال والمراهقين قيد التدريب مع توجه في العلاج السلوكي."
+        }
+      },
+      "nisreen-arja": {
+        "name": "N. Arja",
+        "role": {
+          "de": "Sprach- und Kommunikationstherapeutin",
+          "ar": "معالجة النطق والتواصل"
+        },
+        "bio": {
+          "de": "Spezialisiert auf Sprach- und Sprechstörungen bei Kindern und Jugendlichen.",
+          "ar": "متخصصة في اضطرابات اللغة والنطق لدى الأطفال والمراهقين."
+        }
+      },
+      "amira-muminovic": {
+        "name": "A. Muminovic",
+        "role": {
+          "de": "Heilpädagogin",
+          "ar": "أخصائية تربية علاجية"
+        },
+        "subtitle": {
+          "de": "Elternberatung, Gruppentherapie",
+          "ar": "استشارات الوالدين، العلاج الجماعي"
+        },
+        "bio": {
+          "de": "Spezialisiert auf heilpädagogische Förderung, Elternarbeit und therapeutische Gruppenangebote.",
+          "ar": "متخصصة في الدعم التربوي العلاجي، والعمل مع الوالدين، وبرامج العلاج الجماعي."
+        }
+      },
+      "sana-ammar": {
+        "name": "S. Ammar",
+        "role": {
+          "de": "Kunsttherapeutin i.A.",
+          "ar": "معالجة بالفن - قيد التدريب"
+        },
+        "bio": {
+          "de": "Kunsttherapeutin in Ausbildung mit Fokus auf kreative Therapiemethoden für Kinder und Jugendliche.",
+          "ar": "معالجة بالفن قيد التدريب مع التركيز على أساليب العلاج الإبداعي للأطفال والمراهقين."
+        }
+      },
+      "sandra-loeser": {
+        "name": "S. Löser",
+        "role": {
+          "de": "ZFA – Privatsekretariat, Qualitätsmanagement",
+          "ar": "مساعدة طبية - السكرتارية الخاصة وإدارة الجودة"
+        },
+        "bio": {
+          "de": "Verantwortlich für das Privatsekretariat und Qualitätsmanagement der Praxis.",
+          "ar": "مسؤولة عن السكرتارية الخاصة وإدارة الجودة في العيادة."
+        }
+      },
+      "mustafa-algharraa": {
+        "name": "M. Algharraa",
+        "role": {
+          "de": "MFA-Helfer",
+          "ar": "مساعد طبي"
+        },
+        "bio": {
+          "de": "Unterstützung im Praxisalltag und Patientenbetreuung.",
+          "ar": "دعم في العمل اليومي للعيادة ورعاية المرضى."
+        }
+      }
+    }
+  }
+}

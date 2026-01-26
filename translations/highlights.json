@@ -1,0 +1,62 @@
+{
+  "highlights": {
+    "title": {
+      "de": "Warum Praxis Dr. Allozy?",
+      "ar": "لماذا عيادة الدكتور اللوزي؟"
+    },
+    "subtitle": {
+      "de": "Kultursensible, professionelle Behandlung für Kinder und Jugendliche in einer warmherzigen Atmosphäre.",
+      "ar": "علاج مهني ومراعٍ للثقافات للأطفال والمراهقين في أجواء دافئة وودية."
+    },
+    "items": [
+      {
+        "icon": "Globe2",
+        "color": "primary",
+        "title": {
+          "de": "Mehrsprachiges Team",
+          "ar": "فريق متعدد اللغات"
+        },
+        "description": {
+          "de": "Behandlung in über 10 Sprachen: Deutsch, Arabisch, Englisch, Türkisch, Bosnisch, Russisch, Spanisch, Persisch und mehr.",
+          "ar": "العلاج بأكثر من 10 لغات: الألمانية والعربية والإنجليزية والتركية والبوسنية والروسية والإسبانية والفارسية وغيرها."
+        }
+      },
+      {
+        "icon": "Award",
+        "color": "secondary",
+        "title": {
+          "de": "Langjährige Erfahrung",
+          "ar": "خبرة طويلة"
+        },
+        "description": {
+          "de": "Fachärztliche Expertise in der Kinder- und Jugendpsychiatrie mit modernen, wissenschaftlich fundierten Therapiemethoden.",
+          "ar": "خبرة طبية متخصصة في الطب النفسي للأطفال والمراهقين مع أساليب علاجية حديثة قائمة على أسس علمية."
+        }
+      },
+      {
+        "icon": "HeartHandshake",
+        "color": "primary",
+        "title": {
+          "de": "Familien- & Elternarbeit",
+          "ar": "العمل مع الأسرة والوالدين"
+        },
+        "description": {
+          "de": "Ganzheitliche Behandlung unter Einbeziehung der Familie. Elternberatung, Familientherapie und systemische Ansätze.",
+          "ar": "علاج شامل يشمل الأسرة. استشارات للوالدين وعلاج أسري ومناهج نظامية."
+        }
+      },
+      {
+        "icon": "Train",
+        "color": "secondary",
+        "title": {
+          "de": "Zentrale Lage",
+          "ar": "موقع مركزي"
+        },
+        "description": {
+          "de": "Hervorragende ÖPNV-Anbindung in Berlin-Mitte. U-Bahn, S-Bahn und Bus direkt erreichbar. Barrierefreier Zugang.",
+          "ar": "وصول ممتاز بوسائل النقل العام في وسط برلين. مترو الأنفاق والقطار السريع والحافلات في متناول اليد. دخول ميسر لذوي الاحتياجات الخاصة."
+        }
+      }
+    ]
+  }
+}

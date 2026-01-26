@@ -1,0 +1,214 @@
+{
+  "gkv": {
+    "hero": {
+      "badge": {
+        "de": "Kassenpatient:innen",
+        "ar": "مرضى التأمين الصحي العام"
+      },
+      "title": {
+        "de": "Behandlung für gesetzlich Versicherte",
+        "ar": "العلاج للمؤمن عليهم قانونياً"
+      },
+      "description": {
+        "de": "Als Kassenpraxis bieten wir umfassende psychiatrische und psychotherapeutische Versorgung für Kinder und Jugendliche. Die Kosten werden von Ihrer gesetzlichen Krankenkasse übernommen.",
+        "ar": "كعيادة تأمين صحي عام، نقدم رعاية نفسية وعلاجية شاملة للأطفال والمراهقين. يتم تغطية التكاليف من قبل صندوق التأمين الصحي القانوني الخاص بك."
+      },
+      "buttons": {
+        "requestAppointment": {
+          "de": "Termin anfragen",
+          "ar": "طلب موعد"
+        },
+        "privatePractice": {
+          "de": "Privatpraxis / Selbstzahler",
+          "ar": "العيادة الخاصة / الدفع الذاتي"
+        }
+      }
+    },
+    "importantNotice": {
+      "title": {
+        "de": "Wichtiger Hinweis zur Wartezeit",
+        "ar": "ملاحظة مهمة حول وقت الانتظار"
+      },
+      "description": {
+        "de": "Aufgrund der hohen Nachfrage kann es zu Wartezeiten für Ersttermine kommen. Wir bemühen uns, Ihnen schnellstmöglich einen Termin anzubieten. Bei akuten Notfällen wenden Sie sich bitte an den Kinder- und Jugendpsychiatrischen Notdienst oder die nächste Notaufnahme.",
+        "ar": "بسبب الطلب الكبير، قد تحدث فترات انتظار للمواعيد الأولى. نسعى جاهدين لتقديم موعد لك في أقرب وقت ممكن. في حالات الطوارئ الحادة، يرجى الاتصال بخدمة الطوارئ النفسية للأطفال والمراهقين أو أقرب غرفة طوارئ."
+      }
+    },
+    "services": {
+      "sectionTitle": {
+        "de": "Unsere Kassenleistungen",
+        "ar": "خدمات التأمين الصحي لدينا"
+      },
+      "sectionDescription": {
+        "de": "Alle aufgeführten Leistungen werden von gesetzlichen Krankenkassen übernommen.",
+        "ar": "جميع الخدمات المذكورة يتم تغطيتها من قبل صناديق التأمين الصحي القانوني."
+      },
+      "items": [
+        {
+          "icon": "Stethoscope",
+          "title": {
+            "de": "Psychiatrische Diagnostik",
+            "ar": "التشخيص النفسي"
+          },
+          "description": {
+            "de": "Umfassende Abklärung psychischer Störungen nach ICD-10/11 Kriterien.",
+            "ar": "فحص شامل للاضطرابات النفسية وفقاً لمعايير ICD-10/11."
+          }
+        },
+        {
+          "icon": "Brain",
+          "title": {
+            "de": "Kinder- und Jugendpsychotherapie",
+            "ar": "العلاج النفسي للأطفال والمراهقين"
+          },
+          "description": {
+            "de": "Verhaltenstherapie, tiefenpsychologisch fundierte Verfahren.",
+            "ar": "العلاج السلوكي، الإجراءات المبنية على علم النفس العميق."
+          }
+        },
+        {
+          "icon": "Users",
+          "title": {
+            "de": "Elternberatung",
+            "ar": "استشارة الوالدين"
+          },
+          "description": {
+            "de": "Begleitende Elterngespräche als Teil der Behandlung.",
+            "ar": "جلسات مرافقة للوالدين كجزء من العلاج."
+          }
+        },
+        {
+          "icon": "FileText",
+          "title": {
+            "de": "Berichte & Atteste",
+            "ar": "التقارير والشهادات"
+          },
+          "description": {
+            "de": "Schulberichte, Gutachten für Jugendamt, Eingliederungshilfe.",
+            "ar": "تقارير مدرسية، تقييمات لمكتب رعاية الشباب، مساعدات الدمج."
+          }
+        }
+      ]
+    },
+    "processSteps": {
+      "sectionTitle": {
+        "de": "So läuft die Behandlung ab",
+        "ar": "كيف يسير العلاج"
+      },
+      "sectionDescription": {
+        "de": "Von der Terminvereinbarung bis zum Therapiebeginn – wir begleiten Sie auf jedem Schritt.",
+        "ar": "من حجز الموعد حتى بداية العلاج - نرافقك في كل خطوة."
+      },
+      "steps": [
+        {
+          "step": "1",
+          "title": {
+            "de": "Überweisung einholen",
+            "ar": "الحصول على إحالة"
+          },
+          "description": {
+            "de": "Lassen Sie sich von Ihrem Kinderarzt oder Hausarzt eine Überweisung zur Kinder- und Jugendpsychiatrie ausstellen.",
+            "ar": "احصل على إحالة من طبيب الأطفال أو طبيب الأسرة إلى الطب النفسي للأطفال والمراهقين."
+          }
+        },
+        {
+          "step": "2",
+          "title": {
+            "de": "Termin anfragen",
+            "ar": "طلب موعد"
+          },
+          "description": {
+            "de": "Kontaktieren Sie uns telefonisch oder über das Kontaktformular. Wir melden uns zeitnah bei Ihnen.",
+            "ar": "تواصل معنا هاتفياً أو عبر نموذج الاتصال. سنرد عليك في أقرب وقت."
+          }
+        },
+        {
+          "step": "3",
+          "title": {
+            "de": "Erstgespräch",
+            "ar": "المقابلة الأولى"
+          },
+          "description": {
+            "de": "Im Erstgespräch erheben wir die Vorgeschichte und besprechen das weitere Vorgehen gemeinsam.",
+            "ar": "في المقابلة الأولى نجمع التاريخ المرضي ونناقش الخطوات التالية معاً."
+          }
+        },
+        {
+          "step": "4",
+          "title": {
+            "de": "Diagnostik & Therapie",
+            "ar": "التشخيص والعلاج"
+          },
+          "description": {
+            "de": "Nach der Diagnostik erstellen wir einen individuellen Behandlungsplan für Ihr Kind.",
+            "ar": "بعد التشخيص نقوم بإعداد خطة علاج فردية لطفلك."
+          }
+        }
+      ]
+    },
+    "whatToBring": {
+      "sectionTitle": {
+        "de": "Das bringen Sie zum Ersttermin mit",
+        "ar": "ما تحضره للموعد الأول"
+      },
+      "sectionDescription": {
+        "de": "Um den Ersttermin effektiv zu nutzen, bitten wir Sie, folgende Unterlagen mitzubringen:",
+        "ar": "لاستخدام الموعد الأول بشكل فعال، نرجو منك إحضار الوثائق التالية:"
+      },
+      "items": [
+        {
+          "de": "Versichertenkarte (eGK) des Kindes",
+          "ar": "بطاقة التأمين الصحي (eGK) للطفل"
+        },
+        {
+          "de": "Überweisung vom Kinderarzt/Hausarzt",
+          "ar": "إحالة من طبيب الأطفال/طبيب الأسرة"
+        },
+        {
+          "de": "Vorhandene Vorbefunde (z.B. vom SPZ, Psychologen)",
+          "ar": "النتائج السابقة الموجودة (مثلاً من مركز طب الأطفال الاجتماعي، الأخصائي النفسي)"
+        },
+        {
+          "de": "Schulzeugnisse oder Entwicklungsberichte",
+          "ar": "الشهادات المدرسية أو تقارير التطور"
+        },
+        {
+          "de": "Gelbes Untersuchungsheft (U-Heft)",
+          "ar": "دفتر الفحوصات الأصفر (U-Heft)"
+        },
+        {
+          "de": "Liste aktueller Medikamente",
+          "ar": "قائمة الأدوية الحالية"
+        }
+      ]
+    },
+    "firstAppointmentInfo": {
+      "title": {
+        "de": "Erstgespräch: ca. 50–60 Minuten",
+        "ar": "المقابلة الأولى: حوالي 50-60 دقيقة"
+      },
+      "description": {
+        "de": "Im Erstgespräch nehmen wir uns ausreichend Zeit, um die Vorgeschichte Ihres Kindes zu erheben, aktuelle Beschwerden zu verstehen und gemeinsam die nächsten Schritte zu planen.",
+        "ar": "في المقابلة الأولى نأخذ وقتاً كافياً لجمع التاريخ المرضي لطفلك، فهم الشكاوى الحالية والتخطيط للخطوات التالية معاً."
+      },
+      "button": {
+        "de": "Termin vereinbaren",
+        "ar": "حجز موعد"
+      }
+    },
+    "privatePracticeLink": {
+      "title": {
+        "de": "Privat versichert oder Selbstzahler?",
+        "ar": "مؤمن عليك خاصاً أو دافع ذاتي؟"
+      },
+      "description": {
+        "de": "In unserer Privatpraxis bieten wir kürzere Wartezeiten und erweiterte Leistungen für PKV-Versicherte und Selbstzahler.",
+        "ar": "في عيادتنا الخاصة نقدم فترات انتظار أقصر وخدمات موسعة للمؤمن عليهم خاصاً والدافعين ذاتياً."
+      },
+      "button": {
+        "de": "Zur Privatpraxis",
+        "ar": "إلى العيادة الخاصة"
+      }
+    }
+  }
+}
