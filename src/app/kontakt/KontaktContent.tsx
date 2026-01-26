@@ -499,7 +499,7 @@ export default function KontaktContent() {
             {/* Google Reviews Only */}
             <GlassCard className="p-6">
               <h3 className="font-semibold text-lg text-[var(--foreground)] mb-4">
-                Bewertungen
+                {t("contact.contact.info.reviews.title")}
               </h3>
               <a
                 href={contactInfo.reviewLinks.google}
@@ -529,7 +529,7 @@ export default function KontaktContent() {
                 </div>
                 <div className="flex-1">
                   <span className="text-base font-medium text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors block">
-                    Google Bewertungen ansehen
+                    {t("contact.contact.info.reviews.googleReviews")}
                   </span>
                   <div className="flex items-center gap-1 mt-1">
                     {[1, 2, 3, 4, 5].map((i) => (
@@ -543,7 +543,7 @@ export default function KontaktContent() {
                 <ExternalLink className="w-5 h-5 text-[var(--foreground-muted)] group-hover:text-[var(--primary)] transition-colors" />
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-3">
-                Teilen Sie Ihre Erfahrungen mit anderen Familien!
+                {t("contact.contact.info.reviews.shareExperience")}
               </p>
             </GlassCard>
           </motion.div>
@@ -560,10 +560,10 @@ export default function KontaktContent() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            <span className="text-gradient">Anfahrt</span> & Lage
+            {t("contact.contact.directions.title")}
           </h2>
           <p className="text-[var(--foreground-muted)] max-w-xl mx-auto">
-            Unsere Praxis ist gut mit öffentlichen Verkehrsmitteln erreichbar.
+            {t("contact.contact.directions.subtitle")}
           </p>
         </motion.div>
 
@@ -591,7 +591,7 @@ export default function KontaktContent() {
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white font-medium shadow-md hover:shadow-lg transition-all"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    In Google Maps öffnen
+                    {t("contact.contact.directions.openInGoogleMaps")}
                   </a>
                 </div>
               </div>
@@ -606,11 +606,11 @@ export default function KontaktContent() {
                   <Train className="w-5 h-5" />
                 </div>
                 <h4 className="font-semibold text-[var(--foreground)]">
-                  U-Bahn & S-Bahn
+                  {t("contact.contact.directions.transport.uBahnSBahn")}
                 </h4>
               </div>
               {contactInfo.publicTransport
-                .filter((t) => t.type === "U-Bahn" || t.type === "S-Bahn")
+                .filter((transport) => transport.type === "U-Bahn" || transport.type === "S-Bahn")
                 .map((transport) => (
                   <div key={transport.type} className="mb-2">
                     <div className="flex items-center gap-2 text-sm">
@@ -630,14 +630,14 @@ export default function KontaktContent() {
                 <div className="w-10 h-10 rounded-xl icon-container-primary flex items-center justify-center">
                   <Bus className="w-5 h-5" />
                 </div>
-                <h4 className="font-semibold text-[var(--foreground)]">Bus</h4>
+                <h4 className="font-semibold text-[var(--foreground)]">{t("contact.contact.directions.transport.bus")}</h4>
               </div>
               {contactInfo.publicTransport
-                .filter((t) => t.type === "Bus")
+                .filter((transport) => transport.type === "Bus")
                 .map((transport) => (
                   <div key={transport.type} className="text-sm">
                     <span className="text-[var(--foreground-muted)]">
-                      Linien:
+                      {t("contact.contact.directions.transport.busLines")}
                     </span>{" "}
                     <span className="text-[var(--foreground)] font-medium">
                       {transport.lines.join(", ")} – {transport.station}
@@ -652,7 +652,7 @@ export default function KontaktContent() {
                   <Car className="w-5 h-5" />
                 </div>
                 <h4 className="font-semibold text-[var(--foreground)]">
-                  Parken
+                  {t("contact.contact.directions.transport.parking")}
                 </h4>
               </div>
               <p className="text-sm text-[var(--foreground-muted)]">
@@ -666,7 +666,7 @@ export default function KontaktContent() {
                   <Accessibility className="w-5 h-5" />
                 </div>
                 <h4 className="font-semibold text-[var(--foreground)]">
-                  Barrierefreiheit
+                  {t("contact.contact.directions.transport.accessibility")}
                 </h4>
               </div>
               <p className="text-sm text-[var(--foreground-muted)]">
@@ -688,14 +688,13 @@ export default function KontaktContent() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-100 text-rose-700 text-sm font-medium mb-4">
             <Shield className="w-4 h-4" />
-            <span>Im Notfall</span>
+            <span>{t("contact.contact.emergency.badge")}</span>
           </div>
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            <span className="text-gradient">Notfallnummern</span> & Hilfe
+            {t("contact.contact.emergency.title")}
           </h2>
           <p className="text-[var(--foreground-muted)] max-w-xl mx-auto">
-            Bei akuten Krisen oder Notfällen außerhalb unserer Sprechzeiten
-            erreichen Sie folgende Stellen.
+            {t("contact.contact.emergency.subtitle")}
           </p>
         </motion.div>
 
@@ -714,7 +713,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Feuerwehr / Rettungsdienst
+                    {t("contact.contact.emergency.services.fireRescue.title")}
                   </h4>
                 </div>
               </div>
@@ -725,7 +724,7 @@ export default function KontaktContent() {
                 112
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Bei akuter Lebensgefahr
+                {t("contact.contact.emergency.services.fireRescue.description")}
               </p>
             </GlassCard>
           </motion.div>
@@ -744,7 +743,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Vivantes Kinder-Psychiatrie
+                    {t("contact.contact.emergency.services.vivantesChildPsychiatry.title")}
                   </h4>
                 </div>
               </div>
@@ -755,7 +754,7 @@ export default function KontaktContent() {
                 030 / 130 238 011
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Kinder-Notaufnahme Neukölln
+                {t("contact.contact.emergency.services.vivantesChildPsychiatry.description")}
               </p>
             </GlassCard>
           </motion.div>
@@ -774,7 +773,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Berliner Krisendienst
+                    {t("contact.contact.emergency.services.berlinCrisisService.title")}
                   </h4>
                 </div>
               </div>
@@ -785,7 +784,7 @@ export default function KontaktContent() {
                 030 / 390 63-00
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                24h erreichbar, alle Bezirke
+                {t("contact.contact.emergency.services.berlinCrisisService.description")}
               </p>
             </GlassCard>
           </motion.div>
@@ -804,7 +803,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Kindernotdienst
+                    {t("contact.contact.emergency.services.childEmergency.title")}
                   </h4>
                 </div>
               </div>
@@ -815,7 +814,7 @@ export default function KontaktContent() {
                 030 / 61 00 61
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Für Kinder in Notlagen
+                {t("contact.contact.emergency.services.childEmergency.description")}
               </p>
             </GlassCard>
           </motion.div>
@@ -834,7 +833,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Jugendnotdienst
+                    {t("contact.contact.emergency.services.youthEmergency.title")}
                   </h4>
                 </div>
               </div>
@@ -845,7 +844,7 @@ export default function KontaktContent() {
                 030 / 61 00 62
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Für Jugendliche in Krisen
+                {t("contact.contact.emergency.services.youthEmergency.description")}
               </p>
             </GlassCard>
           </motion.div>
@@ -864,7 +863,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Mädchennotdienst
+                    {t("contact.contact.emergency.services.girlsEmergency.title")}
                   </h4>
                 </div>
               </div>
@@ -875,7 +874,7 @@ export default function KontaktContent() {
                 030 / 61 00 63
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Für Mädchen und junge Frauen
+                {t("contact.contact.emergency.services.girlsEmergency.description")}
               </p>
             </GlassCard>
           </motion.div>
@@ -894,7 +893,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Kinderschutz-Hotline
+                    {t("contact.contact.emergency.services.childProtection.title")}
                   </h4>
                 </div>
               </div>
@@ -905,7 +904,7 @@ export default function KontaktContent() {
                 030 / 61 00 66
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Bei Verdacht auf Kindeswohlgefährdung
+                {t("contact.contact.emergency.services.childProtection.description")}
               </p>
             </GlassCard>
           </motion.div>
@@ -924,7 +923,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Nummer gegen Kummer
+                    {t("contact.contact.emergency.services.nummerGegenKummer.title")}
                   </h4>
                 </div>
               </div>
@@ -935,7 +934,7 @@ export default function KontaktContent() {
                 0800 / 111 0 333
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Kostenlos & anonym für Kinder
+                {t("contact.contact.emergency.services.nummerGegenKummer.description")}
               </p>
             </GlassCard>
           </motion.div>
@@ -951,7 +950,7 @@ export default function KontaktContent() {
         >
           <GlassCard className="p-6 text-center">
             <h4 className="font-semibold text-[var(--foreground)] mb-2">
-              Elterntelefon
+              {t("contact.contact.emergency.services.parentHotline.title")}
             </h4>
             <a
               href="tel:08001110550"
@@ -960,7 +959,7 @@ export default function KontaktContent() {
               0800 / 111 0 550
             </a>
             <p className="text-sm text-[var(--foreground-muted)] mt-2">
-              Kostenlose Beratung für Eltern – Mo–Fr 9–17 Uhr, Di+Do bis 19 Uhr
+              {t("contact.contact.emergency.services.parentHotline.description")}
             </p>
           </GlassCard>
         </motion.div>
@@ -974,7 +973,7 @@ export default function KontaktContent() {
           className="mt-12"
         >
           <h3 className="text-xl font-bold text-[var(--foreground)] text-center mb-6">
-            Religiöse Notfallseelsorge
+            {t("contact.contact.emergency.religiousCounseling.title")}
           </h3>
           <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {/* Muslimische Seelsorge */}
@@ -985,7 +984,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Muslimische Seelsorge
+                    {t("contact.contact.emergency.religiousCounseling.muslim.title")}
                   </h4>
                 </div>
               </div>
@@ -996,10 +995,10 @@ export default function KontaktContent() {
                 030 / 44 35 09 821
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Muslimisches SeelsorgeTelefon (MuTeS)
+                {t("contact.contact.emergency.religiousCounseling.muslim.description")}
               </p>
               <p className="text-xs text-[var(--foreground-muted)] mt-1">
-                täglich 16–23 Uhr
+                {t("contact.contact.emergency.religiousCounseling.muslim.hours")}
               </p>
             </GlassCard>
 
@@ -1011,7 +1010,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Jüdische Seelsorge
+                    {t("contact.contact.emergency.religiousCounseling.jewish.title")}
                   </h4>
                 </div>
               </div>
@@ -1022,10 +1021,10 @@ export default function KontaktContent() {
                 0800 / 111 0 113
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Zentralwohlfahrtsstelle der Juden
+                {t("contact.contact.emergency.religiousCounseling.jewish.description")}
               </p>
               <p className="text-xs text-[var(--foreground-muted)] mt-1">
-                24h erreichbar, kostenlos
+                {t("contact.contact.emergency.religiousCounseling.jewish.hours")}
               </p>
             </GlassCard>
 
@@ -1037,7 +1036,7 @@ export default function KontaktContent() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-[var(--foreground)]">
-                    Christliche Seelsorge
+                    {t("contact.contact.emergency.religiousCounseling.christian.title")}
                   </h4>
                 </div>
               </div>
@@ -1048,10 +1047,10 @@ export default function KontaktContent() {
                 0800 / 111 0 111
               </a>
               <p className="text-sm text-[var(--foreground-muted)] mt-2">
-                Telefonseelsorge (ev. & kath.)
+                {t("contact.contact.emergency.religiousCounseling.christian.description")}
               </p>
               <p className="text-xs text-[var(--foreground-muted)] mt-1">
-                24h erreichbar, kostenlos
+                {t("contact.contact.emergency.religiousCounseling.christian.hours")}
               </p>
             </GlassCard>
           </div>
