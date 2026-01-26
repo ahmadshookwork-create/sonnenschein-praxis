@@ -390,7 +390,7 @@ export default function PrivatpraxisContent() {
                   className="relative w-full max-w-[520px] h-[220px] md:h-[260px] motion-reduce:animate-none"
                 >
                   <Image
-                    src="/illustrations/vr-abstract.svg"
+                    src="/sonnenschein-praxis/illustrations/vr-abstract.svg"
                     alt="Virtual Reality Therapie"
                     fill
                     className="object-contain drop-shadow-lg"

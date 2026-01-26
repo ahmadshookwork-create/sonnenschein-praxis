@@ -23,7 +23,7 @@ export default function Hero() {
 
       {/* Decorative Elements */}
       <div className="absolute top-20 left-10 w-16 h-16 opacity-20 animate-float">
-        <Image src="/logo.png" alt="" fill className="object-contain" />
+        <Image src="/sonnenschein-praxis/logo.png" alt="" fill className="object-contain" />
       </div>
       <div className="absolute top-32 right-20 w-12 h-12 opacity-15 animate-float-delayed">
         <Star className="w-full h-full text-[var(--secondary)]" />
@@ -62,7 +62,7 @@ export default function Hero() {
           >
             <div className="w-28 h-28 relative">
               <Image
-                src="/logo.png"
+                src="/sonnenschein-praxis/logo.png"
                 alt="Praxis Dr. Allozy Logo"
                 fill
                 className="object-contain"

@@ -90,7 +90,7 @@ export default function Philosophy() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-[var(--primary)]/10">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/praxis-philosophie.jpg"
+                  src="/sonnenschein-praxis/praxis-philosophie.jpg"
                   alt="Praxis Dr. Allozy - Freundliches Sprechzimmer"
                   fill
                   className="object-cover"
