@@ -1,6 +1,6 @@
 export const contactInfo = {
   practice: {
-    name: "Sonnenschein Praxis",
+    name: "Praxis Dr. Allozy",
     subtitle: "Dr. med. Basel Allozy",
     specialty: "Kinder- und Jugendpsychiatrie und Psychotherapie",
   },

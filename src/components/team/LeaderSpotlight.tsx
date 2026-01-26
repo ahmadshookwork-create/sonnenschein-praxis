@@ -44,7 +44,7 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
     { year: "2013", text: "Promotion zum Dr. med." },
     { year: "2017", text: "DGSF Supervisor (Systemische Therapie)" },
     { year: "2019", text: "EMDR-Therapeut (Traumatherapie)" },
-    { year: "2021", text: "Gründung Sonnenschein Praxis Berlin" },
+    { year: "2021", text: "Gründung Praxis Dr. Allozy Berlin" },
   ];
 
   const visibleTimeline = showFullTimeline

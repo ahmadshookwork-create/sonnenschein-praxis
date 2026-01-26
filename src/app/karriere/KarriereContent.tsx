@@ -207,7 +207,7 @@ export default function KarriereContent() {
         formData.position;
 
       const mailtoSubject = encodeURIComponent(
-        `Bewerbung: ${positionLabel} - Sonnenschein Praxis`,
+        `Bewerbung: ${positionLabel} - Praxis Dr. Allozy`,
       );
       const mailtoBody = encodeURIComponent(
         `Bewerbung für: ${positionLabel}\n\n` +

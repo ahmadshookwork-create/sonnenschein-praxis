@@ -48,7 +48,7 @@ export default function Philosophy() {
               <span className="text-gradient">Herz und Verstand</span>
             </h2>
             <p className="text-lg text-[var(--foreground-muted)] leading-relaxed mb-8">
-              In der Sonnenschein Praxis verbinden wir fachärztliche Kompetenz
+              In der Praxis Dr. Allozy verbinden wir fachärztliche Kompetenz
               mit einem tiefen Verständnis für die individuellen Bedürfnisse
               jeder Familie. Unser multiprofessionelles Team arbeitet Hand in Hand,
               um die bestmögliche Versorgung zu gewährleisten.
@@ -91,7 +91,7 @@ export default function Philosophy() {
               <div className="aspect-[4/3] relative">
                 <Image
                   src="/praxis-philosophie.jpg"
-                  alt="Sonnenschein Praxis - Freundliches Sprechzimmer"
+                  alt="Praxis Dr. Allozy - Freundliches Sprechzimmer"
                   fill
                   className="object-cover"
                 />

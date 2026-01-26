@@ -158,7 +158,7 @@ export default function PrivatpraxisContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/kontakt">
+              <Link href="/privatpraxis/anfrage">
                 <Button size="lg">
                   Privattermin anfragen
                   <ArrowRight className="w-5 h-5" />
@@ -772,7 +772,7 @@ export default function PrivatpraxisContent() {
             Kontaktieren Sie uns für einen zeitnahen Termin. Wir beraten Sie
             gerne zu Kosten und Erstattungsmöglichkeiten.
           </p>
-          <Link href="/kontakt">
+          <Link href="/privatpraxis/anfrage">
             <Button size="lg">
               Privattermin anfragen
               <ArrowRight className="w-5 h-5" />

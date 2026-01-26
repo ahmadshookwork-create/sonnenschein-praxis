@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum der Sonnenschein Praxis Dr. med. Basel Allozy - Kinder- und Jugendpsychiatrie Berlin.",
+    "Impressum der Praxis Dr. Allozy Dr. med. Basel Allozy - Kinder- und Jugendpsychiatrie Berlin.",
 };
 
 export default function ImpressumPage() {
@@ -37,7 +37,7 @@ export default function ImpressumPage() {
             </h1>
             <p className="mt-4 text-[var(--foreground-muted)] max-w-xl mx-auto">
               Angaben gemäß § 5 TMG und weitere rechtliche Informationen zur
-              Sonnenschein Praxis.
+              Praxis Dr. Allozy.
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function ImpressumPage() {
                 <div className="ml-13 pl-13">
                   <p className="text-[var(--foreground-muted)] leading-relaxed">
                     <strong className="text-[var(--foreground)] text-lg">
-                      Sonnenschein Praxis
+                      Praxis Dr. Allozy
                     </strong>
                     <br />
                     <strong className="text-[var(--foreground)]">

@@ -96,7 +96,7 @@ export default function Navigation() {
               <div className="w-14 h-14 relative">
                 <Image
                   src="/logo.png"
-                  alt="Sonnenschein Praxis Logo"
+                  alt="Praxis Dr. Allozy Logo"
                   fill
                   className="object-contain"
                   priority
@@ -104,7 +104,7 @@ export default function Navigation() {
               </div>
               <div className="hidden sm:block">
                 <span className="font-bold text-lg text-gradient">
-                  Sonnenschein Praxis
+                  Praxis Dr. Allozy
                 </span>
                 <span className="block text-xs text-[var(--foreground-muted)]">
                   Kinder- & Jugendpsychiatrie

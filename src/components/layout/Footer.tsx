@@ -93,14 +93,14 @@ export default function Footer() {
               <div className="w-14 h-14 relative">
                 <Image
                   src="/logo.png"
-                  alt="Sonnenschein Praxis Logo"
+                  alt="Praxis Dr. Allozy Logo"
                   fill
                   className="object-contain"
                 />
               </div>
               <div>
                 <span className="font-bold text-lg text-gradient">
-                  Sonnenschein Praxis
+                  Praxis Dr. Allozy
                 </span>
                 <span className="block text-xs text-[var(--foreground-muted)]">
                   Dr. med. Basel Allozy
@@ -319,7 +319,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-[var(--foreground-muted)] flex items-center gap-1">
-              &copy; {currentYear} Sonnenschein Praxis. Mit{" "}
+              &copy; {currentYear} Praxis Dr. Allozy. Mit{" "}
               <Heart className="w-4 h-4 text-[var(--tertiary)] fill-[var(--tertiary)]" />{" "}
               für Familien.
             </p>

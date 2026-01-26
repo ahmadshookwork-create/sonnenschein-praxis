@@ -97,9 +97,9 @@ export default function KontaktContent() {
       web3FormData.append("access_key", "YOUR_WEB3FORMS_KEY"); // Ersetzen Sie dies mit Ihrem Web3Forms Access Key
       web3FormData.append(
         "subject",
-        "Neue Kontaktanfrage - Sonnenschein Praxis",
+        "Neue Kontaktanfrage - Praxis Dr. Allozy",
       );
-      web3FormData.append("from_name", "Sonnenschein Praxis Website");
+      web3FormData.append("from_name", "Praxis Dr. Allozy Website");
       web3FormData.append("name", formData.name);
       web3FormData.append("email", formData.email);
       web3FormData.append("phone", formData.phone || "Nicht angegeben");
@@ -128,7 +128,7 @@ export default function KontaktContent() {
       } else {
         // Fallback: Öffne E-Mail-Client
         const mailtoSubject = encodeURIComponent(
-          "Kontaktanfrage - Sonnenschein Praxis",
+          "Kontaktanfrage - Praxis Dr. Allozy",
         );
         const mailtoBody = encodeURIComponent(
           `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone || "Nicht angegeben"}\nVersicherungsart: ${formData.insuranceType || "Nicht angegeben"}\n\nNachricht:\n${formData.message}`,
@@ -139,7 +139,7 @@ export default function KontaktContent() {
     } catch {
       // Fallback: Öffne E-Mail-Client bei Fehler
       const mailtoSubject = encodeURIComponent(
-        "Kontaktanfrage - Sonnenschein Praxis",
+        "Kontaktanfrage - Praxis Dr. Allozy",
       );
       const mailtoBody = encodeURIComponent(
         `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone || "Nicht angegeben"}\nVersicherungsart: ${formData.insuranceType || "Nicht angegeben"}\n\nNachricht:\n${formData.message}`,

@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sonnenschein-praxis.de"),
+  metadataBase: new URL("https://baselallozy.de"),
   title: {
     default:
-      "Sonnenschein Praxis | Dr. med. Basel Allozy - Kinder- und Jugendpsychiatrie Berlin",
-    template: "%s | Sonnenschein Praxis",
+      "Praxis Dr. Allozy | Dr. med. Basel Allozy - Kinder- und Jugendpsychiatrie Berlin",
+    template: "%s | Praxis Dr. Allozy",
   },
   description:
     "Fachärztliche Kinder- und Jugendpsychiatrie in Berlin. Mehrsprachiges Team, kultursensible Behandlung. Diagnostik, Psychotherapie, Elternberatung. GKV & Privatpraxis.",
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     "Privatpraxis Kinder- und Jugendpsychiatrie",
   ],
   authors: [{ name: "Dr. med. Basel Allozy" }],
-  creator: "Sonnenschein Praxis",
+  creator: "Praxis Dr. Allozy",
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: "https://sonnenschein-praxis.de",
-    siteName: "Sonnenschein Praxis",
-    title: "Sonnenschein Praxis | Kinder- und Jugendpsychiatrie Berlin",
+    url: "https://baselallozy.de",
+    siteName: "Praxis Dr. Allozy",
+    title: "Praxis Dr. Allozy | Kinder- und Jugendpsychiatrie Berlin",
     description:
       "Mehrsprachige, kultursensible psychiatrische Behandlung für Kinder und Jugendliche in Berlin.",
     images: [
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sonnenschein Praxis - Kinder- und Jugendpsychiatrie",
+        alt: "Praxis Dr. Allozy - Kinder- und Jugendpsychiatrie",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sonnenschein Praxis | Kinder- und Jugendpsychiatrie Berlin",
+    title: "Praxis Dr. Allozy | Kinder- und Jugendpsychiatrie Berlin",
     description:
       "Mehrsprachige, kultursensible psychiatrische Behandlung für Kinder und Jugendliche.",
     images: ["/og-image.jpg"],
@@ -93,18 +93,18 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MedicalClinic",
-              name: "Sonnenschein Praxis",
+              name: "Praxis Dr. Allozy",
               description:
                 "Fachärztliche Praxis für Kinder- und Jugendpsychiatrie und Psychotherapie in Berlin",
-              url: "https://sonnenschein-praxis.de",
-              telephone: "+49 30 12345678",
-              email: "kontakt@sonnenschein-praxis.de",
+              url: "https://baselallozy.de",
+              telephone: "+49 30 6158520",
+              email: "praxis@baselallozy.de",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Musterstraße 123",
+                streetAddress: "Blücherstraße 55",
                 addressLocality: "Berlin",
                 addressRegion: "Berlin",
-                postalCode: "10115",
+                postalCode: "10961",
                 addressCountry: "DE",
               },
               geo: {

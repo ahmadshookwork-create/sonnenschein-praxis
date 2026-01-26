@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
 
     try {
       await transporter.sendMail({
-        from: `"Sonnenschein Praxis Website" <${process.env.SMTP_USER}>`,
+        from: `"Praxis Dr. Allozy Website" <${process.env.SMTP_USER}>`,
         to: praxisEmail,
         replyTo: sanitizedData.email,
         subject: `Neue Bewerbung: ${sanitizedData.positionLabel} - ${sanitizedData.name}`,
@@ -197,13 +197,13 @@ ${attachments.map((a) => `- ${a.filename}`).join("\n")}
 
       // Bestätigungs-E-Mail an den Bewerber
       await transporter.sendMail({
-        from: `"Sonnenschein Praxis" <${process.env.SMTP_USER}>`,
+        from: `"Praxis Dr. Allozy" <${process.env.SMTP_USER}>`,
         to: sanitizedData.email,
-        subject: "Ihre Bewerbung bei der Sonnenschein Praxis",
+        subject: "Ihre Bewerbung bei der Praxis Dr. Allozy",
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <div style="background: linear-gradient(135deg, #f6a623, #4ecdc4); padding: 20px; border-radius: 10px 10px 0 0;">
-              <h1 style="color: white; margin: 0; font-size: 24px;">Sonnenschein Praxis</h1>
+              <h1 style="color: white; margin: 0; font-size: 24px;">Praxis Dr. Allozy</h1>
               <p style="color: white; margin: 5px 0 0 0; opacity: 0.9;">Dr. med. Basel Allozy</p>
             </div>
             <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px;">
@@ -231,11 +231,11 @@ ${attachments.map((a) => `- ${a.filename}`).join("\n")}
 
               <p style="color: #5a6578; margin-top: 30px; line-height: 1.6;">
                 Mit freundlichen Grüßen,<br>
-                Ihr Team der Sonnenschein Praxis
+                Ihr Team der Praxis Dr. Allozy
               </p>
             </div>
             <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
-              <p style="margin: 0;">Sonnenschein Praxis | Blücherstraße 55 | 10961 Berlin</p>
+              <p style="margin: 0;">Praxis Dr. Allozy | Blücherstraße 55 | 10961 Berlin</p>
             </div>
           </div>
         `,
@@ -256,7 +256,7 @@ Telefon: 030 / 615 85 20
 E-Mail: praxis@baselallozy.de
 
 Mit freundlichen Grüßen,
-Ihr Team der Sonnenschein Praxis
+Ihr Team der Praxis Dr. Allozy
         `,
       });
 

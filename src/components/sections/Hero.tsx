@@ -63,7 +63,7 @@ export default function Hero() {
             <div className="w-28 h-28 relative">
               <Image
                 src="/logo.png"
-                alt="Sonnenschein Praxis Logo"
+                alt="Praxis Dr. Allozy Logo"
                 fill
                 className="object-contain"
                 priority
@@ -79,7 +79,7 @@ export default function Hero() {
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
           >
             <span className="text-[var(--foreground)]">
-              Sonnenschein Praxis
+              Praxis Dr. Allozy
             </span>
             <br />
             <span className="text-gradient">Dr. med. Basel Allozy</span>

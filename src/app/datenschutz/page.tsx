@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
   description:
-    "Datenschutzerklärung der Sonnenschein Praxis Dr. med. Basel Allozy - Kinder- und Jugendpsychiatrie Berlin.",
+    "Datenschutzerklärung der Praxis Dr. Allozy Dr. med. Basel Allozy - Kinder- und Jugendpsychiatrie Berlin.",
 };
 
 export default function DatenschutzPage() {
@@ -87,7 +87,7 @@ export default function DatenschutzPage() {
                     <br />
                     <br />
                     <strong className="text-[var(--foreground)]">
-                      Sonnenschein Praxis
+                      Praxis Dr. Allozy
                     </strong>
                     <br />
                     Dr. med. Basel Allozy

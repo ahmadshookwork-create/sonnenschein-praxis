@@ -52,7 +52,7 @@ export default function Highlights() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)] mb-4">
-            Warum <span className="text-gradient">Sonnenschein Praxis</span>?
+            Warum <span className="text-gradient">Praxis Dr. Allozy</span>?
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
             Kultursensible, professionelle Behandlung für Kinder und Jugendliche
