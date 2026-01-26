@@ -3,39 +3,18 @@
 import { motion } from "framer-motion";
 import { Globe2, Award, HeartHandshake, Train } from "lucide-react";
 import GlassCard from "@/components/ui/GlassCard";
+import { useTranslation } from "@/i18n";
 
-const highlights = [
-  {
-    icon: Globe2,
-    title: "Mehrsprachiges Team",
-    description:
-      "Behandlung in über 10 Sprachen: Deutsch, Arabisch, Englisch, Türkisch, Bosnisch, Russisch, Spanisch, Persisch und mehr.",
-    color: "primary",
-  },
-  {
-    icon: Award,
-    title: "Langjährige Erfahrung",
-    description:
-      "Fachärztliche Expertise in der Kinder- und Jugendpsychiatrie mit modernen, wissenschaftlich fundierten Therapiemethoden.",
-    color: "secondary",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Familien- & Elternarbeit",
-    description:
-      "Ganzheitliche Behandlung unter Einbeziehung der Familie. Elternberatung, Familientherapie und systemische Ansätze.",
-    color: "primary",
-  },
-  {
-    icon: Train,
-    title: "Zentrale Lage",
-    description:
-      "Hervorragende ÖPNV-Anbindung in Berlin-Mitte. U-Bahn, S-Bahn und Bus direkt erreichbar. Barrierefreier Zugang.",
-    color: "secondary",
-  },
+const highlightIcons = [
+  { icon: Globe2, color: "primary" },
+  { icon: Award, color: "secondary" },
+  { icon: HeartHandshake, color: "primary" },
+  { icon: Train, color: "secondary" },
 ];
 
 export default function Highlights() {
+  const { t } = useTranslation();
+
   return (
     <section className="section-padding bg-[var(--background-secondary)] relative overflow-hidden">
       {/* Background decoration */}
@@ -52,19 +31,18 @@ export default function Highlights() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)] mb-4">
-            Warum <span className="text-gradient">Praxis Dr. Allozy</span>?
+            {t("highlights.highlights.title")}
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Kultursensible, professionelle Behandlung für Kinder und Jugendliche
-            in einer warmherzigen Atmosphäre.
+            {t("highlights.highlights.subtitle")}
           </p>
         </motion.div>
 
         {/* Highlights Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.map((highlight, index) => (
+          {highlightIcons.map((highlight, index) => (
             <GlassCard
-              key={highlight.title}
+              key={index}
               delay={index * 0.1}
               glow
               className="text-center"
@@ -85,10 +63,10 @@ export default function Highlights() {
                 />
               </div>
               <h3 className="font-semibold text-lg text-[var(--foreground)] mb-3">
-                {highlight.title}
+                {t(`highlights.highlights.items.${index}.title`)}
               </h3>
               <p className="text-sm text-[var(--foreground-muted)] leading-relaxed">
-                {highlight.description}
+                {t(`highlights.highlights.items.${index}.description`)}
               </p>
             </GlassCard>
           ))}

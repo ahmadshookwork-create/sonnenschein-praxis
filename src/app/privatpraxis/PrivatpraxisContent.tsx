@@ -37,79 +37,72 @@ import GlassCard from "@/components/ui/GlassCard";
 import Button from "@/components/ui/Button";
 import { pricingData, billingFAQ, vrTherapyData } from "@/data/pricing";
 import { privatpraxisLocation } from "@/data/locations";
+import { useTranslation } from "@/i18n";
 
-const serviceModules = [
-  {
-    icon: Stethoscope,
-    title: "Diagnostik",
-    description:
-      "Umfassende psychiatrische und psychologische Diagnostik mit standardisierten Testverfahren.",
-    services: [
-      "Anamnese & Exploration",
-      "Entwicklungsdiagnostik",
-      "Intelligenz- & Leistungstests",
-      "ADHS-Diagnostik",
-    ],
-  },
-  {
-    icon: User,
-    title: "Einzeltherapie",
-    description:
-      "Individuelle psychotherapeutische Behandlung für Kinder und Jugendliche.",
-    services: [
-      "Verhaltenstherapie",
-      "Kognitive Therapie",
-      "Spieltherapie",
-      "Traumatherapie",
-    ],
-  },
-  {
-    icon: Users,
-    title: "Gruppentherapie",
-    description: "Therapeutische Gruppen zur Förderung sozialer Kompetenzen.",
-    services: [
-      "Soziales Kompetenztraining",
-      "ADHS-Gruppen",
-      "Angstbewältigung",
-      "Emotionsregulation",
-    ],
-  },
-  {
-    icon: Home,
-    title: "Familien- & Elternarbeit",
-    description: "Systemische Arbeit mit der Familie und Beratung für Eltern.",
-    services: [
-      "Familientherapie",
-      "Elternberatung",
-      "Paarberatung",
-      "Netzwerkgespräche",
-    ],
-  },
-  {
-    icon: Palette,
-    title: "Kreativtherapien",
-    description: "Kunsttherapeutische Methoden für nonverbalen Ausdruck.",
-    services: [
-      "Kunsttherapie",
-      "Gestaltungstherapie",
-      "Kreative Ausdrucksformen",
-    ],
-  },
-  {
-    icon: MessageCircle,
-    title: "Logopädie",
-    description: "Behandlung von Sprach- und Sprechstörungen.",
-    services: [
-      "Sprachentwicklung",
-      "Artikulation",
-      "Stottern",
-      "Mehrsprachige Therapie",
-    ],
-  },
+const serviceModuleIcons = [
+  Stethoscope,
+  User,
+  Users,
+  Home,
+  Palette,
+  MessageCircle,
 ];
 
 export default function PrivatpraxisContent() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const { t } = useTranslation();
+
+  // Get service modules from translations
+  const serviceModules = [0, 1, 2, 3, 4, 5].map((index) => ({
+    icon: serviceModuleIcons[index],
+    title: t(`private.private.serviceModules.modules.${index}.title`),
+    description: t(`private.private.serviceModules.modules.${index}.description`),
+    services: Object.keys(
+      { 0: "", 1: "", 2: "", 3: "" }
+    ).map((i) => t(`private.private.serviceModules.modules.${index}.services.${i}`)).filter(s => !s.includes('services')),
+  }));
+
+  // Get benefits from translations
+  const benefits = [
+    {
+      icon: Clock,
+      title: t("private.private.benefits.0.title"),
+      description: t("private.private.benefits.0.description"),
+    },
+    {
+      icon: CreditCard,
+      title: t("private.private.benefits.1.title"),
+      description: t("private.private.benefits.1.description"),
+    },
+    {
+      icon: CheckCircle2,
+      title: t("private.private.benefits.2.title"),
+      description: t("private.private.benefits.2.description"),
+    },
+  ];
+
+  // Get FAQ items from translations
+  const faqItems = [0, 1, 2, 3, 4, 5, 6].map((index) => ({
+    question: t(`private.private.faq.items.${index}.question`),
+    answer: t(`private.private.faq.items.${index}.answer`),
+  }));
+
+  // Get pricing items from translations
+  const pricingItems = pricingData.map((item, index) => ({
+    ...item,
+    service: t(`private.private.pricing.items.${index}.service`),
+    description: t(`private.private.pricing.items.${index}.description`),
+    duration: t(`private.private.pricing.items.${index}.duration`) !== `private.private.pricing.items.${index}.duration`
+      ? t(`private.private.pricing.items.${index}.duration`)
+      : item.duration,
+  }));
+
+  // Get VR therapies from translations
+  const vrTherapies = vrTherapyData.map((therapy, index) => ({
+    ...therapy,
+    title: t(`private.private.vrTherapy.therapies.${index}.title`),
+    description: t(`private.private.vrTherapy.therapies.${index}.description`),
+  }));
 
   return (
     <>
@@ -143,31 +136,29 @@ export default function PrivatpraxisContent() {
           >
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[var(--secondary)]/10 to-[var(--tertiary)]/10 border border-[var(--secondary)]/20 text-[var(--secondary-dark)] text-sm font-medium mb-6 shadow-sm">
               <Heart className="w-4 h-4" />
-              <span>Privatpraxis</span>
+              <span>{t("private.private.hero.badge")}</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] mb-6">
-              Privatpraxis für{" "}
+              {t("private.private.hero.title").split("PKV")[0]}
               <span className="text-gradient">PKV & Selbstzahler</span>
             </h1>
 
             <p className="text-lg text-[var(--foreground-muted)] leading-relaxed mb-8">
-              Individuelle, zeitnahe Behandlung für privatversicherte
-              Patient:innen, Beihilfeberechtigte und Selbstzahler. Hochwertige
-              psychiatrische Versorgung mit kürzeren Wartezeiten.
+              {t("private.private.hero.description")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/privatpraxis/anfrage">
                 <Button size="lg">
-                  Privattermin anfragen
+                  {t("private.private.hero.ctaPrimary")}
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
               <Link href="/gkv">
                 <Button variant="secondary" size="lg">
                   <Shield className="w-5 h-5" />
-                  Gesetzlich versichert?
+                  {t("private.private.hero.ctaSecondary")}
                 </Button>
               </Link>
             </div>
@@ -178,26 +169,7 @@ export default function PrivatpraxisContent() {
       {/* Benefits */}
       <SectionWrapper background="secondary">
         <div className="grid sm:grid-cols-3 gap-6">
-          {[
-            {
-              icon: Clock,
-              title: "Kürzere Wartezeiten",
-              description:
-                "Schnellere Terminvergabe für Privatpatienten und Selbstzahler.",
-            },
-            {
-              icon: CreditCard,
-              title: "Transparente Abrechnung",
-              description:
-                "Klare Preisstruktur nach GOÄ mit detaillierter Rechnung.",
-            },
-            {
-              icon: CheckCircle2,
-              title: "Erweiterte Leistungen",
-              description:
-                "Zusätzliche diagnostische und therapeutische Optionen.",
-            },
-          ].map((benefit, index) => (
+          {benefits.map((benefit, index) => (
             <GlassCard
               key={benefit.title}
               delay={index * 0.1}
@@ -227,10 +199,10 @@ export default function PrivatpraxisContent() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            <span className="text-gradient">Standort</span> Privatpraxis
+            <span className="text-gradient">{t("private.private.location.sectionTitle").split(" ")[0]}</span> {t("private.private.location.sectionTitle").split(" ").slice(1).join(" ")}
           </h2>
           <p className="text-[var(--foreground-muted)] max-w-xl mx-auto">
-            {privatpraxisLocation.note}
+            {t("private.private.location.note")}
           </p>
         </motion.div>
 
@@ -278,7 +250,7 @@ export default function PrivatpraxisContent() {
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--secondary)] to-[var(--tertiary)] text-white font-medium shadow-md hover:shadow-lg transition-all"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    In Google Maps öffnen
+                    {t("private.private.location.openInMaps")}
                   </a>
                 </div>
               </div>
@@ -293,24 +265,24 @@ export default function PrivatpraxisContent() {
                   <Train className="w-5 h-5" />
                 </div>
                 <h4 className="font-semibold text-[var(--foreground)]">
-                  U-Bahn & S-Bahn
+                  {t("private.private.location.transport.uBahn.title")}
                 </h4>
               </div>
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
                   <span className="text-[var(--foreground-muted)]">
-                    U-Bahn:
+                    {t("private.private.location.transport.uBahn.uBahnLabel")}
                   </span>
                   <span className="text-[var(--foreground)] font-medium">
-                    U6, U7 – Mehringdamm
+                    {t("private.private.location.transport.uBahn.uBahnValue")}
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-[var(--foreground-muted)]">
-                    S-Bahn:
+                    {t("private.private.location.transport.uBahn.sBahnLabel")}
                   </span>
                   <span className="text-[var(--foreground)] font-medium">
-                    S1, S2 – Yorckstraße
+                    {t("private.private.location.transport.uBahn.sBahnValue")}
                   </span>
                 </div>
               </div>
@@ -321,12 +293,16 @@ export default function PrivatpraxisContent() {
                 <div className="w-10 h-10 rounded-xl icon-container-primary flex items-center justify-center">
                   <Bus className="w-5 h-5" />
                 </div>
-                <h4 className="font-semibold text-[var(--foreground)]">Bus</h4>
+                <h4 className="font-semibold text-[var(--foreground)]">
+                  {t("private.private.location.transport.bus.title")}
+                </h4>
               </div>
               <div className="text-sm">
-                <span className="text-[var(--foreground-muted)]">Linien:</span>{" "}
+                <span className="text-[var(--foreground-muted)]">
+                  {t("private.private.location.transport.bus.label")}
+                </span>{" "}
                 <span className="text-[var(--foreground)] font-medium">
-                  M19, 140 – Blücherstraße
+                  {t("private.private.location.transport.bus.value")}
                 </span>
               </div>
             </GlassCard>
@@ -337,12 +313,11 @@ export default function PrivatpraxisContent() {
                   <Car className="w-5 h-5" />
                 </div>
                 <h4 className="font-semibold text-[var(--foreground)]">
-                  Parken
+                  {t("private.private.location.transport.parking.title")}
                 </h4>
               </div>
               <p className="text-sm text-[var(--foreground-muted)]">
-                Begrenzte Parkplätze vorhanden. Öffentliche Verkehrsmittel
-                empfohlen.
+                {t("private.private.location.transport.parking.description")}
               </p>
             </GlassCard>
 
@@ -352,11 +327,11 @@ export default function PrivatpraxisContent() {
                   <Accessibility className="w-5 h-5" />
                 </div>
                 <h4 className="font-semibold text-[var(--foreground)]">
-                  Barrierefreiheit
+                  {t("private.private.location.transport.accessibility.title")}
                 </h4>
               </div>
               <p className="text-sm text-[var(--foreground-muted)]">
-                Die Praxis ist barrierefrei erreichbar.
+                {t("private.private.location.transport.accessibility.description")}
               </p>
             </GlassCard>
           </div>
@@ -371,7 +346,7 @@ export default function PrivatpraxisContent() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          {/* Große weiße Hero-Card mit VR-Bild darin */}
+          {/* Grosse weisse Hero-Card mit VR-Bild darin */}
           <div className="mx-auto max-w-5xl rounded-3xl bg-white/90 shadow-lg ring-1 ring-black/5 p-8 md:p-12 overflow-hidden relative">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-violet-500/10 to-cyan-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -402,10 +377,10 @@ export default function PrivatpraxisContent() {
               {/* Header */}
               <div className="text-center mb-6">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)] mb-2">
-                  Virtual-Reality-Therapien
+                  {t("private.private.vrTherapy.sectionTitle")}
                 </h2>
                 <p className="text-[var(--foreground-muted)]">
-                  Innovative Behandlungsmethoden
+                  {t("private.private.vrTherapy.subtitle")}
                 </p>
               </div>
 
@@ -413,15 +388,21 @@ export default function PrivatpraxisContent() {
               <div className="flex flex-wrap gap-3 mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-700">
                   <Sparkles className="w-4 h-4" />
-                  <span className="text-sm font-medium">Innovativ</span>
+                  <span className="text-sm font-medium">
+                    {t("private.private.vrTherapy.badges.innovative")}
+                  </span>
                 </div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-700">
                   <MousePointerClick className="w-4 h-4" />
-                  <span className="text-sm font-medium">Interaktiv</span>
+                  <span className="text-sm font-medium">
+                    {t("private.private.vrTherapy.badges.interactive")}
+                  </span>
                 </div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700">
                   <ShieldCheck className="w-4 h-4" />
-                  <span className="text-sm font-medium">Schonend</span>
+                  <span className="text-sm font-medium">
+                    {t("private.private.vrTherapy.badges.gentle")}
+                  </span>
                 </div>
               </div>
 
@@ -430,11 +411,10 @@ export default function PrivatpraxisContent() {
                 <AlertTriangle className="w-5 h-5 text-[var(--warning)] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-medium text-[var(--foreground)]">
-                    Hinweis
+                    {t("private.private.vrTherapy.notice.title")}
                   </p>
                   <p className="text-sm text-[var(--foreground-muted)]">
-                    Nicht Bestandteil der KV-Leistungen, nur auf Wunsch
-                    verfügbar.
+                    {t("private.private.vrTherapy.notice.text")}
                   </p>
                 </div>
               </div>
@@ -442,13 +422,13 @@ export default function PrivatpraxisContent() {
               {/* VR Surcharge Info */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--secondary)]/20 to-[var(--tertiary)]/20 border border-[var(--secondary)]/30 mb-8">
                 <span className="text-sm font-semibold text-[var(--secondary-dark)]">
-                  Zuschlag für VR-Brille: +35 € pro Sitzung
+                  {t("private.private.vrTherapy.surcharge")}
                 </span>
               </div>
 
               {/* VR Therapy Cards - Next Level Design */}
               <div className="grid sm:grid-cols-3 gap-6">
-                {vrTherapyData.map((therapy, index) => {
+                {vrTherapies.map((therapy, index) => {
                   const variantStyles = {
                     "vr-konfrontation": {
                       bg: "from-violet-500/15 via-violet-400/5 to-transparent",
@@ -522,10 +502,13 @@ export default function PrivatpraxisContent() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            Unsere <span className="text-gradient">Leistungen</span>
+            {t("private.private.serviceModules.sectionTitle").split(" ")[0]}{" "}
+            <span className="text-gradient">
+              {t("private.private.serviceModules.sectionTitle").split(" ").slice(1).join(" ")}
+            </span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Umfassendes Angebot für privatversicherte Familien und Selbstzahler.
+            {t("private.private.serviceModules.sectionDescription")}
           </p>
         </motion.div>
 
@@ -571,11 +554,13 @@ export default function PrivatpraxisContent() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            Preise & <span className="text-gradient">Abrechnung</span>
+            {t("private.private.pricing.sectionTitle").split("&")[0]}&{" "}
+            <span className="text-gradient">
+              {t("private.private.pricing.sectionTitle").split("&")[1]?.trim() || "Abrechnung"}
+            </span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Transparente Preise nach Gebührenordnung für Ärzte (GOÄ). Die
-            tatsächlichen Kosten können je nach Aufwand variieren.
+            {t("private.private.pricing.sectionDescription")}
           </p>
         </motion.div>
 
@@ -583,34 +568,32 @@ export default function PrivatpraxisContent() {
         <div className="grid sm:grid-cols-3 gap-4 mb-8">
           <GlassCard className="p-4 text-center border-l-4 border-l-[var(--primary)]">
             <h4 className="font-semibold text-[var(--foreground)] mb-1">
-              GKV-Patient:innen
+              {t("private.private.pricing.patientTypes.gkv.title")}
             </h4>
             <p className="text-sm text-[var(--foreground-muted)]">
-              Abrechnung über Ihre Krankenkasse.{" "}
+              {t("private.private.pricing.patientTypes.gkv.description")}{" "}
               <Link
                 href="/gkv"
                 className="text-[var(--primary-dark)] hover:text-[var(--primary)] font-medium"
               >
-                Mehr Info
+                {t("private.private.pricing.patientTypes.gkv.link")}
               </Link>
             </p>
           </GlassCard>
           <GlassCard className="p-4 text-center border-l-4 border-l-[var(--secondary)]">
             <h4 className="font-semibold text-[var(--foreground)] mb-1">
-              PKV-Patient:innen
+              {t("private.private.pricing.patientTypes.pkv.title")}
             </h4>
             <p className="text-sm text-[var(--foreground-muted)]">
-              Terminvereinbarung gegen Vorkasse. Sie erhalten eine Rechnung zur
-              Einreichung bei Ihrer PKV.
+              {t("private.private.pricing.patientTypes.pkv.description")}
             </p>
           </GlassCard>
           <GlassCard className="p-4 text-center border-l-4 border-l-[var(--warning)]">
             <h4 className="font-semibold text-[var(--foreground)] mb-1">
-              Selbstzahler
+              {t("private.private.pricing.patientTypes.selfPay.title")}
             </h4>
             <p className="text-sm text-[var(--foreground-muted)]">
-              Terminvereinbarung gegen Vorkasse. Direkte Zahlung zu unseren
-              Selbstzahler-Tarifen.
+              {t("private.private.pricing.patientTypes.selfPay.description")}
             </p>
           </GlassCard>
         </div>
@@ -623,13 +606,10 @@ export default function PrivatpraxisContent() {
             </div>
             <div>
               <p className="font-medium text-[var(--foreground)] mb-1">
-                Hinweis zur Terminvereinbarung
+                {t("private.private.pricing.prepaymentNotice.title")}
               </p>
               <p className="text-sm text-[var(--foreground-muted)]">
-                Für Privatpatient:innen und Selbstzahler ist bei der
-                Terminvereinbarung eine Vorkasse erforderlich. Die Zahlung
-                erfolgt vor dem Termin. Bei Absage bis 24 Stunden vor dem Termin
-                wird der Betrag vollständig erstattet.
+                {t("private.private.pricing.prepaymentNotice.text")}
               </p>
             </div>
           </div>
@@ -642,21 +622,21 @@ export default function PrivatpraxisContent() {
               <thead>
                 <tr className="border-b border-[var(--card-border)] bg-[var(--background-secondary)]">
                   <th className="text-left px-6 py-4 text-sm font-semibold text-[var(--foreground)]">
-                    Leistung
+                    {t("private.private.pricing.tableHeaders.service")}
                   </th>
                   <th className="text-left px-6 py-4 text-sm font-semibold text-[var(--foreground)]">
-                    Dauer
+                    {t("private.private.pricing.tableHeaders.duration")}
                   </th>
                   <th className="text-right px-6 py-4 text-sm font-semibold text-[var(--secondary-dark)]">
-                    PKV
+                    {t("private.private.pricing.tableHeaders.pkv")}
                   </th>
                   <th className="text-right px-6 py-4 text-sm font-semibold text-[var(--warning)]">
-                    Selbstzahler
+                    {t("private.private.pricing.tableHeaders.selfPay")}
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {pricingData.map((item, index) => (
+                {pricingItems.map((item, index) => (
                   <tr
                     key={item.id}
                     className={
@@ -694,10 +674,7 @@ export default function PrivatpraxisContent() {
           </div>
           <div className="px-6 py-4 bg-[var(--background-secondary)]/50 border-t border-[var(--card-border)]">
             <p className="text-sm text-[var(--foreground-muted)]">
-              <strong>Hinweis:</strong> Alle Preise sind Bruttobeträge. Die
-              Abrechnung erfolgt nach der Gebührenordnung für Ärzte (GOÄ). Der
-              tatsächliche Betrag kann je nach Behandlungsaufwand und
-              Steigerungsfaktor variieren.
+              <strong>Hinweis:</strong> {t("private.private.pricing.tableFooter")}
             </p>
           </div>
         </GlassCard>
@@ -713,12 +690,14 @@ export default function PrivatpraxisContent() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            Häufige <span className="text-gradient">Fragen</span> zur Abrechnung
+            {t("private.private.faq.sectionTitle").split("Fragen")[0]}
+            <span className="text-gradient">Fragen</span>{" "}
+            {t("private.private.faq.sectionTitle").split("Fragen")[1]}
           </h2>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-4">
-          {billingFAQ.map((faq, index) => (
+          {faqItems.map((faq, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 10 }}
@@ -766,15 +745,14 @@ export default function PrivatpraxisContent() {
         <GlassCard className="p-8 sm:p-12 text-center" gradient>
           <FileText className="w-16 h-16 mx-auto text-[var(--primary)] mb-6" />
           <h2 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)] mb-4">
-            Termin in der Privatpraxis vereinbaren
+            {t("private.private.cta.title")}
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto mb-8">
-            Kontaktieren Sie uns für einen zeitnahen Termin. Wir beraten Sie
-            gerne zu Kosten und Erstattungsmöglichkeiten.
+            {t("private.private.cta.description")}
           </p>
           <Link href="/privatpraxis/anfrage">
             <Button size="lg">
-              Privattermin anfragen
+              {t("private.private.cta.button")}
               <ArrowRight className="w-5 h-5" />
             </Button>
           </Link>

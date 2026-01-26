@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Phone, Calendar, Users } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { useTranslation } from "@/i18n";
 
 export default function CTASection() {
+  const { t } = useTranslation();
+
   return (
     <section className="section-padding bg-[var(--background)] relative overflow-hidden">
       {/* Background decoration */}
@@ -19,24 +22,23 @@ export default function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)] mb-4">
-            Wir sind für Sie da
+            {t("cta.title")}
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] mb-8 max-w-2xl mx-auto">
-            Haben Sie Fragen oder möchten Sie einen Termin vereinbaren?
-            Unser Team freut sich auf Ihre Kontaktaufnahme.
+            {t("cta.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link href="/kontakt">
               <Button size="lg">
                 <Calendar className="w-5 h-5" />
-                Termin anfragen
+                {t("cta.buttonAppointment")}
               </Button>
             </Link>
             <Link href="/team">
               <Button variant="secondary" size="lg">
                 <Users className="w-5 h-5" />
-                Team kennenlernen
+                {t("cta.buttonTeam")}
               </Button>
             </Link>
           </div>
@@ -44,12 +46,12 @@ export default function CTASection() {
           {/* Quick Contact Info */}
           <div className="flex items-center justify-center gap-2 text-[var(--foreground-muted)]">
             <Phone className="w-5 h-5 text-[var(--primary)]" />
-            <span>Oder rufen Sie uns an:</span>
+            <span>{t("cta.callPrompt")}</span>
             <a
               href="tel:+493012345678"
               className="font-semibold text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
             >
-              030 / 123 456 78
+              {t("cta.phoneNumber")}
             </a>
           </div>
         </motion.div>

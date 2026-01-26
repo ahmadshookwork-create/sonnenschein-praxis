@@ -4,31 +4,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import GlassCard from "@/components/ui/GlassCard";
+import { useTranslation } from "@/i18n";
 
-const philosophyPoints = [
-  {
-    title: "Kultursensible Behandlung",
-    description:
-      "Wir verstehen die Bedeutung kultureller Hintergründe und bieten Behandlung, die verschiedene kulturelle Kontexte respektiert und integriert.",
-  },
-  {
-    title: "Wissenschaftlich fundiert",
-    description:
-      "Unsere Therapien basieren auf aktuellen wissenschaftlichen Erkenntnissen und bewährten Behandlungsmethoden der Kinder- und Jugendpsychiatrie.",
-  },
-  {
-    title: "Ganzheitlicher Ansatz",
-    description:
-      "Wir betrachten das Kind im Kontext seiner Familie und seines sozialen Umfelds. Elternarbeit und Familientherapie sind feste Bestandteile unserer Behandlung.",
-  },
-  {
-    title: "Vertrauensvolle Atmosphäre",
-    description:
-      "In unserer Praxis schaffen wir eine warme, einladende Umgebung, in der sich Kinder, Jugendliche und Eltern sicher und verstanden fühlen.",
-  },
-];
+const philosophyPointKeys = [
+  "culturallySensitive",
+  "scientificallyBased",
+  "holisticApproach",
+  "trustfulAtmosphere",
+] as const;
 
 export default function Philosophy() {
+  const { t } = useTranslation();
+
   return (
     <section className="section-padding bg-[var(--background)] relative">
       <div className="max-w-7xl mx-auto">
@@ -41,23 +28,23 @@ export default function Philosophy() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block text-[var(--primary)] text-sm font-semibold uppercase tracking-wider mb-4">
-              Unsere Philosophie
+              {t("philosophy.philosophy.sectionLabel")}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)] mb-6">
-              Professionelle Hilfe mit{" "}
-              <span className="text-gradient">Herz und Verstand</span>
+              {t("philosophy.philosophy.title").replace(
+                t("philosophy.philosophy.titleHighlight"),
+                ""
+              )}
+              <span className="text-gradient">{t("philosophy.philosophy.titleHighlight")}</span>
             </h2>
             <p className="text-lg text-[var(--foreground-muted)] leading-relaxed mb-8">
-              In der Praxis Dr. Allozy verbinden wir fachärztliche Kompetenz
-              mit einem tiefen Verständnis für die individuellen Bedürfnisse
-              jeder Familie. Unser multiprofessionelles Team arbeitet Hand in Hand,
-              um die bestmögliche Versorgung zu gewährleisten.
+              {t("philosophy.philosophy.description")}
             </p>
 
             <div className="space-y-4">
-              {philosophyPoints.map((point, index) => (
+              {philosophyPointKeys.map((pointKey, index) => (
                 <motion.div
-                  key={point.title}
+                  key={pointKey}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -67,10 +54,10 @@ export default function Philosophy() {
                   <CheckCircle2 className="w-6 h-6 text-[var(--primary)] flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-semibold text-[var(--foreground)] mb-1">
-                      {point.title}
+                      {t(`philosophy.philosophy.points.${pointKey}.title`)}
                     </h3>
                     <p className="text-sm text-[var(--foreground-muted)]">
-                      {point.description}
+                      {t(`philosophy.philosophy.points.${pointKey}.description`)}
                     </p>
                   </div>
                 </motion.div>
@@ -91,21 +78,21 @@ export default function Philosophy() {
               <div className="aspect-[4/3] relative">
                 <Image
                   src="/sonnenschein-praxis/praxis-philosophie.jpg"
-                  alt="Praxis Dr. Allozy - Freundliches Sprechzimmer"
+                  alt={t("philosophy.philosophy.imageAlt")}
                   fill
                   className="object-cover"
                 />
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
-              
+
               {/* Quote Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <blockquote className="text-lg sm:text-xl font-medium leading-relaxed mb-2">
-                  &bdquo;Jedes Kind verdient es, gehört und verstanden zu werden.&ldquo;
+                  &bdquo;{t("philosophy.philosophy.quote.text")}&ldquo;
                 </blockquote>
                 <p className="text-white/80 text-sm">
-                  — Dr. med. Basel Allozy
+                  — {t("philosophy.philosophy.quote.author")}
                 </p>
               </div>
             </div>
@@ -118,15 +105,15 @@ export default function Philosophy() {
             <div className="grid grid-cols-3 gap-4 mt-6">
               <GlassCard className="p-4 text-center">
                 <span className="block text-2xl font-bold text-gradient">15+</span>
-                <span className="text-xs text-[var(--foreground-muted)]">Team-Mitglieder</span>
+                <span className="text-xs text-[var(--foreground-muted)]">{t("philosophy.philosophy.stats.teamMembers.label")}</span>
               </GlassCard>
               <GlassCard className="p-4 text-center">
                 <span className="block text-2xl font-bold text-gradient">10+</span>
-                <span className="text-xs text-[var(--foreground-muted)]">Sprachen</span>
+                <span className="text-xs text-[var(--foreground-muted)]">{t("philosophy.philosophy.stats.languages.label")}</span>
               </GlassCard>
               <GlassCard className="p-4 text-center">
                 <span className="block text-2xl font-bold text-gradient">∞</span>
-                <span className="text-xs text-[var(--foreground-muted)]">Engagement</span>
+                <span className="text-xs text-[var(--foreground-muted)]">{t("philosophy.philosophy.stats.engagement.label")}</span>
               </GlassCard>
             </div>
           </motion.div>

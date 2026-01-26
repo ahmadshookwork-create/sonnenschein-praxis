@@ -11,6 +11,7 @@ import Badge from "@/components/ui/Badge";
 import TeamCard from "@/components/sections/TeamCard";
 import LeaderSpotlight from "@/components/team/LeaderSpotlight";
 import { teamMembers, allLanguages, languageFlags } from "@/data/team";
+import { useTranslation } from "@/i18n";
 
 // Praxisleiter separat
 const teamLead = teamMembers.find((m) => m.isLead);
@@ -18,6 +19,7 @@ const teamLead = teamMembers.find((m) => m.isLead);
 const teamWithoutLead = teamMembers.filter((m) => !m.isLead);
 
 export default function TeamContent() {
+  const { t } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
 
   const filteredMembers = useMemo(() => {
@@ -55,20 +57,15 @@ export default function TeamContent() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/30 text-[var(--primary)] text-sm font-medium mb-6">
               <Users className="w-4 h-4" />
-              <span>Unser Team</span>
+              <span>{t("team.team.title")}</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] mb-6">
-              Ein <span className="text-gradient">multiprofessionelles</span>{" "}
-              Team
-              <br />
-              für Ihre Familie
+              {t("team.team.subtitle")}
             </h1>
 
             <p className="text-lg text-[var(--foreground-muted)] leading-relaxed">
-              Unser engagiertes Team vereint Fachärzte, Psychotherapeuten und
-              therapeutische Fachkräfte mit unterschiedlichen Spezialisierungen
-              und Sprachkenntnissen.
+              {t("team.team.description")}
             </p>
           </motion.div>
         </div>
@@ -88,10 +85,10 @@ export default function TeamContent() {
             <Globe className="w-8 h-8 text-[var(--primary)]" />
             <div>
               <h2 className="text-xl font-bold text-[var(--foreground)]">
-                Sprachen unserer Praxis
+                {t("team.team.languages.title")}
               </h2>
               <p className="text-sm text-[var(--foreground-muted)]">
-                Behandlung in über {allLanguages.length} Sprachen möglich
+                {t("team.team.languages.subtitle").replace("{count}", String(allLanguages.length))}
               </p>
             </div>
           </div>
@@ -139,10 +136,10 @@ export default function TeamContent() {
           className="text-center mb-10"
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)] mb-3">
-            Unser Team
+            {t("team.team.sectionTitle")}
           </h2>
           <p className="text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Fachärzte, Psychotherapeuten und therapeutische Fachkräfte mit vielfältigen Spezialisierungen
+            {t("team.team.sectionSubtitle")}
           </p>
         </motion.div>
 
@@ -156,8 +153,7 @@ export default function TeamContent() {
             <div className="flex items-center gap-3">
               <Filter className="w-5 h-5 text-[var(--primary)]" />
               <span className="text-[var(--foreground)]">
-                Zeige {filteredMembers.length} Teammitglieder mit
-                Sprachkenntnissen in{" "}
+                {t("team.team.filter.showing").replace("{count}", String(filteredMembers.length))}{" "}
                 <strong className="text-[var(--primary)]">
                   {selectedLanguage}
                 </strong>
@@ -168,7 +164,7 @@ export default function TeamContent() {
               className="flex items-center gap-2 text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
             >
               <X className="w-4 h-4" />
-              Filter entfernen
+              {t("team.team.filter.remove")}
             </button>
           </motion.div>
         )}
@@ -182,7 +178,7 @@ export default function TeamContent() {
         {filteredMembers.length === 0 && (
           <div className="text-center py-12">
             <p className="text-[var(--foreground-muted)]">
-              Keine Teammitglieder mit dieser Sprache gefunden.
+              {t("team.team.filter.noResults")}
             </p>
           </div>
         )}
@@ -192,10 +188,10 @@ export default function TeamContent() {
       <SectionWrapper background="secondary">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { label: "Teammitglieder", value: teamMembers.length, suffix: "+" },
-            { label: "Sprachen", value: allLanguages.length, suffix: "" },
-            { label: "Fachrichtungen", value: 6, suffix: "+" },
-            { label: "Jahre Erfahrung", value: 15, suffix: "+" },
+            { label: t("team.team.stats.members"), value: teamMembers.length, suffix: "+" },
+            { label: t("team.team.stats.languages"), value: allLanguages.length, suffix: "" },
+            { label: t("team.team.stats.specializations"), value: 6, suffix: "+" },
+            { label: t("team.team.stats.experience"), value: 15, suffix: "+" },
           ].map((stat, index) => (
             <GlassCard
               key={stat.label}
@@ -220,29 +216,26 @@ export default function TeamContent() {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)] mb-4">
-                Teil unseres Teams werden?
+                {t("team.team.career.title")}
               </h2>
               <p className="text-lg text-[var(--foreground-muted)] leading-relaxed mb-6">
-                Wir suchen engagierte Kolleg:innen, die unser
-                multiprofessionelles Team verstärken möchten. Ob Facharzt,
-                Psychotherapeut:in oder therapeutische Fachkraft – bei uns
-                arbeiten Sie in einem wertschätzenden, vielfältigen Umfeld.
+                {t("team.team.career.description")}
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {[
-                  "Supervision",
-                  "Fortbildungen",
-                  "Multiprofessionell",
-                  "Mehrsprachig",
+                  { key: "supervision", label: t("team.team.career.tags.supervision") },
+                  { key: "training", label: t("team.team.career.tags.training") },
+                  { key: "multiprofessional", label: t("team.team.career.tags.multiprofessional") },
+                  { key: "multilingual", label: t("team.team.career.tags.multilingual") },
                 ].map((tag) => (
-                  <Badge key={tag} variant="primary" size="md">
-                    {tag}
+                  <Badge key={tag.key} variant="primary" size="md">
+                    {tag.label}
                   </Badge>
                 ))}
               </div>
               <Link href="/karriere">
                 <Button size="lg">
-                  Offene Stellen ansehen
+                  {t("team.team.career.cta")}
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>

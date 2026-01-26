@@ -16,45 +16,46 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-
-const navLinks = [
-  { href: "/", label: "Startseite" },
-  { href: "/leistungen", label: "Leistungen", hasDropdown: true },
-  { href: "/team", label: "Team" },
-  { href: "/gkv", label: "GKV" },
-  { href: "/privatpraxis", label: "Privatpraxis" },
-  { href: "/anmeldeformulare", label: "Formulare" },
-  { href: "/karriere", label: "Karriere" },
-  { href: "/kontakt", label: "Kontakt" },
-];
-
-const diagnostikSchwerpunkte = [
-  {
-    icon: Brain,
-    title: "Autismusdiagnostik",
-    description:
-      "Umfassende ASS-Diagnostik nach Leitlinien mit ADOS-2 und ADI-R",
-    href: "/leistungen#autismus",
-  },
-  {
-    icon: BookOpen,
-    title: "Teilleistungsstörungen",
-    description: "LRS- und Dyskalkulie-Diagnostik für gezielte Förderung",
-    href: "/leistungen#teilleistung",
-  },
-  {
-    icon: Stethoscope,
-    title: "Alle Leistungen",
-    description: "Unser vollständiges Behandlungsspektrum im Überblick",
-    href: "/leistungen",
-  },
-];
+import { useTranslation } from "@/i18n";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [leistungenOpen, setLeistungenOpen] = useState(false);
   const pathname = usePathname();
+  const { t } = useTranslation();
+
+  const navLinks = [
+    { href: "/", label: t("nav.nav.home") },
+    { href: "/leistungen", label: t("nav.nav.services"), hasDropdown: true },
+    { href: "/team", label: t("nav.nav.team") },
+    { href: "/gkv", label: t("nav.nav.gkv") },
+    { href: "/privatpraxis", label: t("nav.nav.privatePractice") },
+    { href: "/anmeldeformulare", label: t("nav.nav.forms") },
+    { href: "/karriere", label: t("nav.nav.career") },
+    { href: "/kontakt", label: t("nav.nav.contact") },
+  ];
+
+  const diagnostikSchwerpunkte = [
+    {
+      icon: Brain,
+      title: t("nav.dropdown.autismDiagnostics.title"),
+      description: t("nav.dropdown.autismDiagnostics.description"),
+      href: "/leistungen#autismus",
+    },
+    {
+      icon: BookOpen,
+      title: t("nav.dropdown.learningDisorders.title"),
+      description: t("nav.dropdown.learningDisorders.description"),
+      href: "/leistungen#teilleistung",
+    },
+    {
+      icon: Stethoscope,
+      title: t("nav.dropdown.allServices.title"),
+      description: t("nav.dropdown.allServices.description"),
+      href: "/leistungen",
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,7 +79,7 @@ export default function Navigation() {
   return (
     <>
       <a href="#main-content" className="skip-link">
-        Zum Hauptinhalt springen
+        {t("nav.accessibility.skipToContent")}
       </a>
       <motion.header
         initial={{ y: -100 }}
@@ -105,10 +106,10 @@ export default function Navigation() {
               </div>
               <div className="hidden sm:block">
                 <span className="font-bold text-lg text-gradient">
-                  Praxis Dr. Allozy
+                  {t("nav.branding.practiceName")}
                 </span>
                 <span className="block text-xs text-[var(--foreground-muted)]">
-                  Kinder- & Jugendpsychiatrie
+                  {t("nav.branding.specialty")}
                 </span>
               </div>
             </Link>
@@ -154,7 +155,7 @@ export default function Navigation() {
                           <div className="p-2">
                             <div className="px-3 py-2 mb-1">
                               <span className="text-xs font-semibold text-[var(--primary)] uppercase tracking-wider">
-                                Unsere Schwerpunkte
+                                {t("nav.dropdown.sectionTitle")}
                               </span>
                             </div>
                             {diagnostikSchwerpunkte.map((item, index) => {
@@ -210,13 +211,13 @@ export default function Navigation() {
                 className="hidden sm:flex items-center gap-2 btn-primary text-sm"
               >
                 <Phone className="w-4 h-4" />
-                <span>Termin anfragen</span>
+                <span>{t("nav.cta.requestAppointment")}</span>
               </Link>
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="lg:hidden p-2 rounded-xl text-[var(--foreground)] hover:bg-[var(--primary)]/10 transition-colors"
-                aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
+                aria-label={isOpen ? t("nav.accessibility.closeMenu") : t("nav.accessibility.openMenu")}
                 aria-expanded={isOpen}
               >
                 {isOpen ? (
@@ -309,7 +310,7 @@ export default function Navigation() {
                     className="flex items-center justify-center gap-2 btn-primary w-full"
                   >
                     <Phone className="w-4 h-4" />
-                    <span>Termin anfragen</span>
+                    <span>{t("nav.cta.requestAppointment")}</span>
                   </Link>
                 </motion.div>
               </div>

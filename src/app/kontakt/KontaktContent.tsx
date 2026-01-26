@@ -33,6 +33,7 @@ import Input from "@/components/ui/Input";
 import Textarea from "@/components/ui/Textarea";
 import Select from "@/components/ui/Select";
 import { contactInfo, insuranceTypes } from "@/data/contact";
+import { useTranslation } from "@/i18n";
 
 interface FormData {
   name: string;
@@ -49,6 +50,7 @@ interface FormErrors {
 }
 
 export default function KontaktContent() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -66,17 +68,17 @@ export default function KontaktContent() {
     const newErrors: FormErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Bitte geben Sie Ihren Namen ein";
+      newErrors.name = t("contact.contact.form.name.error");
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Bitte geben Sie Ihre E-Mail-Adresse ein";
+      newErrors.email = t("contact.contact.form.email.errors.required");
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Bitte geben Sie eine gültige E-Mail-Adresse ein";
+      newErrors.email = t("contact.contact.form.email.errors.invalid");
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "Bitte geben Sie eine Nachricht ein";
+      newErrors.message = t("contact.contact.form.message.error");
     }
 
     setErrors(newErrors);
@@ -97,15 +99,15 @@ export default function KontaktContent() {
       web3FormData.append("access_key", "YOUR_WEB3FORMS_KEY"); // Ersetzen Sie dies mit Ihrem Web3Forms Access Key
       web3FormData.append(
         "subject",
-        "Neue Kontaktanfrage - Praxis Dr. Allozy",
+        t("contact.contact.emailSubjects.newContactRequest"),
       );
       web3FormData.append("from_name", "Praxis Dr. Allozy Website");
       web3FormData.append("name", formData.name);
       web3FormData.append("email", formData.email);
-      web3FormData.append("phone", formData.phone || "Nicht angegeben");
+      web3FormData.append("phone", formData.phone || t("contact.contact.form.notSpecified"));
       web3FormData.append(
         "insuranceType",
-        formData.insuranceType || "Nicht angegeben",
+        formData.insuranceType || t("contact.contact.form.notSpecified"),
       );
       web3FormData.append("message", formData.message);
 
@@ -128,10 +130,11 @@ export default function KontaktContent() {
       } else {
         // Fallback: Öffne E-Mail-Client
         const mailtoSubject = encodeURIComponent(
-          "Kontaktanfrage - Praxis Dr. Allozy",
+          t("contact.contact.emailSubjects.contactRequest"),
         );
+        const notSpecified = t("contact.contact.form.notSpecified");
         const mailtoBody = encodeURIComponent(
-          `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone || "Nicht angegeben"}\nVersicherungsart: ${formData.insuranceType || "Nicht angegeben"}\n\nNachricht:\n${formData.message}`,
+          `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone || notSpecified}\nVersicherungsart: ${formData.insuranceType || notSpecified}\n\nNachricht:\n${formData.message}`,
         );
         window.location.href = `mailto:praxis@baselallozy.de?subject=${mailtoSubject}&body=${mailtoBody}`;
         setSubmitStatus("success");
@@ -139,10 +142,11 @@ export default function KontaktContent() {
     } catch {
       // Fallback: Öffne E-Mail-Client bei Fehler
       const mailtoSubject = encodeURIComponent(
-        "Kontaktanfrage - Praxis Dr. Allozy",
+        t("contact.contact.emailSubjects.contactRequest"),
       );
+      const notSpecified = t("contact.contact.form.notSpecified");
       const mailtoBody = encodeURIComponent(
-        `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone || "Nicht angegeben"}\nVersicherungsart: ${formData.insuranceType || "Nicht angegeben"}\n\nNachricht:\n${formData.message}`,
+        `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone || notSpecified}\nVersicherungsart: ${formData.insuranceType || notSpecified}\n\nNachricht:\n${formData.message}`,
       );
       window.location.href = `mailto:praxis@baselallozy.de?subject=${mailtoSubject}&body=${mailtoBody}`;
       setSubmitStatus("success");
@@ -178,17 +182,15 @@ export default function KontaktContent() {
           >
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[var(--primary)]/10 to-[var(--secondary)]/10 border border-[var(--primary)]/20 text-[var(--primary-dark)] text-sm font-medium mb-6 shadow-sm">
               <MapPin className="w-4 h-4" />
-              <span>Kontakt</span>
+              <span>{t("contact.contact.hero.badge")}</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] mb-6">
-              Wir freuen uns auf{" "}
-              <span className="text-gradient">Ihre Nachricht</span>
+              {t("contact.contact.hero.title")}
             </h1>
 
             <p className="text-lg text-[var(--foreground-muted)] leading-relaxed">
-              Haben Sie Fragen oder möchten Sie einen Termin vereinbaren?
-              Kontaktieren Sie uns – wir sind gerne für Sie da.
+              {t("contact.contact.hero.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -198,7 +200,7 @@ export default function KontaktContent() {
       <SectionWrapper className="!pt-0 -mt-8 !pb-0">
         <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
           <motion.a
-            href="mailto:praxis@baselallozy.de?subject=Terminbuchung"
+            href={`mailto:praxis@baselallozy.de?subject=${encodeURIComponent(t("contact.contact.emailSubjects.appointmentBooking"))}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -211,16 +213,16 @@ export default function KontaktContent() {
             </div>
             <div>
               <h3 className="font-semibold text-lg text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
-                Termin buchen
+                {t("contact.contact.quickActions.bookAppointment.title")}
               </h3>
               <p className="text-sm text-[var(--foreground-muted)]">
-                Per E-Mail anfragen
+                {t("contact.contact.quickActions.bookAppointment.subtitle")}
               </p>
             </div>
           </motion.a>
 
           <motion.a
-            href="mailto:praxis@baselallozy.de?subject=Terminabsage"
+            href={`mailto:praxis@baselallozy.de?subject=${encodeURIComponent(t("contact.contact.emailSubjects.appointmentCancellation"))}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -233,10 +235,10 @@ export default function KontaktContent() {
             </div>
             <div>
               <h3 className="font-semibold text-lg text-[var(--foreground)] group-hover:text-rose-600 transition-colors">
-                Termin absagen
+                {t("contact.contact.quickActions.cancelAppointment.title")}
               </h3>
               <p className="text-sm text-[var(--foreground-muted)]">
-                Bitte frühzeitig melden
+                {t("contact.contact.quickActions.cancelAppointment.subtitle")}
               </p>
             </div>
           </motion.a>
@@ -255,7 +257,7 @@ export default function KontaktContent() {
           >
             <GlassCard className="p-6 sm:p-8" gradient>
               <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">
-                Terminanfrage / Nachricht
+                {t("contact.contact.form.title")}
               </h2>
 
               {submitStatus === "success" ? (
@@ -268,19 +270,18 @@ export default function KontaktContent() {
                     <CheckCircle2 className="w-10 h-10 text-[var(--success)]" />
                   </div>
                   <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
-                    Nachricht erfolgreich gesendet!
+                    {t("contact.contact.form.success.title")}
                   </h3>
                   <p className="text-[var(--foreground-muted)]">
-                    Vielen Dank für Ihre Anfrage. Wir melden uns
-                    schnellstmöglich bei Ihnen.
+                    {t("contact.contact.form.success.message")}
                   </p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <Input
                     id="name"
-                    label="Name *"
-                    placeholder="Ihr Name"
+                    label={t("contact.contact.form.name.label")}
+                    placeholder={t("contact.contact.form.name.placeholder")}
                     value={formData.name}
                     onChange={(e) =>
                       setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -293,8 +294,8 @@ export default function KontaktContent() {
                     <Input
                       id="email"
                       type="email"
-                      label="E-Mail *"
-                      placeholder="ihre@email.de"
+                      label={t("contact.contact.form.email.label")}
+                      placeholder={t("contact.contact.form.email.placeholder")}
                       value={formData.email}
                       onChange={(e) =>
                         setFormData((prev) => ({
@@ -308,8 +309,8 @@ export default function KontaktContent() {
                     <Input
                       id="phone"
                       type="tel"
-                      label="Telefon"
-                      placeholder="+49 123 456789"
+                      label={t("contact.contact.form.phone.label")}
+                      placeholder={t("contact.contact.form.phone.placeholder")}
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData((prev) => ({
@@ -322,9 +323,9 @@ export default function KontaktContent() {
 
                   <Select
                     id="insuranceType"
-                    label="Versicherungsart"
+                    label={t("contact.contact.form.insuranceType.label")}
                     options={[
-                      { value: "", label: "Bitte wählen..." },
+                      { value: "", label: t("contact.contact.form.insuranceType.placeholder") },
                       ...insuranceTypes,
                     ]}
                     value={formData.insuranceType}
@@ -338,8 +339,8 @@ export default function KontaktContent() {
 
                   <Textarea
                     id="message"
-                    label="Ihr Anliegen *"
-                    placeholder="Beschreiben Sie kurz Ihr Anliegen oder nennen Sie uns Terminwünsche..."
+                    label={t("contact.contact.form.message.label")}
+                    placeholder={t("contact.contact.form.message.placeholder")}
                     value={formData.message}
                     onChange={(e) =>
                       setFormData((prev) => ({
@@ -355,8 +356,7 @@ export default function KontaktContent() {
                     <div className="p-4 rounded-xl bg-[var(--error)]/10 border border-[var(--error)]/30 flex items-center gap-3">
                       <AlertCircle className="w-5 h-5 text-[var(--error)]" />
                       <p className="text-sm text-[var(--error)]">
-                        Es ist ein Fehler aufgetreten. Bitte versuchen Sie es
-                        erneut oder rufen Sie uns an.
+                        {t("contact.contact.form.error")}
                       </p>
                     </div>
                   )}
@@ -370,12 +370,12 @@ export default function KontaktContent() {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="w-5 h-5 animate-spin" />
-                        Wird gesendet...
+                        {t("contact.contact.form.submit.loading")}
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        Jetzt Kontakt aufnehmen
+                        {t("contact.contact.form.submit.default")}
                       </>
                     )}
                   </Button>
@@ -395,7 +395,7 @@ export default function KontaktContent() {
             {/* Address & Phone */}
             <GlassCard className="p-6">
               <h3 className="font-semibold text-lg text-[var(--foreground)] mb-4">
-                Kontaktdaten
+                {t("contact.contact.info.contactDetails.title")}
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -404,7 +404,7 @@ export default function KontaktContent() {
                   </div>
                   <div>
                     <p className="font-medium text-[var(--foreground)]">
-                      Adresse
+                      {t("contact.contact.info.contactDetails.address")}
                     </p>
                     <p className="text-[var(--foreground-muted)]">
                       {contactInfo.address.street}
@@ -420,7 +420,7 @@ export default function KontaktContent() {
                   </div>
                   <div>
                     <p className="font-medium text-[var(--foreground)]">
-                      Telefon
+                      {t("contact.contact.info.contactDetails.phone")}
                     </p>
                     <a
                       href={`tel:${contactInfo.phone.main}`}
@@ -437,7 +437,7 @@ export default function KontaktContent() {
                   </div>
                   <div>
                     <p className="font-medium text-[var(--foreground)]">
-                      E-Mail
+                      {t("contact.contact.info.contactDetails.email")}
                     </p>
                     <a
                       href={`mailto:${contactInfo.email}`}
@@ -457,7 +457,7 @@ export default function KontaktContent() {
                   <Clock className="w-5 h-5" />
                 </div>
                 <h3 className="font-semibold text-lg text-[var(--foreground)]">
-                  Öffnungszeiten
+                  {t("contact.contact.info.openingHours.title")}
                 </h3>
               </div>
               <div className="space-y-2">
@@ -476,7 +476,7 @@ export default function KontaktContent() {
                           : "text-[var(--foreground)] font-medium"
                       }
                     >
-                      {item.hours}
+                      {item.hours === "Geschlossen" ? t("contact.contact.info.openingHours.closed") : item.hours}
                     </span>
                   </div>
                 ))}
@@ -487,7 +487,7 @@ export default function KontaktContent() {
                 <div className="flex items-center gap-2 mb-2">
                   <PhoneCall className="w-4 h-4 text-[var(--primary)]" />
                   <span className="font-medium text-sm text-[var(--foreground)]">
-                    Telefonische Sprechzeiten
+                    {t("contact.contact.info.openingHours.phoneConsultation.title")}
                   </span>
                 </div>
                 <p className="text-sm text-[var(--foreground-muted)]">

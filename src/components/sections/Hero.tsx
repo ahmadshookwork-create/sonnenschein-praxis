@@ -13,8 +13,10 @@ import {
   Sparkles,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { useTranslation } from "@/i18n";
 
 export default function Hero() {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -50,7 +52,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[var(--primary)]/10 to-[var(--secondary)]/10 border border-[var(--primary)]/20 text-[var(--primary-dark)] text-sm font-medium mb-8 shadow-sm"
           >
             <MapPin className="w-4 h-4" />
-            <span>Kinder- und Jugendpsychiatrie in Berlin</span>
+            <span>{t('hero.hero.badge')}</span>
           </motion.div>
 
           {/* Sonnenschein Logo */}
@@ -63,7 +65,7 @@ export default function Hero() {
             <div className="w-28 h-28 relative">
               <Image
                 src="/sonnenschein-praxis/logo.png"
-                alt="Praxis Dr. Allozy Logo"
+                alt={t('hero.hero.logoAlt')}
                 fill
                 className="object-contain"
                 priority
@@ -79,10 +81,10 @@ export default function Hero() {
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
           >
             <span className="text-[var(--foreground)]">
-              Praxis Dr. Allozy
+              {t('hero.hero.title')}
             </span>
             <br />
-            <span className="text-gradient">Dr. med. Basel Allozy</span>
+            <span className="text-gradient">{t('hero.hero.doctorName')}</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -92,9 +94,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-[var(--foreground-muted)] mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Mehrsprachige, kultursensible psychiatrische und
-            psychotherapeutische Behandlung für Kinder, Jugendliche und Familien
-            in einem vertrauensvollen Umfeld.
+            {t('hero.hero.subtitle')}
           </motion.p>
 
           {/* Insurance Selection Cards */}
@@ -110,13 +110,13 @@ export default function Hero() {
                   <Shield className="w-8 h-8" />
                 </div>
                 <h3 className="font-semibold text-lg text-[var(--foreground)] mb-2">
-                  Gesetzlich versichert
+                  {t('hero.hero.insuranceCards.statutory.title')}
                 </h3>
                 <p className="text-sm text-[var(--foreground-muted)] mb-4">
-                  Informationen für Kassenpatient:innen (GKV)
+                  {t('hero.hero.insuranceCards.statutory.description')}
                 </p>
                 <span className="inline-flex items-center gap-2 text-[var(--primary-dark)] font-medium text-sm group-hover:gap-3 transition-all">
-                  Mehr erfahren <ArrowRight className="w-4 h-4" />
+                  {t('hero.hero.insuranceCards.statutory.cta')} <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
             </Link>
@@ -127,13 +127,13 @@ export default function Hero() {
                   <Heart className="w-8 h-8" />
                 </div>
                 <h3 className="font-semibold text-lg text-[var(--foreground)] mb-2">
-                  Privat / Selbstzahler
+                  {t('hero.hero.insuranceCards.private.title')}
                 </h3>
                 <p className="text-sm text-[var(--foreground-muted)] mb-4">
-                  Privatpraxis für PKV & Selbstzahler
+                  {t('hero.hero.insuranceCards.private.description')}
                 </p>
                 <span className="inline-flex items-center gap-2 text-[var(--secondary-dark)] font-medium text-sm group-hover:gap-3 transition-all">
-                  Mehr erfahren <ArrowRight className="w-4 h-4" />
+                  {t('hero.hero.insuranceCards.private.cta')} <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
             </Link>
@@ -148,14 +148,14 @@ export default function Hero() {
           >
             <Link href="/kontakt">
               <Button size="lg">
-                Termin anfragen
+                {t('hero.hero.ctaButtons.appointment')}
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
             <Link href="/team">
               <Button variant="secondary" size="lg">
                 <Users className="w-5 h-5" />
-                Team kennenlernen
+                {t('hero.hero.ctaButtons.team')}
               </Button>
             </Link>
           </motion.div>

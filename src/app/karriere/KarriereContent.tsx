@@ -24,73 +24,9 @@ import Input from "@/components/ui/Input";
 import Textarea from "@/components/ui/Textarea";
 import Select from "@/components/ui/Select";
 import Badge from "@/components/ui/Badge";
+import { useTranslation } from "@/i18n";
 
-const openPositions = [
-  {
-    id: "mfa",
-    title: "Medizinische/r Fachangestellte/r (MFA) bzw. Arzthelfer/in",
-    type: "Vollzeit/Teilzeit",
-    description:
-      "Für Kinder- und Jugendpsychiater und -psychotherapeuten in eigener Praxis gesucht.",
-    requirements: [
-      "Abgeschlossene MFA-Ausbildung",
-      "Erfahrung in der Arztpraxis von Vorteil",
-      "Freundliches und einfühlsames Auftreten",
-      "Gute Kommunikationsfähigkeiten",
-      "EDV-Kenntnisse",
-    ],
-  },
-  {
-    id: "kjp-therapeut",
-    title: "Kinder- und Jugendlichenpsychotherapeut*in (m/w/d)",
-    type: "Vollzeit/Teilzeit",
-    description:
-      "Mit Approbation oder in fortgeschrittener Ausbildung (MIT Behandlungserlaubnis) gesucht.",
-    requirements: [
-      "Approbation als KJ-Psychotherapeut*in oder fortgeschrittene Ausbildung",
-      "Behandlungserlaubnis erforderlich",
-      "Freude an der Arbeit mit Kindern und Jugendlichen",
-      "Teamorientierte Arbeitsweise",
-      "Interesse an kultursensible Therapie",
-    ],
-  },
-];
-
-const positionOptions = [
-  { value: "", label: "Bitte wählen..." },
-  { value: "mfa", label: "Medizinische/r Fachangestellte/r (MFA)" },
-  {
-    value: "kjp-therapeut",
-    label: "Kinder- und Jugendlichenpsychotherapeut*in",
-  },
-  { value: "andere", label: "Andere / Initiativbewerbung" },
-];
-
-const benefits = [
-  {
-    icon: Users,
-    title: "Multiprofessionelles Team",
-    description:
-      "Arbeiten Sie mit Fachärzten, Psychologen, Therapeuten und Pädagogen zusammen.",
-  },
-  {
-    icon: Globe,
-    title: "Mehrsprachiges Umfeld",
-    description:
-      "Über 10 Sprachen in unserem Team – kulturelle Vielfalt als Stärke.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Fortbildung & Supervision",
-    description:
-      "Regelmäßige Team-Supervisionen und Unterstützung bei Fortbildungen.",
-  },
-  {
-    icon: Heart,
-    title: "Wertschätzende Atmosphäre",
-    description: "Respektvolles Miteinander und flache Hierarchien.",
-  },
-];
+const benefitIcons = [Users, Globe, GraduationCap, Heart];
 
 interface FormData {
   name: string;
@@ -110,6 +46,8 @@ interface FormErrors {
 }
 
 export default function KarriereContent() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -126,25 +64,33 @@ export default function KarriereContent() {
   >("idle");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Build position options from translations
+  const positionOptions = [
+    { value: "", label: t("career.career.positionOptions.0.label") },
+    { value: "mfa", label: t("career.career.positionOptions.1.label") },
+    { value: "kjp-therapeut", label: t("career.career.positionOptions.2.label") },
+    { value: "andere", label: t("career.career.positionOptions.3.label") },
+  ];
+
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Bitte geben Sie Ihren Namen ein";
+      newErrors.name = t("career.career.form.validation.nameRequired");
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Bitte geben Sie Ihre E-Mail-Adresse ein";
+      newErrors.email = t("career.career.form.validation.emailRequired");
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Bitte geben Sie eine gültige E-Mail-Adresse ein";
+      newErrors.email = t("career.career.form.validation.emailInvalid");
     }
 
     if (!formData.position) {
-      newErrors.position = "Bitte wählen Sie eine Position aus";
+      newErrors.position = t("career.career.form.validation.positionRequired");
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "Bitte geben Sie eine kurze Nachricht ein";
+      newErrors.message = t("career.career.form.validation.messageRequired");
     }
 
     // Datei-Validierung
@@ -159,11 +105,11 @@ export default function KarriereContent() {
 
     for (const file of files) {
       if (file.size > maxFileSize) {
-        newErrors.files = `Datei "${file.name}" ist zu groß (max. 10MB pro Datei)`;
+        newErrors.files = t("career.career.form.validation.fileTooLarge");
         break;
       }
       if (!allowedTypes.includes(file.type)) {
-        newErrors.files = `Dateityp von "${file.name}" nicht erlaubt`;
+        newErrors.files = t("career.career.form.validation.fileTypeNotAllowed");
         break;
       }
     }
@@ -207,19 +153,19 @@ export default function KarriereContent() {
         formData.position;
 
       const mailtoSubject = encodeURIComponent(
-        `Bewerbung: ${positionLabel} - Praxis Dr. Allozy`,
+        t("career.career.form.email.subject").replace("{position}", positionLabel),
       );
       const mailtoBody = encodeURIComponent(
-        `Bewerbung für: ${positionLabel}\n\n` +
-          `Name: ${formData.name}\n` +
-          `E-Mail: ${formData.email}\n` +
-          `Telefon: ${formData.phone || "Nicht angegeben"}\n` +
-          `Sprachkenntnisse: ${formData.languages || "Nicht angegeben"}\n\n` +
-          `Anschreiben:\n${formData.message}\n\n` +
+        `${t("career.career.form.email.body.applicationFor")}: ${positionLabel}\n\n` +
+          `${t("career.career.form.email.body.name")}: ${formData.name}\n` +
+          `${t("career.career.form.email.body.email")}: ${formData.email}\n` +
+          `${t("career.career.form.email.body.phone")}: ${formData.phone || t("career.career.form.email.body.notProvided")}\n` +
+          `${t("career.career.form.email.body.languageSkills")}: ${formData.languages || t("career.career.form.email.body.notProvided")}\n\n` +
+          `${t("career.career.form.email.body.coverLetter")}:\n${formData.message}\n\n` +
           `---\n` +
           (files.length > 0
-            ? `HINWEIS: Bitte hängen Sie folgende Dateien manuell an diese E-Mail an:\n${files.map((f) => `- ${f.name}`).join("\n")}`
-            : `HINWEIS: Bitte hängen Sie Ihren Lebenslauf und weitere Unterlagen an diese E-Mail an.`),
+            ? `${t("career.career.form.email.body.attachFilesNote")}\n${files.map((f) => `- ${f.name}`).join("\n")}`
+            : t("career.career.form.email.body.attachDocumentsNote")),
       );
 
       window.location.href = `mailto:praxis@baselallozy.de?subject=${mailtoSubject}&body=${mailtoBody}`;
@@ -261,18 +207,16 @@ export default function KarriereContent() {
           >
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[var(--secondary)]/10 to-[var(--primary)]/10 border border-[var(--secondary)]/20 text-[var(--secondary-dark)] text-sm font-medium mb-6 shadow-sm">
               <Briefcase className="w-4 h-4" />
-              <span>Karriere</span>
+              <span>{t("career.career.badge")}</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] mb-6">
-              Werden Sie Teil unseres{" "}
-              <span className="text-gradient">Teams</span>
+              {t("career.career.title").split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="text-gradient">{t("career.career.title").split(" ").slice(-1)}</span>
             </h1>
 
             <p className="text-lg text-[var(--foreground-muted)] leading-relaxed">
-              Wir suchen engagierte Kolleg:innen, die unser multiprofessionelles
-              Team verstärken möchten. Bei uns arbeiten Sie in einem
-              wertschätzenden, kulturell vielfältigen Umfeld.
+              {t("career.career.subtitle")}
             </p>
           </motion.div>
         </div>
@@ -281,23 +225,26 @@ export default function KarriereContent() {
       {/* Benefits */}
       <SectionWrapper background="secondary">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (
-            <GlassCard
-              key={benefit.title}
-              delay={index * 0.1}
-              className="text-center"
-            >
-              <div className="w-14 h-14 mx-auto rounded-xl icon-container-secondary flex items-center justify-center mb-4">
-                <benefit.icon className="w-7 h-7" />
-              </div>
-              <h3 className="font-semibold text-lg text-[var(--foreground)] mb-2">
-                {benefit.title}
-              </h3>
-              <p className="text-sm text-[var(--foreground-muted)]">
-                {benefit.description}
-              </p>
-            </GlassCard>
-          ))}
+          {[0, 1, 2, 3].map((index) => {
+            const Icon = benefitIcons[index];
+            return (
+              <GlassCard
+                key={index}
+                delay={index * 0.1}
+                className="text-center"
+              >
+                <div className="w-14 h-14 mx-auto rounded-xl icon-container-secondary flex items-center justify-center mb-4">
+                  <Icon className="w-7 h-7" />
+                </div>
+                <h3 className="font-semibold text-lg text-[var(--foreground)] mb-2">
+                  {t(`career.career.benefits.${index}.title`)}
+                </h3>
+                <p className="text-sm text-[var(--foreground-muted)]">
+                  {t(`career.career.benefits.${index}.description`)}
+                </p>
+              </GlassCard>
+            );
+          })}
         </div>
       </SectionWrapper>
 
@@ -311,18 +258,18 @@ export default function KarriereContent() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            Aktuelle <span className="text-gradient">Stellenangebote</span>
+            {t("career.career.positions.sectionTitle").split(" ").slice(0, 1).join(" ")}{" "}
+            <span className="text-gradient">{t("career.career.positions.sectionTitle").split(" ").slice(1).join(" ")}</span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Diese Positionen sind derzeit offen. Wir freuen uns auch über
-            Initiativbewerbungen!
+            {t("career.career.positions.sectionSubtitle")}
           </p>
         </motion.div>
 
         <div className="space-y-6">
-          {openPositions.map((position, index) => (
+          {[0, 1].map((index) => (
             <motion.div
-              key={position.id}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -333,23 +280,30 @@ export default function KarriereContent() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2 flex-wrap">
                       <h3 className="font-semibold text-xl text-[var(--foreground)]">
-                        {position.title}
+                        {t(`career.career.positions.items.${index}.title`)}
                       </h3>
-                      <Badge variant="primary">{position.type}</Badge>
+                      <Badge variant="primary">
+                        {t(`career.career.positions.items.${index}.type`)}
+                      </Badge>
                     </div>
                     <p className="text-[var(--foreground-muted)] mb-4">
-                      {position.description}
+                      {t(`career.career.positions.items.${index}.description`)}
                     </p>
                     <div className="flex flex-wrap gap-3">
-                      {position.requirements.map((req) => (
-                        <span
-                          key={req}
-                          className="inline-flex items-center gap-1.5 text-sm text-[var(--foreground)]"
-                        >
-                          <CheckCircle2 className="w-4 h-4 text-[var(--primary)]" />
-                          {req}
-                        </span>
-                      ))}
+                      {[0, 1, 2, 3, 4].map((reqIndex) => {
+                        const reqText = t(`career.career.positions.items.${index}.requirements.${reqIndex}`);
+                        // Only render if translation exists (not returning the key)
+                        if (reqText.includes("career.career.positions")) return null;
+                        return (
+                          <span
+                            key={reqIndex}
+                            className="inline-flex items-center gap-1.5 text-sm text-[var(--foreground)]"
+                          >
+                            <CheckCircle2 className="w-4 h-4 text-[var(--primary)]" />
+                            {reqText}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                   <a
@@ -358,14 +312,16 @@ export default function KarriereContent() {
                       e.preventDefault();
                       setFormData((prev) => ({
                         ...prev,
-                        position: position.id,
+                        position: index === 0 ? "mfa" : "kjp-therapeut",
                       }));
                       document
                         .getElementById("bewerbung")
                         ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
-                    <Button variant="secondary">Jetzt bewerben</Button>
+                    <Button variant="secondary">
+                      {t("career.career.positions.applyNow")}
+                    </Button>
                   </a>
                 </div>
               </GlassCard>
@@ -385,10 +341,11 @@ export default function KarriereContent() {
             className="text-center mb-8"
           >
             <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-              <span className="text-gradient">Bewerbung</span> senden
+              <span className="text-gradient">{t("career.career.form.title").split(" ")[0]}</span>{" "}
+              {t("career.career.form.title").split(" ").slice(1).join(" ")}
             </h2>
             <p className="text-[var(--foreground-muted)]">
-              Füllen Sie das Formular aus und laden Sie Ihre Unterlagen hoch.
+              {t("career.career.form.subtitle")}
             </p>
           </motion.div>
 
@@ -403,11 +360,10 @@ export default function KarriereContent() {
                   <CheckCircle2 className="w-10 h-10 text-[var(--success)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
-                  Bewerbung erfolgreich gesendet!
+                  {t("career.career.form.success.title")}
                 </h3>
                 <p className="text-[var(--foreground-muted)]">
-                  Vielen Dank für Ihr Interesse. Wir werden uns zeitnah bei
-                  Ihnen melden.
+                  {t("career.career.form.success.message")}
                 </p>
               </motion.div>
             ) : (
@@ -415,8 +371,8 @@ export default function KarriereContent() {
                 <div className="grid sm:grid-cols-2 gap-6">
                   <Input
                     id="name"
-                    label="Name *"
-                    placeholder="Ihr vollständiger Name"
+                    label={t("career.career.form.fields.name.label")}
+                    placeholder={t("career.career.form.fields.name.placeholder")}
                     value={formData.name}
                     onChange={(e) =>
                       setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -427,8 +383,8 @@ export default function KarriereContent() {
                   <Input
                     id="email"
                     type="email"
-                    label="E-Mail *"
-                    placeholder="ihre@email.de"
+                    label={t("career.career.form.fields.email.label")}
+                    placeholder={t("career.career.form.fields.email.placeholder")}
                     value={formData.email}
                     onChange={(e) =>
                       setFormData((prev) => ({
@@ -445,8 +401,8 @@ export default function KarriereContent() {
                   <Input
                     id="phone"
                     type="tel"
-                    label="Telefon"
-                    placeholder="+49 123 456789"
+                    label={t("career.career.form.fields.phone.label")}
+                    placeholder={t("career.career.form.fields.phone.placeholder")}
                     value={formData.phone}
                     onChange={(e) =>
                       setFormData((prev) => ({
@@ -457,7 +413,7 @@ export default function KarriereContent() {
                   />
                   <Select
                     id="position"
-                    label="Gewünschte Position *"
+                    label={t("career.career.form.fields.position.label")}
                     options={positionOptions}
                     value={formData.position}
                     onChange={(e) =>
@@ -473,8 +429,8 @@ export default function KarriereContent() {
 
                 <Input
                   id="languages"
-                  label="Sprachkenntnisse"
-                  placeholder="z.B. Deutsch (Muttersprache), Englisch (fließend), Arabisch (gut)"
+                  label={t("career.career.form.fields.languages.label")}
+                  placeholder={t("career.career.form.fields.languages.placeholder")}
                   value={formData.languages}
                   onChange={(e) =>
                     setFormData((prev) => ({
@@ -486,8 +442,8 @@ export default function KarriereContent() {
 
                 <Textarea
                   id="message"
-                  label="Anschreiben / Kurze Vorstellung *"
-                  placeholder="Erzählen Sie uns kurz von sich und warum Sie bei uns arbeiten möchten..."
+                  label={t("career.career.form.fields.message.label")}
+                  placeholder={t("career.career.form.fields.message.placeholder")}
                   value={formData.message}
                   onChange={(e) =>
                     setFormData((prev) => ({
@@ -502,7 +458,7 @@ export default function KarriereContent() {
                 {/* File Upload */}
                 <div className="space-y-3">
                   <label className="block text-sm font-medium text-[var(--foreground)]">
-                    Lebenslauf & Unterlagen
+                    {t("career.career.form.fields.files.label")}
                   </label>
 
                   <div
@@ -524,10 +480,10 @@ export default function KarriereContent() {
                     />
                     <Upload className="w-10 h-10 mx-auto text-[var(--primary)] mb-3" />
                     <p className="text-sm font-medium text-[var(--foreground)] mb-1">
-                      Dateien hier ablegen oder klicken zum Hochladen
+                      {t("career.career.form.fields.files.dropzone")}
                     </p>
                     <p className="text-xs text-[var(--foreground-muted)]">
-                      PDF, DOC, DOCX, JPG, PNG (max. 10MB pro Datei)
+                      {t("career.career.form.fields.files.hint")}
                     </p>
                   </div>
 
@@ -580,8 +536,7 @@ export default function KarriereContent() {
                   <div className="p-4 rounded-xl bg-[var(--error)]/10 border border-[var(--error)]/30 flex items-center gap-3">
                     <AlertCircle className="w-5 h-5 text-[var(--error)]" />
                     <p className="text-sm text-[var(--error)]">
-                      Es ist ein Fehler aufgetreten. Bitte versuchen Sie es
-                      erneut.
+                      {t("career.career.form.error")}
                     </p>
                   </div>
                 )}
@@ -595,12 +550,12 @@ export default function KarriereContent() {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
-                      Wird gesendet...
+                      {t("career.career.form.submitting")}
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      Bewerbung absenden
+                      {t("career.career.form.submit")}
                     </>
                   )}
                 </Button>

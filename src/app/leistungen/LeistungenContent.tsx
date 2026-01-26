@@ -27,6 +27,7 @@ import GlassCard from "@/components/ui/GlassCard";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import { services, targetGroupDescriptions } from "@/data/services";
+import { useTranslation } from "@/i18n";
 
 const iconMap: Record<string, typeof Stethoscope> = {
   Stethoscope,
@@ -50,6 +51,46 @@ type TargetGroup = "kinder" | "jugendliche" | "eltern" | "familien";
 
 export default function LeistungenContent() {
   const [activeTab, setActiveTab] = useState<TargetGroup>("kinder");
+  const { t } = useTranslation();
+
+  // Helper to get translated items array
+  const getTranslatedItems = (basePath: string, count: number): string[] => {
+    const items: string[] = [];
+    for (let i = 0; i < count; i++) {
+      items.push(t(`${basePath}.${i}`));
+    }
+    return items;
+  };
+
+  // Get autism diagnostics items (6 items)
+  const autismDiagnosticsItems = getTranslatedItems(
+    "services.services.specializations.autismDiagnostics.items",
+    6
+  );
+
+  // Get partial performance disorders items (6 items)
+  const partialPerformanceDisordersItems = getTranslatedItems(
+    "services.services.specializations.partialPerformanceDisorders.items",
+    6
+  );
+
+  // Get translated target group info
+  const getTargetGroupInfo = (group: TargetGroup) => ({
+    title: t(`services.services.targetGroupDescriptions.${group}.title`),
+    ageRange: t(`services.services.targetGroupDescriptions.${group}.ageRange`),
+    description: t(`services.services.targetGroupDescriptions.${group}.description`),
+    commonIssues: getTranslatedItems(
+      `services.services.targetGroupDescriptions.${group}.commonIssues`,
+      6
+    ),
+  });
+
+  // Get translated service item
+  const getServiceItem = (index: number) => ({
+    title: t(`services.services.items.${index}.title`),
+    description: t(`services.services.items.${index}.description`),
+    details: getTranslatedItems(`services.services.items.${index}.details`, 8),
+  });
 
   return (
     <>
@@ -68,18 +109,18 @@ export default function LeistungenContent() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/30 text-[var(--primary)] text-sm font-medium mb-6">
               <Stethoscope className="w-4 h-4" />
-              <span>Leistungen</span>
+              <span>{t("services.services.pageTitle")}</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] mb-6">
-              Umfassende Versorgung für{" "}
-              <span className="text-gradient">alle Altersgruppen</span>
+              {t("services.services.heroTitle").split(" ").slice(0, -2).join(" ")}{" "}
+              <span className="text-gradient">
+                {t("services.services.heroTitle").split(" ").slice(-2).join(" ")}
+              </span>
             </h1>
 
             <p className="text-lg text-[var(--foreground-muted)] leading-relaxed">
-              Von der Diagnostik über verschiedene Therapieformen bis zur
-              Familienberatung – wir bieten ein breites Spektrum an Leistungen
-              für Kinder, Jugendliche und ihre Familien.
+              {t("services.services.heroDescription")}
             </p>
           </motion.div>
         </div>
@@ -96,15 +137,16 @@ export default function LeistungenContent() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/30 text-[var(--primary)] text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4" />
-            <span>Unsere Schwerpunkte</span>
+            <span>{t("services.services.specializations.sectionBadge")}</span>
           </div>
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            Spezialisierte <span className="text-gradient">Diagnostik</span>
+            {t("services.services.specializations.title").split(" ")[0]}{" "}
+            <span className="text-gradient">
+              {t("services.services.specializations.title").split(" ").slice(1).join(" ")}
+            </span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Wir sind spezialisiert auf die umfassende Diagnostik von
-            Autismus-Spektrum-Störungen und Teilleistungsstörungen – für eine
-            fundierte Grundlage der Behandlung.
+            {t("services.services.specializations.description")}
           </p>
         </motion.div>
 
@@ -123,22 +165,13 @@ export default function LeistungenContent() {
                   <Brain className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
-                  Autismusdiagnostik
+                  {t("services.services.specializations.autismDiagnostics.title")}
                 </h3>
                 <p className="text-[var(--foreground-muted)] mb-6 leading-relaxed">
-                  Umfassende Diagnostik von Autismus-Spektrum-Störungen (ASS)
-                  bei Kindern und Jugendlichen nach aktuellen Leitlinien mit
-                  standardisierten Verfahren.
+                  {t("services.services.specializations.autismDiagnostics.description")}
                 </p>
                 <ul className="space-y-3">
-                  {[
-                    "ADOS-2 (Autism Diagnostic Observation Schedule)",
-                    "ADI-R (Diagnostisches Interview)",
-                    "Entwicklungsanamnese",
-                    "Verhaltensbeobachtung",
-                    "Differentialdiagnostik",
-                    "Ausführlicher Befundbericht",
-                  ].map((item, index) => (
+                  {autismDiagnosticsItems.map((item, index) => (
                     <motion.li
                       key={item}
                       initial={{ opacity: 0, x: -10 }}
@@ -170,22 +203,13 @@ export default function LeistungenContent() {
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
-                  Teilleistungsstörungsdiagnostik
+                  {t("services.services.specializations.partialPerformanceDisorders.title")}
                 </h3>
                 <p className="text-[var(--foreground-muted)] mb-6 leading-relaxed">
-                  Fundierte Diagnostik von Lese-Rechtschreib-Störungen (LRS),
-                  Dyskalkulie und anderen Teilleistungsstörungen für gezielte
-                  Förderung.
+                  {t("services.services.specializations.partialPerformanceDisorders.description")}
                 </p>
                 <ul className="space-y-3">
-                  {[
-                    "Lese-Rechtschreib-Diagnostik (LRS)",
-                    "Dyskalkulie-Diagnostik (Rechenstörung)",
-                    "Standardisierte Leistungstests",
-                    "Intelligenzdiagnostik",
-                    "Ausschluss von Seh-/Hörstörungen",
-                    "Förderempfehlungen für Schule",
-                  ].map((item, index) => (
+                  {partialPerformanceDisordersItems.map((item, index) => (
                     <motion.li
                       key={item}
                       initial={{ opacity: 0, x: -10 }}
@@ -215,17 +239,20 @@ export default function LeistungenContent() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            Unsere <span className="text-gradient">Behandlungsangebote</span>
+            {t("services.services.treatmentOffers.title").split(" ")[0]}{" "}
+            <span className="text-gradient">
+              {t("services.services.treatmentOffers.title").split(" ").slice(1).join(" ")}
+            </span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Individuell abgestimmte Diagnostik und Therapie nach aktuellen
-            wissenschaftlichen Standards.
+            {t("services.services.treatmentOffers.description")}
           </p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const Icon = iconMap[service.icon] || Stethoscope;
+            const translatedService = getServiceItem(index);
             return (
               <GlassCard
                 key={service.id}
@@ -236,20 +263,20 @@ export default function LeistungenContent() {
                   <Icon className="w-7 h-7 text-[var(--primary)]" />
                 </div>
                 <h3 className="font-semibold text-lg text-[var(--foreground)] mb-2">
-                  {service.title}
+                  {translatedService.title}
                 </h3>
                 <p className="text-sm text-[var(--foreground-muted)] mb-4">
-                  {service.description}
+                  {translatedService.description}
                 </p>
                 <div className="flex flex-wrap gap-1 mb-4">
                   {service.targetGroups.map((group) => (
                     <Badge key={group} variant="default" size="sm">
-                      {targetGroupDescriptions[group].title}
+                      {t(`services.services.targetGroupDescriptions.${group}.title`)}
                     </Badge>
                   ))}
                 </div>
                 <ul className="space-y-2">
-                  {service.details.slice(0, 4).map((detail) => (
+                  {translatedService.details.slice(0, 4).map((detail) => (
                     <li
                       key={detail}
                       className="flex items-start gap-2 text-xs text-[var(--foreground-muted)]"
@@ -275,10 +302,13 @@ export default function LeistungenContent() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
-            Für wen wir <span className="text-gradient">da sind</span>
+            {t("services.services.targetGroups.sectionTitle").split(" ").slice(0, -2).join(" ")}{" "}
+            <span className="text-gradient">
+              {t("services.services.targetGroups.sectionTitle").split(" ").slice(-2).join(" ")}
+            </span>
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
-            Spezialisierte Behandlung für verschiedene Alters- und Zielgruppen.
+            {t("services.services.targetGroups.sectionDescription")}
           </p>
         </motion.div>
 
@@ -287,7 +317,7 @@ export default function LeistungenContent() {
           {(Object.keys(targetGroupDescriptions) as TargetGroup[]).map(
             (group) => {
               const Icon = targetGroupIcons[group];
-              const info = targetGroupDescriptions[group];
+              const info = getTargetGroupInfo(group);
               return (
                 <button
                   key={group}
@@ -318,7 +348,7 @@ export default function LeistungenContent() {
               <div>
                 {(() => {
                   const Icon = targetGroupIcons[activeTab];
-                  const info = targetGroupDescriptions[activeTab];
+                  const info = getTargetGroupInfo(activeTab);
                   return (
                     <>
                       <div className="flex items-center gap-4 mb-6">
@@ -346,10 +376,10 @@ export default function LeistungenContent() {
 
               <div>
                 <h4 className="font-semibold text-[var(--foreground)] mb-4">
-                  Häufige Themen und Störungsbilder:
+                  {t("services.services.targetGroups.commonIssuesTitle")}
                 </h4>
                 <ul className="grid sm:grid-cols-2 gap-3">
-                  {targetGroupDescriptions[activeTab].commonIssues.map(
+                  {getTargetGroupInfo(activeTab).commonIssues.map(
                     (issue, index) => (
                       <motion.li
                         key={issue}
@@ -374,13 +404,15 @@ export default function LeistungenContent() {
         {/* Relevant Services */}
         <div className="mt-8">
           <h4 className="text-center text-lg font-semibold text-[var(--foreground)] mb-6">
-            Passende Leistungen für {targetGroupDescriptions[activeTab].title}
+            {t("services.services.targetGroups.matchingServicesTitle")} {getTargetGroupInfo(activeTab).title}
           </h4>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {services
               .filter((s) => s.targetGroups.includes(activeTab))
               .map((service, index) => {
                 const Icon = iconMap[service.icon] || Stethoscope;
+                const serviceIndex = services.findIndex((s) => s.id === service.id);
+                const translatedService = getServiceItem(serviceIndex);
                 return (
                   <motion.div
                     key={service.id}
@@ -393,7 +425,7 @@ export default function LeistungenContent() {
                         <Icon className="w-5 h-5 text-[var(--primary)]" />
                       </div>
                       <span className="font-medium text-sm text-[var(--foreground)]">
-                        {service.title}
+                        {translatedService.title}
                       </span>
                     </GlassCard>
                   </motion.div>
@@ -407,23 +439,22 @@ export default function LeistungenContent() {
       <SectionWrapper background="secondary">
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)] mb-4">
-            Welche Behandlung ist die richtige?
+            {t("services.services.cta.title")}
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto mb-8">
-            Im Erstgespräch klären wir gemeinsam, welche Leistungen für Ihr Kind
-            und Ihre Familie am besten geeignet sind.
+            {t("services.services.cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/kontakt">
               <Button size="lg">
-                Erstgespräch vereinbaren
+                {t("services.services.cta.primaryButton")}
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
             <Link href="/team">
               <Button variant="secondary" size="lg">
                 <Users className="w-5 h-5" />
-                Team kennenlernen
+                {t("services.services.cta.secondaryButton")}
               </Button>
             </Link>
           </div>

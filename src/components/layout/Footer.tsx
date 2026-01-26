@@ -16,27 +16,29 @@ import {
   Handshake,
 } from "lucide-react";
 import { contactInfo } from "@/data/contact";
+import { useTranslation } from "@/i18n";
 
 // Kooperationspartner - später mit echten Daten ersetzen
 const kooperationspartner = [
   {
     name: "Verein Balsam e.V.",
     url: "https://balsam-dag-ev.de/",
-    description: "Deutsch-Arabische Gesellschaft",
+    descriptionKey: "deutschArabischeGesellschaft",
   },
   {
     name: "Vivantes Klinikum",
     url: "https://www.vivantes.de/",
-    description: "Kinder- & Jugendpsychiatrie",
+    descriptionKey: "kinderJugendpsychiatrie",
   },
   {
     name: "Charité Berlin",
     url: "https://www.charite.de/",
-    description: "Universitätsmedizin",
+    descriptionKey: "universitaetsmedizin",
   },
 ];
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -47,13 +49,13 @@ export default function Footer() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--primary)]/10 to-[var(--secondary)]/10 border border-[var(--primary)]/20 text-[var(--primary-dark)] text-sm font-medium mb-4">
               <Handshake className="w-4 h-4" />
-              <span>Unsere Partner</span>
+              <span>{t('footer.footer.partners.badge')}</span>
             </div>
             <h3 className="text-2xl font-bold text-[var(--foreground)]">
-              Kooperationen & <span className="text-gradient">Netzwerk</span>
+              {t('footer.footer.partners.title')}
             </h3>
             <p className="text-[var(--foreground-muted)] mt-2 max-w-xl mx-auto">
-              Gemeinsam für die beste Versorgung unserer jungen Patient:innen
+              {t('footer.footer.partners.subtitle')}
             </p>
           </div>
           
@@ -74,7 +76,7 @@ export default function Footer() {
                     {partner.name}
                   </span>
                   <span className="text-sm text-[var(--foreground-muted)] block truncate">
-                    {partner.description}
+                    {t(`footer.footer.partners.partnerDescriptions.${partner.descriptionKey}`)}
                   </span>
                 </div>
                 <ExternalLink className="w-4 h-4 text-[var(--foreground-muted)] group-hover:text-[var(--primary)] transition-colors flex-shrink-0" />
@@ -100,16 +102,15 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-bold text-lg text-gradient">
-                  Praxis Dr. Allozy
+                  {t('footer.footer.brand.practiceName')}
                 </span>
                 <span className="block text-xs text-[var(--foreground-muted)]">
-                  Dr. med. Basel Allozy
+                  {t('footer.footer.brand.doctorName')}
                 </span>
               </div>
             </Link>
             <p className="text-sm text-[var(--foreground-muted)] leading-relaxed">
-              Kinder- und Jugendpsychiatrie und Psychotherapie in Berlin.
-              Mehrsprachiges, kultursensibles Team für Ihre Familien.
+              {t('footer.footer.brand.description')}
             </p>
 
             {/* Social Links */}
@@ -156,7 +157,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-[var(--foreground)] mb-4">
-              Schnellzugriff
+              {t('footer.footer.quickLinks.title')}
             </h3>
             <ul className="space-y-3">
               <li>
@@ -164,7 +165,7 @@ export default function Footer() {
                   href="/"
                   className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
                 >
-                  Startseite
+                  {t('footer.footer.quickLinks.links.startseite')}
                 </Link>
               </li>
               <li>
@@ -172,7 +173,7 @@ export default function Footer() {
                   href="/leistungen"
                   className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
                 >
-                  Leistungen
+                  {t('footer.footer.quickLinks.links.leistungen')}
                 </Link>
               </li>
               <li>
@@ -180,7 +181,7 @@ export default function Footer() {
                   href="/team"
                   className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
                 >
-                  Unser Team
+                  {t('footer.footer.quickLinks.links.team')}
                 </Link>
               </li>
               <li>
@@ -188,7 +189,7 @@ export default function Footer() {
                   href="/gkv"
                   className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
                 >
-                  Kassenpatient:innen (GKV)
+                  {t('footer.footer.quickLinks.links.gkv')}
                 </Link>
               </li>
               <li>
@@ -196,7 +197,7 @@ export default function Footer() {
                   href="/privatpraxis"
                   className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
                 >
-                  Privatpraxis / Selbstzahler
+                  {t('footer.footer.quickLinks.links.privatpraxis')}
                 </Link>
               </li>
               <li>
@@ -204,7 +205,7 @@ export default function Footer() {
                   href="/karriere"
                   className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
                 >
-                  Karriere
+                  {t('footer.footer.quickLinks.links.karriere')}
                 </Link>
               </li>
               <li>
@@ -212,7 +213,7 @@ export default function Footer() {
                   href="/kontakt"
                   className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
                 >
-                  Kontakt
+                  {t('footer.footer.quickLinks.links.kontakt')}
                 </Link>
               </li>
             </ul>
@@ -221,7 +222,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="font-semibold text-[var(--foreground)] mb-4">
-              Kontakt
+              {t('footer.footer.contact.title')}
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -262,7 +263,7 @@ export default function Footer() {
           {/* Google Reviews */}
           <div>
             <h3 className="font-semibold text-[var(--foreground)] mb-4">
-              Bewertungen
+              {t('footer.footer.reviews.title')}
             </h3>
             <a
               href={contactInfo.reviewLinks.google}
@@ -292,7 +293,7 @@ export default function Footer() {
               </div>
               <div className="flex-1">
                 <span className="text-sm font-medium text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors block">
-                  Google Bewertungen
+                  {t('footer.footer.reviews.googleReviews')}
                 </span>
                 <div className="flex items-center gap-1 mt-1">
                   {[1, 2, 3, 4, 5].map((i) => (
@@ -307,8 +308,7 @@ export default function Footer() {
             </a>
 
             <p className="text-xs text-[var(--foreground-muted)] mt-4 leading-relaxed">
-              Ihre Meinung ist uns wichtig! Teilen Sie Ihre Erfahrungen mit
-              anderen Familien.
+              {t('footer.footer.reviews.feedbackMessage')}
             </p>
           </div>
         </div>
@@ -319,22 +319,22 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-[var(--foreground-muted)] flex items-center gap-1">
-              &copy; {currentYear} Praxis Dr. Allozy. Mit{" "}
+              &copy; {currentYear} {t('footer.footer.brand.practiceName')}. Mit{" "}
               <Heart className="w-4 h-4 text-[var(--tertiary)] fill-[var(--tertiary)]" />{" "}
-              für Familien.
+              {t('footer.footer.bottomBar.forFamilies')}.
             </p>
             <div className="flex items-center gap-6">
               <Link
                 href="/impressum"
                 className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
               >
-                Impressum
+                {t('footer.footer.bottomBar.impressum')}
               </Link>
               <Link
                 href="/datenschutz"
                 className="text-sm text-[var(--foreground-muted)] hover:text-[var(--primary)] transition-colors"
               >
-                Datenschutz
+                {t('footer.footer.bottomBar.datenschutz')}
               </Link>
             </div>
           </div>
