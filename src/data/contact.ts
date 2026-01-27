@@ -39,7 +39,7 @@ export const contactInfo = {
     twitter: "https://twitter.com/sonnenscheinprx",
   },
   reviewLinks: {
-    google: "https://g.page/sonnenscheinpraxis/review",
+    google: "https://share.google/5kM3tYfZa0oikMTNe",
   },
   mapEmbed: {
     lat: 52.4912,
