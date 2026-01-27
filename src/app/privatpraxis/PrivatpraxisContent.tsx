@@ -31,10 +31,16 @@ import {
   Car,
   Accessibility,
   ExternalLink,
+  Send,
+  Loader2,
+  AlertCircle,
 } from "lucide-react";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import GlassCard from "@/components/ui/GlassCard";
 import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
+import Textarea from "@/components/ui/Textarea";
+import Select from "@/components/ui/Select";
 import { pricingData, billingFAQ, vrTherapyData } from "@/data/pricing";
 import { privatpraxisLocation } from "@/data/locations";
 import { useTranslation } from "@/i18n";
@@ -48,9 +54,77 @@ const serviceModuleIcons = [
   MessageCircle,
 ];
 
+interface PrivateFormData {
+  name: string;
+  email: string;
+  phone: string;
+  childName: string;
+  insuranceType: string;
+  message: string;
+}
+
+interface PrivateFormErrors {
+  name?: string;
+  email?: string;
+  message?: string;
+}
+
 export default function PrivatpraxisContent() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const { t } = useTranslation();
+
+  const [formData, setFormData] = useState<PrivateFormData>({
+    name: "",
+    email: "",
+    phone: "",
+    childName: "",
+    insuranceType: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<PrivateFormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const validateForm = (): boolean => {
+    const newErrors: PrivateFormErrors = {};
+    if (!formData.name.trim()) newErrors.name = t("private.private.contactForm.name.error");
+    if (!formData.email.trim()) {
+      newErrors.email = t("private.private.contactForm.email.errors.required");
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = t("private.private.contactForm.email.errors.invalid");
+    }
+    if (!formData.message.trim()) newErrors.message = t("private.private.contactForm.message.error");
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+    setIsSubmitting(true);
+    try {
+      const form = new FormData();
+      form.append("access_key", "privatpraxis-contact");
+      form.append("subject", "Privatpraxis Anfrage - " + formData.name);
+      form.append("from_name", formData.name);
+      form.append("email", formData.email);
+      form.append("phone", formData.phone || "-");
+      form.append("child_name", formData.childName || "-");
+      form.append("insurance_type", formData.insuranceType || "-");
+      form.append("message", formData.message);
+
+      // Send via mailto as fallback
+      const mailtoBody = `Name: ${formData.name}\nE-Mail: ${formData.email}\nTelefon: ${formData.phone || "-"}\nKind: ${formData.childName || "-"}\nVersicherung: ${formData.insuranceType || "-"}\n\nNachricht:\n${formData.message}`;
+      window.location.href = `mailto:Privatpraxis@baselallozy.de?subject=${encodeURIComponent("Privatpraxis Anfrage - " + formData.name)}&body=${encodeURIComponent(mailtoBody)}`;
+
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", phone: "", childName: "", insuranceType: "", message: "" });
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   // Get service modules from translations
   const serviceModules = [0, 1, 2, 3, 4, 5].map((index) => ({
@@ -149,12 +223,12 @@ export default function PrivatpraxisContent() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/privatpraxis/anfrage">
+              <a href="#kontakt-formular">
                 <Button size="lg">
                   {t("private.private.hero.ctaPrimary")}
                   <ArrowRight className="w-5 h-5" />
                 </Button>
-              </Link>
+              </a>
               <Link href="/gkv">
                 <Button variant="secondary" size="lg">
                   <Shield className="w-5 h-5" />
@@ -750,13 +824,208 @@ export default function PrivatpraxisContent() {
           <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto mb-8">
             {t("private.private.cta.description")}
           </p>
-          <Link href="/privatpraxis/anfrage">
+          <a href="#kontakt-formular">
             <Button size="lg">
               {t("private.private.cta.button")}
               <ArrowRight className="w-5 h-5" />
             </Button>
-          </Link>
+          </a>
         </GlassCard>
+      </SectionWrapper>
+
+      {/* Contact Form */}
+      <SectionWrapper id="kontakt-formular">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
+            {t("private.private.contactForm.sectionTitle").split(" ")[0]}{" "}
+            <span className="text-gradient">
+              {t("private.private.contactForm.sectionTitle").split(" ").slice(1).join(" ")}
+            </span>
+          </h2>
+          <p className="text-lg text-[var(--foreground-muted)] max-w-2xl mx-auto">
+            {t("private.private.contactForm.sectionDescription")}
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Form */}
+          <div className="lg:col-span-2">
+            <GlassCard className="p-6 sm:p-8">
+              {submitStatus === "success" ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-12"
+                >
+                  <div className="w-16 h-16 mx-auto rounded-full bg-green-100 flex items-center justify-center mb-4">
+                    <CheckCircle2 className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">
+                    {t("private.private.contactForm.success.title")}
+                  </h3>
+                  <p className="text-[var(--foreground-muted)]">
+                    {t("private.private.contactForm.success.text")}
+                  </p>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-medium text-[var(--foreground)] mb-1.5">
+                        {t("private.private.contactForm.name.label")} *
+                      </label>
+                      <Input
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder={t("private.private.contactForm.name.placeholder")}
+                        error={errors.name}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-[var(--foreground)] mb-1.5">
+                        {t("private.private.contactForm.email.label")} *
+                      </label>
+                      <Input
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder={t("private.private.contactForm.email.placeholder")}
+                        error={errors.email}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-medium text-[var(--foreground)] mb-1.5">
+                        {t("private.private.contactForm.phone.label")}
+                      </label>
+                      <Input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        placeholder={t("private.private.contactForm.phone.placeholder")}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-[var(--foreground)] mb-1.5">
+                        {t("private.private.contactForm.childName.label")}
+                      </label>
+                      <Input
+                        value={formData.childName}
+                        onChange={(e) => setFormData({ ...formData, childName: e.target.value })}
+                        placeholder={t("private.private.contactForm.childName.placeholder")}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-[var(--foreground)] mb-1.5">
+                      {t("private.private.contactForm.insuranceType.label")}
+                    </label>
+                    <Select
+                      value={formData.insuranceType}
+                      onChange={(e) => setFormData({ ...formData, insuranceType: e.target.value })}
+                      placeholder={t("private.private.contactForm.insuranceType.placeholder")}
+                      options={[
+                        { value: "PKV", label: t("private.private.contactForm.insuranceType.options.pkv") },
+                        { value: "Selbstzahler", label: t("private.private.contactForm.insuranceType.options.selfPay") },
+                        { value: "Beihilfe", label: t("private.private.contactForm.insuranceType.options.beihilfe") },
+                      ]}
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-[var(--foreground)] mb-1.5">
+                      {t("private.private.contactForm.message.label")} *
+                    </label>
+                    <Textarea
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder={t("private.private.contactForm.message.placeholder")}
+                      rows={5}
+                      error={errors.message}
+                    />
+                  </div>
+
+                  {submitStatus === "error" && (
+                    <div className="flex items-center gap-3 p-4 rounded-xl bg-red-50 border border-red-200">
+                      <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium text-red-800">{t("private.private.contactForm.error.title")}</p>
+                        <p className="text-sm text-red-600">{t("private.private.contactForm.error.text")}</p>
+                      </div>
+                    </div>
+                  )}
+
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        {t("private.private.contactForm.submit.sending")}
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        {t("private.private.contactForm.submit.default")}
+                      </>
+                    )}
+                  </Button>
+                </form>
+              )}
+            </GlassCard>
+          </div>
+
+          {/* Direct Contact Sidebar */}
+          <div className="space-y-4">
+            <GlassCard className="p-5">
+              <h3 className="font-semibold text-lg text-[var(--foreground)] mb-4">
+                {t("private.private.contactForm.directContact.title")}
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl icon-container-primary flex items-center justify-center">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-[var(--foreground-muted)]">{t("private.private.contactForm.directContact.phone")}</p>
+                    <a href="tel:+493061585520" className="font-medium text-[var(--foreground)] hover:text-[var(--primary)]">
+                      030 / 615 85 20
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl icon-container-secondary flex items-center justify-center">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-[var(--foreground-muted)]">{t("private.private.contactForm.directContact.email")}</p>
+                    <a href="mailto:Privatpraxis@baselallozy.de" className="font-medium text-[var(--foreground)] hover:text-[var(--primary)]">
+                      Privatpraxis@baselallozy.de
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl icon-container-tertiary flex items-center justify-center">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-[var(--foreground-muted)]">{t("private.private.contactForm.directContact.hours")}</p>
+                    <p className="font-medium text-[var(--foreground)]">
+                      {t("private.private.contactForm.directContact.hoursValue")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </GlassCard>
+          </div>
+        </div>
       </SectionWrapper>
     </>
   );

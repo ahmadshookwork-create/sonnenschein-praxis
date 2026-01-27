@@ -1132,7 +1132,65 @@
       "cta": {
         "title": "Termin in der Privatpraxis vereinbaren",
         "description": "Kontaktieren Sie uns für einen zeitnahen Termin. Wir beraten Sie gerne zu Kosten und Erstattungsmöglichkeiten.",
-        "button": "Privattermin anfragen"
+        "button": "Zum Kontaktformular"
+      },
+      "contactForm": {
+        "sectionTitle": "Kontaktformular Privatpraxis",
+        "sectionDescription": "Füllen Sie das Formular aus und wir melden uns zeitnah bei Ihnen.",
+        "name": {
+          "label": "Name",
+          "placeholder": "Ihr vollständiger Name",
+          "error": "Bitte geben Sie Ihren Namen ein."
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "Ihre E-Mail-Adresse",
+          "errors": {
+            "required": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+            "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+          }
+        },
+        "phone": {
+          "label": "Telefon (optional)",
+          "placeholder": "Ihre Telefonnummer"
+        },
+        "childName": {
+          "label": "Name des Kindes",
+          "placeholder": "Name und Alter des Kindes"
+        },
+        "insuranceType": {
+          "label": "Versicherungsart",
+          "placeholder": "Bitte auswählen",
+          "options": {
+            "pkv": "Privat versichert (PKV)",
+            "selfPay": "Selbstzahler",
+            "beihilfe": "Beihilfe"
+          }
+        },
+        "message": {
+          "label": "Ihr Anliegen",
+          "placeholder": "Bitte beschreiben Sie Ihr Anliegen oder Ihre Frage...",
+          "error": "Bitte geben Sie eine Nachricht ein."
+        },
+        "submit": {
+          "sending": "Wird gesendet...",
+          "default": "Anfrage absenden"
+        },
+        "success": {
+          "title": "Nachricht gesendet!",
+          "text": "Vielen Dank für Ihre Anfrage. Wir melden uns schnellstmöglich bei Ihnen."
+        },
+        "error": {
+          "title": "Fehler beim Senden",
+          "text": "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per Telefon."
+        },
+        "directContact": {
+          "title": "Direkter Kontakt",
+          "phone": "Telefon",
+          "email": "E-Mail",
+          "hours": "Sprechzeiten",
+          "hoursValue": "Mo–Do 8–18 Uhr, Fr 8–14 Uhr"
+        }
       }
     }
   },
