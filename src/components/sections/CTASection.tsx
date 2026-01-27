@@ -22,23 +22,23 @@ export default function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-[var(--foreground)] mb-4">
-            {t("cta.title")}
+            {t("cta.cta.title")}
           </h2>
           <p className="text-lg text-[var(--foreground-muted)] mb-8 max-w-2xl mx-auto">
-            {t("cta.description")}
+            {t("cta.cta.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link href="/kontakt">
               <Button size="lg">
                 <Calendar className="w-5 h-5" />
-                {t("cta.buttonAppointment")}
+                {t("cta.cta.buttonAppointment")}
               </Button>
             </Link>
             <Link href="/team">
               <Button variant="secondary" size="lg">
                 <Users className="w-5 h-5" />
-                {t("cta.buttonTeam")}
+                {t("cta.cta.buttonTeam")}
               </Button>
             </Link>
           </div>
@@ -46,12 +46,12 @@ export default function CTASection() {
           {/* Quick Contact Info */}
           <div className="flex items-center justify-center gap-2 text-[var(--foreground-muted)]">
             <Phone className="w-5 h-5 text-[var(--primary)]" />
-            <span>{t("cta.callPrompt")}</span>
+            <span>{t("cta.cta.callPrompt")}</span>
             <a
               href="tel:+493012345678"
               className="font-semibold text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
             >
-              {t("cta.phoneNumber")}
+              {t("cta.cta.phoneNumber")}
             </a>
           </div>
         </motion.div>
