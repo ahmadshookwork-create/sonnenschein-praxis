@@ -1496,6 +1496,7 @@
       },
       "members": {
         "basel-allozy": {
+          "name": "Dr. med. Basel Allozy",
           "role": "Facharzt für Kinder- und Jugendpsychiatrie und Psychotherapie",
           "subtitle": "Praxisinhaber, Systemischer Coach und Supervisor (DGSF)",
           "bio": "Praxisleitung mit langjähriger Erfahrung in der Behandlung von Kindern und Jugendlichen. Spezialisiert auf kultursensible psychiatrische Versorgung.",
@@ -1510,51 +1511,102 @@
           ]
         },
         "christian-montivero": {
+          "name": "C. Montivero",
           "role": "Arzt in Weiterbildung",
           "subtitle": "Weiterbildung zum FA für Kinder- und Jugendpsychiatrie",
           "bio": "Arzt in der Facharztweiterbildung für Kinder- und Jugendpsychiatrie."
         },
         "anna-kosel": {
+          "name": "A. Kosel",
           "role": "Kinder- und Jugendlichenpsychotherapeutin",
           "bio": "Approbierte Psychotherapeutin mit Schwerpunkt auf verhaltenstherapeutische Behandlung von Kindern und Jugendlichen."
         },
         "linus-sagert": {
+          "name": "L. Sagert",
           "role": "Psychotherapeut",
           "bio": "Psychotherapeut mit Fokus auf moderne, evidenzbasierte Therapieverfahren."
         },
         "amina-jeleskovic-ozturk": {
+          "name": "A. Jeleskovic-Öztürk",
           "role": "Psychologin B. Sc.",
           "bio": "Psychologin mit Expertise in psychologischer Diagnostik und Beratung."
         },
         "mahmoud-alsioufy": {
+          "name": "M. Alsiofy",
           "role": "Psychologische Fachkraft",
           "bio": "Unterstützung in psychologischer Betreuung und Beratung."
         },
         "lina-prochaska": {
+          "name": "L. Prochaska",
           "role": "KJ-Psychotherapeutin VT i.A.",
           "bio": "Kinder- und Jugendlichenpsychotherapeutin in Ausbildung mit verhaltenstherapeutischer Ausrichtung."
         },
         "nisreen-arja": {
+          "name": "N. Arja",
           "role": "Sprach- und Kommunikationstherapeutin",
           "bio": "Spezialisiert auf Sprach- und Sprechstörungen bei Kindern und Jugendlichen."
         },
         "amira-muminovic": {
+          "name": "A. Muminovic",
           "role": "Heilpädagogin",
           "subtitle": "Elternberatung, Gruppentherapie",
           "bio": "Spezialisiert auf heilpädagogische Förderung, Elternarbeit und therapeutische Gruppenangebote."
         },
         "sana-ammar": {
+          "name": "S. Ammar",
           "role": "Kunsttherapeutin i.A.",
           "bio": "Kunsttherapeutin in Ausbildung mit Fokus auf kreative Therapiemethoden für Kinder und Jugendliche."
         },
         "sandra-loeser": {
+          "name": "S. Löser",
           "role": "ZFA – Privatsekretariat, Qualitätsmanagement",
           "bio": "Verantwortlich für das Privatsekretariat und Qualitätsmanagement der Praxis."
         },
         "mustafa-algharraa": {
+          "name": "M. Algharraa",
           "role": "MFA-Helfer",
           "bio": "Unterstützung im Praxisalltag und Patientenbetreuung."
         }
+      },
+      "leader": {
+        "badge": "Praxisleitung",
+        "stats": {
+          "experience": "Jahre Erfahrung",
+          "founded": "Praxisgründung"
+        },
+        "cta": {
+          "appointment": "Termin anfragen",
+          "services": "Leistungen ansehen"
+        },
+        "sections": {
+          "focus": "Schwerpunkte",
+          "career": "Werdegang",
+          "engagement": "Engagement & Forschung"
+        },
+        "bullets": {
+          "specialist": "Facharzt für Kinder- und Jugendpsychiatrie",
+          "psychotherapy": "Tiefenpsychologisch fundierte Psychotherapie",
+          "integrative": "Integrative, individualisierte Therapiekonzepte",
+          "cultureSensitive": "Kultursensible Versorgung für Familien"
+        },
+        "timeline": {
+          "2006": "Medizinstudium Charité Berlin abgeschlossen",
+          "2012": "Facharztanerkennung KJP + Psychotherapie",
+          "2013": "Promotion zum Dr. med.",
+          "2017": "DGSF Supervisor (Systemische Therapie)",
+          "2019": "EMDR-Therapeut (Traumatherapie)",
+          "2021": "Gründung Praxis Dr. Allozy Berlin"
+        },
+        "badges": {
+          "specialist": "Facharzt seit 2012",
+          "dgsf": "DGSF Supervisor",
+          "emdr": "EMDR",
+          "tfpKip": "TFP / KIP"
+        },
+        "engagementText": "Mitgründer BALSAM (DAGP e.V.) – Rehabilitation traumatisierter geflüchteter Kinder. Forschungsfokus auf integrative, methodenübergreifende Psychotherapiekonzepte.",
+        "memberships": "Mitglied: IASE e.V., NKJPP e.V.",
+        "showMore": "Mehr anzeigen",
+        "showLess": "Weniger anzeigen"
       }
     }
   }
