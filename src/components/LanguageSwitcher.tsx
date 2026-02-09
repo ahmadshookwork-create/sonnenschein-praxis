@@ -17,13 +17,13 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
   };
 
   return (
-    <div className={`flex items-center gap-1 ${className}`}>
+    <div className={`flex items-center gap-1 bg-[var(--background-secondary)] rounded-lg p-1 ${className}`}>
       <button
         onClick={() => handleChange('de')}
-        className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
+        className={`px-3 py-1.5 text-sm font-semibold rounded-md transition-all ${
           locale === 'de'
-            ? 'bg-primary text-white'
-            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            ? 'bg-[var(--primary)] text-white shadow-sm'
+            : 'text-[var(--foreground-muted)] hover:text-[var(--foreground)] hover:bg-white/50'
         }`}
         aria-label="Deutsch"
       >
@@ -31,14 +31,14 @@ export function LanguageSwitcher({ className = '' }: LanguageSwitcherProps) {
       </button>
       <button
         onClick={() => handleChange('ar')}
-        className={`px-2 py-1 text-sm font-medium rounded transition-colors ${
+        className={`px-3 py-1.5 text-sm font-semibold rounded-md transition-all ${
           locale === 'ar'
-            ? 'bg-primary text-white'
-            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            ? 'bg-[var(--primary)] text-white shadow-sm'
+            : 'text-[var(--foreground-muted)] hover:text-[var(--foreground)] hover:bg-white/50'
         }`}
         aria-label="العربية"
       >
-        AR
+        ع
       </button>
     </div>
   );

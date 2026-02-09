@@ -205,7 +205,7 @@ export default function Navigation() {
 
             {/* Language Switcher + CTA Button + Mobile Toggle */}
             <div className="flex items-center gap-3">
-              <LanguageSwitcher className="hidden sm:flex" />
+              <LanguageSwitcher className="flex" />
               <Link
                 href="/kontakt"
                 className="hidden sm:flex items-center gap-2 btn-primary text-sm"
