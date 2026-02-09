@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from 'react';
 import de from './locales/de.json';
 import ar from './locales/ar.json';
 
@@ -13,6 +13,8 @@ const translations: Record<Locale, Translations> = {
   de: de as Translations,
   ar: ar as Translations,
 };
+
+const LOCALE_STORAGE_KEY = 'praxis-allozy-locale';
 
 interface I18nContextType {
   locale: Locale;
@@ -28,8 +30,61 @@ interface I18nProviderProps {
   defaultLocale?: Locale;
 }
 
+function getStoredLocale(): Locale | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
+    if (stored === 'de' || stored === 'ar') {
+      return stored;
+    }
+  } catch {
+    // localStorage might not be available
+  }
+  return null;
+}
+
+function storeLocale(locale: Locale): void {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+  } catch {
+    // localStorage might not be available
+  }
+}
+
 export function I18nProvider({ children, defaultLocale = 'de' }: I18nProviderProps) {
-  const [locale, setLocale] = useState<Locale>(defaultLocale);
+  // Initialize with stored locale or default
+  const [locale, setLocaleState] = useState<Locale>(() => {
+    // Only run on client
+    if (typeof window !== 'undefined') {
+      return getStoredLocale() || defaultLocale;
+    }
+    return defaultLocale;
+  });
+  
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  // On mount, check localStorage again (for SSR hydration)
+  useEffect(() => {
+    const stored = getStoredLocale();
+    if (stored && stored !== locale) {
+      setLocaleState(stored);
+    }
+    setIsHydrated(true);
+  }, []);
+
+  // Update document direction when locale changes
+  useEffect(() => {
+    if (isHydrated) {
+      document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.lang = locale;
+    }
+  }, [locale, isHydrated]);
+
+  const setLocale = useCallback((newLocale: Locale) => {
+    setLocaleState(newLocale);
+    storeLocale(newLocale);
+  }, []);
 
   const t = useCallback((key: string): string => {
     const keys = key.split('.');
