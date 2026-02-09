@@ -19,44 +19,62 @@ import {
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { TeamMember, languageFlags } from "@/data/team";
+import { useTranslation } from "@/i18n";
 
 interface LeaderSpotlightProps {
   member: TeamMember;
 }
 
 export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
+  const { t, lang } = useTranslation();
   const [imageError, setImageError] = useState(false);
   const [showFullTimeline, setShowFullTimeline] = useState(false);
   const languages = member.languages ?? [];
+  const isRTL = lang === "ar";
 
-  // Kurzprofil Bullets (prägnant, 1 Zeile)
+  // Get translated member data
+  const memberKey = `team.team.members.${member.id}`;
+  const translatedName = t(`${memberKey}.name`) || member.name;
+  const translatedRole = t(`${memberKey}.role`) || member.role;
+  const translatedSubtitle = t(`${memberKey}.subtitle`) || member.subtitle;
+  const translatedFullBio = t(`${memberKey}.fullBio`) || member.fullBio;
+  
+  // Get translated highlights array
+  const translatedHighlights = t(`${memberKey}.highlights`) || member.highlights || [];
+
+  // Get translated language names
+  const getTranslatedLanguage = (langName: string) => {
+    return t(`team.team.languageNames.${langName}`) || langName;
+  };
+
+  // Kurzprofil Bullets (translated)
   const profileBullets = [
-    { icon: Stethoscope, text: "Facharzt für Kinder- und Jugendpsychiatrie" },
-    { icon: Heart, text: "Tiefenpsychologisch fundierte Psychotherapie" },
-    { icon: Sparkles, text: "Integrative, individualisierte Therapiekonzepte" },
-    { icon: HandHeart, text: "Kultursensible Versorgung für Familien" },
+    { icon: Stethoscope, text: t("team.team.leader.bullets.specialist") },
+    { icon: Heart, text: t("team.team.leader.bullets.psychotherapy") },
+    { icon: Sparkles, text: t("team.team.leader.bullets.integrative") },
+    { icon: HandHeart, text: t("team.team.leader.bullets.cultureSensitive") },
   ];
 
-  // Mini-Timeline Werdegang
+  // Mini-Timeline Werdegang (translated)
   const timelineItems = [
-    { year: "2006", text: "Medizinstudium Charité Berlin abgeschlossen" },
-    { year: "2012", text: "Facharztanerkennung KJP + Psychotherapie" },
-    { year: "2013", text: "Promotion zum Dr. med." },
-    { year: "2017", text: "DGSF Supervisor (Systemische Therapie)" },
-    { year: "2019", text: "EMDR-Therapeut (Traumatherapie)" },
-    { year: "2021", text: "Gründung Praxis Dr. Allozy Berlin" },
+    { year: "2006", text: t("team.team.leader.timeline.2006") },
+    { year: "2012", text: t("team.team.leader.timeline.2012") },
+    { year: "2013", text: t("team.team.leader.timeline.2013") },
+    { year: "2017", text: t("team.team.leader.timeline.2017") },
+    { year: "2019", text: t("team.team.leader.timeline.2019") },
+    { year: "2021", text: t("team.team.leader.timeline.2021") },
   ];
 
   const visibleTimeline = showFullTimeline
     ? timelineItems
     : timelineItems.slice(0, 3);
 
-  // Badges
+  // Badges (translated)
   const badges = [
-    "Facharzt seit 2012",
-    "DGSF Supervisor",
-    "EMDR",
-    "TFP / KIP",
+    t("team.team.leader.badges.specialist"),
+    t("team.team.leader.badges.dgsf"),
+    t("team.team.leader.badges.emdr"),
+    t("team.team.leader.badges.tfpKip"),
   ];
 
   return (
@@ -65,17 +83,18 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
+      dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Premium Profile Card */}
       <div className="relative max-w-6xl mx-auto rounded-3xl bg-gradient-to-br from-white/95 via-white/90 to-[var(--primary)]/[0.02] backdrop-blur-md border border-white/60 shadow-[0_8px_40px_rgba(0,0,0,0.06)] overflow-hidden">
         {/* Subtle gradient orbs */}
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-[var(--primary)]/[0.04] rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[var(--secondary)]/[0.04] rounded-full blur-3xl pointer-events-none" />
+        <div className={`absolute -top-40 ${isRTL ? '-left-40' : '-right-40'} w-96 h-96 bg-[var(--primary)]/[0.04] rounded-full blur-3xl pointer-events-none`} />
+        <div className={`absolute -bottom-40 ${isRTL ? '-right-40' : '-left-40'} w-80 h-80 bg-[var(--secondary)]/[0.04] rounded-full blur-3xl pointer-events-none`} />
 
         {/* Main Grid: 2 Columns Desktop, Stack Mobile */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-0">
+        <div className={`relative z-10 grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-0`}>
           {/* LEFT COLUMN: Avatar + Quick Facts + CTAs (Desktop) */}
-          <div className="flex flex-col items-center lg:items-center p-6 sm:p-8 lg:p-10 lg:border-r border-[var(--card-border)]/50 bg-gradient-to-b from-transparent to-[var(--background-secondary)]/30">
+          <div className={`flex flex-col items-center lg:items-center p-6 sm:p-8 lg:p-10 ${isRTL ? 'lg:border-l' : 'lg:border-r'} border-[var(--card-border)]/50 bg-gradient-to-b from-transparent to-[var(--background-secondary)]/30`}>
             {/* Avatar Container */}
             <div className="relative mb-5">
               {/* Glow behind */}
@@ -86,13 +105,14 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
                 {member.imageSrc && !imageError ? (
                   <Image
                     src={member.imageSrc}
-                    alt={`Portrait von ${member.name}, Praxisleitung`}
+                    alt={translatedName}
                     fill
                     sizes="(max-width: 768px) 168px, (max-width: 1024px) 220px, 260px"
                     quality={90}
                     priority
                     className="object-cover scale-[1.03]"
-                    style={{ objectPosition: "50% 18%" }} onError={() => setImageError(true)}
+                    style={{ objectPosition: "50% 18%" }}
+                    onError={() => setImageError(true)}
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-[var(--primary)]/20 to-[var(--secondary)]/20 flex items-center justify-center">
@@ -106,17 +126,17 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[var(--primary)]/10 to-[var(--secondary)]/10 border border-[var(--primary)]/20 shadow-sm mb-5">
               <Award className="w-4 h-4 text-[var(--primary)]" />
               <span className="text-sm font-semibold text-[var(--primary-dark)]">
-                Praxisleitung
+                {t("team.team.leader.badge")}
               </span>
             </div>
 
             {/* Name & Title (Mobile only) */}
             <div className="lg:hidden text-center mb-5">
               <h2 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)] mb-1 leading-tight">
-                {member.name}
+                {translatedName}
               </h2>
               <p className="text-base text-[var(--primary-dark)] font-medium">
-                {member.role}
+                {translatedRole}
               </p>
             </div>
 
@@ -124,15 +144,15 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
             {languages.length > 0 && (
               <div className="flex items-center gap-3 mb-5">
                 <Globe className="w-4 h-4 text-[var(--foreground-muted)]" />
-                {languages.map((lang) => (
+                {languages.map((langName) => (
                   <span
-                    key={lang}
+                    key={langName}
                     className="inline-flex items-center gap-1.5 text-sm text-[var(--foreground)]"
                   >
                     <span className="text-base">
-                      {languageFlags[lang] || "🌍"}
+                      {languageFlags[langName] || "🌍"}
                     </span>
-                    {lang}
+                    {getTranslatedLanguage(langName)}
                   </span>
                 ))}
               </div>
@@ -145,7 +165,7 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
                   15+
                 </div>
                 <div className="text-xs text-[var(--foreground-muted)]">
-                  Jahre Erfahrung
+                  {t("team.team.leader.stats.experience")}
                 </div>
               </div>
               <div className="text-center p-3 rounded-xl bg-white/60 border border-[var(--card-border)]/50">
@@ -153,7 +173,7 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
                   2021
                 </div>
                 <div className="text-xs text-[var(--foreground-muted)]">
-                  Praxisgründung
+                  {t("team.team.leader.stats.founded")}
                 </div>
               </div>
             </div>
@@ -162,13 +182,13 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
             <div className="hidden lg:flex flex-col gap-3 w-full max-w-[280px]">
               <Link href="/kontakt" className="block">
                 <Button size="lg" className="w-full justify-center">
-                  Termin anfragen
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  {t("team.team.leader.cta.appointment")}
+                  <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-1 rotate-180' : 'ml-1'}`} />
                 </Button>
               </Link>
               <Link href="/leistungen" className="block">
                 <Button variant="secondary" size="lg" className="w-full justify-center">
-                  Leistungen ansehen
+                  {t("team.team.leader.cta.services")}
                 </Button>
               </Link>
             </div>
@@ -179,14 +199,14 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
             {/* Name & Title (Desktop only) */}
             <div className="hidden lg:block mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-[var(--foreground)] mb-2 leading-tight tracking-tight">
-                {member.name}
+                {translatedName}
               </h2>
               <p className="text-lg text-[var(--primary-dark)] font-medium">
-                {member.role}
+                {translatedRole}
               </p>
-              {member.subtitle && (
+              {translatedSubtitle && (
                 <p className="text-sm text-[var(--foreground-muted)] mt-1">
-                  {member.subtitle}
+                  {translatedSubtitle}
                 </p>
               )}
             </div>
@@ -194,7 +214,7 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
             {/* Profile Bullets */}
             <div className="mb-6">
               <h3 className="text-sm font-semibold text-[var(--foreground-muted)] uppercase tracking-wide mb-3">
-                Schwerpunkte
+                {t("team.team.leader.sections.focus")}
               </h3>
               <ul className="space-y-2.5">
                 {profileBullets.map((item, idx) => (
@@ -214,11 +234,11 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
             {/* Mini-Timeline Werdegang */}
             <div className="mb-6">
               <h3 className="text-sm font-semibold text-[var(--foreground-muted)] uppercase tracking-wide mb-3">
-                Werdegang
+                {t("team.team.leader.sections.career")}
               </h3>
               <div className="relative">
                 {/* Timeline line */}
-                <div className="absolute left-[11px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-[var(--primary)]/30 to-[var(--secondary)]/20" />
+                <div className={`absolute ${isRTL ? 'right-[11px]' : 'left-[11px]'} top-2 bottom-2 w-0.5 bg-gradient-to-b from-[var(--primary)]/30 to-[var(--secondary)]/20`} />
 
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -251,9 +271,9 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
                 {timelineItems.length > 3 && (
                   <button
                     onClick={() => setShowFullTimeline(!showFullTimeline)}
-                    className="mt-3 ml-9 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--primary-dark)] hover:text-[var(--primary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 rounded"
+                    className={`mt-3 ${isRTL ? 'mr-9' : 'ml-9'} inline-flex items-center gap-1.5 text-sm font-medium text-[var(--primary-dark)] hover:text-[var(--primary)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 rounded`}
                   >
-                    {showFullTimeline ? "Weniger anzeigen" : "Mehr anzeigen"}
+                    {showFullTimeline ? t("team.team.leader.showLess") : t("team.team.leader.showMore")}
                     <ChevronDown
                       className={`w-4 h-4 transition-transform ${
                         showFullTimeline ? "rotate-180" : ""
@@ -270,12 +290,10 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
                 <Building2 className="w-5 h-5 text-[var(--secondary)] flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-sm font-medium text-[var(--foreground)] mb-1">
-                    Engagement & Forschung
+                    {t("team.team.leader.sections.engagement")}
                   </p>
                   <p className="text-sm text-[var(--foreground-muted)] leading-relaxed">
-                    Mitgründer BALSAM (DAGP e.V.) – Rehabilitation traumatisierter
-                    geflüchteter Kinder. Forschungsfokus auf integrative,
-                    methodenübergreifende Psychotherapiekonzepte.
+                    {t("team.team.leader.engagementText")}
                   </p>
                 </div>
               </div>
@@ -297,20 +315,20 @@ export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
             {/* Memberships */}
             <div className="flex items-center gap-2 text-xs text-[var(--foreground-muted)] mb-6">
               <Briefcase className="w-3.5 h-3.5" />
-              <span>Mitglied: IASE e.V., NKJPP e.V.</span>
+              <span>{t("team.team.leader.memberships")}</span>
             </div>
 
             {/* CTAs - Mobile only */}
             <div className="lg:hidden flex flex-col sm:flex-row gap-3">
               <Link href="/kontakt" className="block flex-1">
                 <Button size="lg" className="w-full justify-center">
-                  Termin anfragen
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  {t("team.team.leader.cta.appointment")}
+                  <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-1 rotate-180' : 'ml-1'}`} />
                 </Button>
               </Link>
               <Link href="/leistungen" className="block flex-1">
                 <Button variant="secondary" size="lg" className="w-full justify-center">
-                  Leistungen ansehen
+                  {t("team.team.leader.cta.services")}
                 </Button>
               </Link>
             </div>

@@ -166,9 +166,130 @@
         "ar": "الفارسية"
       }
     },
+    "leader": {
+      "badge": {
+        "de": "Praxisleitung",
+        "ar": "إدارة العيادة"
+      },
+      "stats": {
+        "experience": {
+          "de": "Jahre Erfahrung",
+          "ar": "سنوات الخبرة"
+        },
+        "founded": {
+          "de": "Praxisgründung",
+          "ar": "تأسيس العيادة"
+        }
+      },
+      "cta": {
+        "appointment": {
+          "de": "Termin anfragen",
+          "ar": "طلب موعد"
+        },
+        "services": {
+          "de": "Leistungen ansehen",
+          "ar": "عرض الخدمات"
+        }
+      },
+      "sections": {
+        "focus": {
+          "de": "Schwerpunkte",
+          "ar": "التخصصات"
+        },
+        "career": {
+          "de": "Werdegang",
+          "ar": "المسيرة المهنية"
+        },
+        "engagement": {
+          "de": "Engagement & Forschung",
+          "ar": "المشاركة والبحث"
+        }
+      },
+      "bullets": {
+        "specialist": {
+          "de": "Facharzt für Kinder- und Jugendpsychiatrie",
+          "ar": "أخصائي الطب النفسي للأطفال والمراهقين"
+        },
+        "psychotherapy": {
+          "de": "Tiefenpsychologisch fundierte Psychotherapie",
+          "ar": "العلاج النفسي العميق"
+        },
+        "integrative": {
+          "de": "Integrative, individualisierte Therapiekonzepte",
+          "ar": "مفاهيم علاجية تكاملية ومخصصة"
+        },
+        "cultureSensitive": {
+          "de": "Kultursensible Versorgung für Familien",
+          "ar": "رعاية مراعية للثقافات للعائلات"
+        }
+      },
+      "timeline": {
+        "2006": {
+          "de": "Medizinstudium Charité Berlin abgeschlossen",
+          "ar": "إتمام دراسة الطب في شاريتيه برلين"
+        },
+        "2012": {
+          "de": "Facharztanerkennung KJP + Psychotherapie",
+          "ar": "الاعتراف كطبيب متخصص في الطب النفسي للأطفال والمراهقين + العلاج النفسي"
+        },
+        "2013": {
+          "de": "Promotion zum Dr. med.",
+          "ar": "الحصول على درجة الدكتوراه في الطب"
+        },
+        "2017": {
+          "de": "DGSF Supervisor (Systemische Therapie)",
+          "ar": "مشرف معتمد DGSF (العلاج النظامي)"
+        },
+        "2019": {
+          "de": "EMDR-Therapeut (Traumatherapie)",
+          "ar": "معالج EMDR (علاج الصدمات)"
+        },
+        "2021": {
+          "de": "Gründung Praxis Dr. Allozy Berlin",
+          "ar": "تأسيس عيادة د. اللوزي في برلين"
+        }
+      },
+      "badges": {
+        "specialist": {
+          "de": "Facharzt seit 2012",
+          "ar": "طبيب متخصص منذ 2012"
+        },
+        "dgsf": {
+          "de": "DGSF Supervisor",
+          "ar": "مشرف DGSF"
+        },
+        "emdr": {
+          "de": "EMDR",
+          "ar": "EMDR"
+        },
+        "tfpKip": {
+          "de": "TFP / KIP",
+          "ar": "TFP / KIP"
+        }
+      },
+      "engagementText": {
+        "de": "Mitgründer BALSAM (DAGP e.V.) – Rehabilitation traumatisierter geflüchteter Kinder. Forschungsfokus auf integrative, methodenübergreifende Psychotherapiekonzepte.",
+        "ar": "مؤسس مشارك لـ BALSAM (DAGP e.V.) – إعادة تأهيل الأطفال اللاجئين المصابين بصدمات. التركيز البحثي على مفاهيم العلاج النفسي التكاملية ومتعددة الأساليب."
+      },
+      "memberships": {
+        "de": "Mitglied: IASE e.V., NKJPP e.V.",
+        "ar": "عضو في: IASE e.V.، NKJPP e.V."
+      },
+      "showMore": {
+        "de": "Mehr anzeigen",
+        "ar": "عرض المزيد"
+      },
+      "showLess": {
+        "de": "Weniger anzeigen",
+        "ar": "عرض أقل"
+      }
+    },
     "members": {
       "basel-allozy": {
-        "name": "Dr. med. Basel Allozy",
+        "name": {
+          "de": "Dr. med. Basel Allozy",
+          "ar": "د. باسل اللوزي"
+        },
         "role": {
           "de": "Facharzt für Kinder- und Jugendpsychiatrie und Psychotherapie",
           "ar": "أخصائي الطب النفسي للأطفال والمراهقين والعلاج النفسي"
@@ -205,7 +326,10 @@
         }
       },
       "christian-montivero": {
-        "name": "C. Montivero",
+        "name": {
+          "de": "C. Montivero",
+          "ar": "س. مونتيفيرو"
+        },
         "role": {
           "de": "Arzt in Weiterbildung",
           "ar": "طبيب في التدريب التخصصي"
@@ -220,7 +344,10 @@
         }
       },
       "anna-kosel": {
-        "name": "A. Kosel",
+        "name": {
+          "de": "A. Kosel",
+          "ar": "أ. كوزل"
+        },
         "role": {
           "de": "Kinder- und Jugendlichenpsychotherapeutin",
           "ar": "معالجة نفسية للأطفال والمراهقين"
@@ -231,7 +358,10 @@
         }
       },
       "linus-sagert": {
-        "name": "L. Sagert",
+        "name": {
+          "de": "L. Sagert",
+          "ar": "ل. زاغرت"
+        },
         "role": {
           "de": "Psychotherapeut",
           "ar": "معالج نفسي"
@@ -242,7 +372,10 @@
         }
       },
       "amina-jeleskovic-ozturk": {
-        "name": "A. Jeleskovic-Öztürk",
+        "name": {
+          "de": "A. Jeleskovic-Öztürk",
+          "ar": "أ. يليسكوفيتش-أوزتورك"
+        },
         "role": {
           "de": "Psychologin B. Sc.",
           "ar": "أخصائية نفسية - بكالوريوس"
@@ -253,7 +386,10 @@
         }
       },
       "mahmoud-alsioufy": {
-        "name": "M. Alsiofy",
+        "name": {
+          "de": "M. Alsiofy",
+          "ar": "م. السيوفي"
+        },
         "role": {
           "de": "Psychologische Fachkraft",
           "ar": "متخصص نفسي"
@@ -264,7 +400,10 @@
         }
       },
       "lina-prochaska": {
-        "name": "L. Prochaska",
+        "name": {
+          "de": "L. Prochaska",
+          "ar": "ل. بروشاسكا"
+        },
         "role": {
           "de": "KJ-Psychotherapeutin VT i.A.",
           "ar": "معالجة نفسية للأطفال والمراهقين (علاج سلوكي) - قيد التدريب"
@@ -275,7 +414,10 @@
         }
       },
       "nisreen-arja": {
-        "name": "N. Arja",
+        "name": {
+          "de": "N. Arja",
+          "ar": "ن. عرجا"
+        },
         "role": {
           "de": "Sprach- und Kommunikationstherapeutin",
           "ar": "معالجة النطق والتواصل"
@@ -286,7 +428,10 @@
         }
       },
       "amira-muminovic": {
-        "name": "A. Muminovic",
+        "name": {
+          "de": "A. Muminovic",
+          "ar": "أ. موميnoفيتش"
+        },
         "role": {
           "de": "Heilpädagogin",
           "ar": "أخصائية تربية علاجية"
@@ -301,7 +446,10 @@
         }
       },
       "sana-ammar": {
-        "name": "S. Ammar",
+        "name": {
+          "de": "S. Ammar",
+          "ar": "س. عمار"
+        },
         "role": {
           "de": "Kunsttherapeutin i.A.",
           "ar": "معالجة بالفن - قيد التدريب"
@@ -312,7 +460,10 @@
         }
       },
       "sandra-loeser": {
-        "name": "S. Löser",
+        "name": {
+          "de": "S. Löser",
+          "ar": "س. لوزر"
+        },
         "role": {
           "de": "ZFA – Privatsekretariat, Qualitätsmanagement",
           "ar": "مساعدة طبية - السكرتارية الخاصة وإدارة الجودة"
@@ -323,7 +474,10 @@
         }
       },
       "mustafa-algharraa": {
-        "name": "M. Algharraa",
+        "name": {
+          "de": "M. Algharraa",
+          "ar": "م. الغراء"
+        },
         "role": {
           "de": "MFA-Helfer",
           "ar": "مساعد طبي"
