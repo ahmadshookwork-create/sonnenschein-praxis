@@ -94,7 +94,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <div className="w-14 h-14 relative">
                 <Image
-                  src="/sonnenschein-praxis/logo.png"
+                  src="/logo.png"
                   alt="Praxis Dr. Allozy Logo"
                   fill
                   className="object-contain"

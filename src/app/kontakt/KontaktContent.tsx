@@ -167,7 +167,7 @@ export default function KontaktContent() {
           <Heart className="w-full h-full text-[var(--tertiary)]" />
         </div>
         <div className="absolute bottom-20 left-16 w-10 h-10 opacity-15 animate-float-delayed">
-          <Image src="/sonnenschein-praxis/logo.png" alt="" fill className="object-contain" />
+          <Image src="/logo.png" alt="" fill className="object-contain" />
         </div>
 
         <div className="absolute top-1/3 -right-32 w-96 h-96 bg-[var(--primary-light)] rounded-full blur-[128px] opacity-20" />

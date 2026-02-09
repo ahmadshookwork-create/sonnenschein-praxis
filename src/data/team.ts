@@ -30,7 +30,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "arzt",
     languages: ["Arabisch", "Deutsch"],
     bio: "Praxisleitung mit langjähriger Erfahrung in der Behandlung von Kindern und Jugendlichen. Spezialisiert auf kultursensible psychiatrische Versorgung.",
-    imageSrc: "/sonnenschein-praxis/team/basel-allozy.jpg",
+    imageSrc: "/team/basel-allozy.jpg",
     imageFocus: { x: 0.5, y: 0.15 },
     isLead: true,
     fullBio: "Dr. med. Basel Allozy leitet die Praxis mit über 15 Jahren Erfahrung in der Kinder- und Jugendpsychiatrie. Als Facharzt und zertifizierter systemischer Coach (DGSF) verbindet er fundierte medizinische Expertise mit einem ganzheitlichen Therapieansatz. Seine Schwerpunkte umfassen tiefenpsychologisch fundierte Psychotherapie (TFP), Katathym Imaginative Psychotherapie (KIP) sowie EMDR-Behandlungen. Besonders am Herzen liegt ihm die kultursensible und mehrsprachige Versorgung von Familien mit Migrationshintergrund.",
@@ -52,7 +52,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "ausbildung",
     languages: ["Spanisch", "Deutsch"],
     bio: "Arzt in der Facharztweiterbildung für Kinder- und Jugendpsychiatrie.",
-    imageSrc: "/sonnenschein-praxis/team/christian-montivero.png",
+    imageSrc: "/team/christian-montivero.png",
     imageFocus: { x: 0.5, y: 0.2 },
   },
   // 3. A. Kosel
@@ -63,7 +63,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "therapeut",
     languages: ["Deutsch"],
     bio: "Approbierte Psychotherapeutin mit Schwerpunkt auf verhaltenstherapeutische Behandlung von Kindern und Jugendlichen.",
-    imageSrc: "/sonnenschein-praxis/team/anna-kosel.jpg",
+    imageSrc: "/team/anna-kosel.jpg",
     imageFocus: { x: 0.5, y: 0.25 },
   },
   // 4. L. Sagert
@@ -74,7 +74,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "therapeut",
     languages: ["Deutsch", "Englisch"],
     bio: "Psychotherapeut mit Fokus auf moderne, evidenzbasierte Therapieverfahren.",
-    imageSrc: "/sonnenschein-praxis/team/linus-sagert.jpg",
+    imageSrc: "/team/linus-sagert.jpg",
     imageFocus: { x: 0.5, y: 0.2 },
   },
   // 5. A. Jeleskovic-Öztürk
@@ -85,7 +85,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "fachkraft",
     languages: ["Bosnisch", "Kroatisch", "Serbisch", "Deutsch", "Englisch"],
     bio: "Psychologin mit Expertise in psychologischer Diagnostik und Beratung.",
-    imageSrc: "/sonnenschein-praxis/team/amina-jeleskovic-oztuerk.jpg",
+    imageSrc: "/team/amina-jeleskovic-oztuerk.jpg",
     imageFocus: { x: 0.5, y: 0.3 },
   },
   // 6. M. Alsiofy
@@ -96,7 +96,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "fachkraft",
     languages: ["Arabisch", "Englisch", "Deutsch"],
     bio: "Unterstützung in psychologischer Betreuung und Beratung.",
-    imageSrc: "/sonnenschein-praxis/team/mahmoud-alsioufy.jpg",
+    imageSrc: "/team/mahmoud-alsioufy.jpg",
     imageFocus: { x: 0.5, y: 0.3 },
   },
   // 7. L. Prochaska
@@ -107,7 +107,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "ausbildung",
     languages: ["Deutsch", "Englisch", "Persisch"],
     bio: "Kinder- und Jugendlichenpsychotherapeutin in Ausbildung mit verhaltenstherapeutischer Ausrichtung.",
-    imageSrc: "/sonnenschein-praxis/team/lina-prochaska.png",
+    imageSrc: "/team/lina-prochaska.png",
     imageFocus: { x: 0.5, y: 0.25 },
   },
   // 8. N. Arja
@@ -118,7 +118,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "fachkraft",
     languages: ["Arabisch", "Englisch", "Deutsch"],
     bio: "Spezialisiert auf Sprach- und Sprechstörungen bei Kindern und Jugendlichen.",
-    imageSrc: "/sonnenschein-praxis/team/nisreen-arja.png",
+    imageSrc: "/team/nisreen-arja.png",
     imageFocus: { x: 0.5, y: 0.25 },
   },
   // 9. A. Muminovic
@@ -130,7 +130,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "therapeut",
     languages: ["Bosnisch", "Arabisch", "Polnisch", "Russisch", "Deutsch"],
     bio: "Spezialisiert auf heilpädagogische Förderung, Elternarbeit und therapeutische Gruppenangebote.",
-    imageSrc: "/sonnenschein-praxis/team/amira-muminovic.png",
+    imageSrc: "/team/amira-muminovic.png",
     imageFocus: { x: 0.5, y: 0.2 },
   },
   // 10. S. Ammar
@@ -141,7 +141,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "ausbildung",
     languages: ["Deutsch", "Arabisch", "Französisch", "Englisch"],
     bio: "Kunsttherapeutin in Ausbildung mit Fokus auf kreative Therapiemethoden für Kinder und Jugendliche.",
-    imageSrc: "/sonnenschein-praxis/team/sana-ammar.jpg",
+    imageSrc: "/team/sana-ammar.jpg",
     imageFocus: { x: 0.5, y: 0.35 },
   },
   // 11. S. Löser
@@ -152,7 +152,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "verwaltung",
     languages: ["Deutsch"],
     bio: "Verantwortlich für das Privatsekretariat und Qualitätsmanagement der Praxis.",
-    imageSrc: "/sonnenschein-praxis/team/sandra-loeser.jpg",
+    imageSrc: "/team/sandra-loeser.jpg",
     imageFocus: { x: 0.5, y: 0.2 },
   },
   // 12. M. Algharraa
@@ -163,7 +163,7 @@ export const teamMembers: TeamMember[] = [
     roleCategory: "verwaltung",
     languages: ["Arabisch", "Englisch", "Türkisch", "Deutsch"],
     bio: "Unterstützung im Praxisalltag und Patientenbetreuung.",
-    imageSrc: "/sonnenschein-praxis/team/mustafa-algharraa.jpg",
+    imageSrc: "/team/mustafa-algharraa.jpg",
     imageFocus: { x: 0.5, y: 0.3 },
   },
 ];

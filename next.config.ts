@@ -3,8 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Static Export für Strato Webhosting (kein Node.js Server)
   output: "export",
-  basePath: "/sonnenschein-praxis",
-  assetPrefix: "/sonnenschein-praxis/",
+  // Für Strato Root-Deployment - kein basePath nötig
+  // basePath: "/sonnenschein-praxis",
+  // assetPrefix: "/sonnenschein-praxis/",
   trailingSlash: true, // Wichtig für statisches Hosting - erzeugt /kontakt/index.html statt /kontakt.html
   images: {
     unoptimized: true,

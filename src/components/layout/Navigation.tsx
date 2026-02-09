@@ -97,7 +97,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="w-14 h-14 relative">
                 <Image
-                  src="/sonnenschein-praxis/logo.png"
+                  src="/logo.png"
                   alt="Praxis Dr. Allozy Logo"
                   fill
                   className="object-contain"

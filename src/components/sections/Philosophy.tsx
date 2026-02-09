@@ -77,7 +77,7 @@ export default function Philosophy() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-[var(--primary)]/10">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/sonnenschein-praxis/praxis-philosophie.jpg"
+                  src="/praxis-philosophie.jpg"
                   alt={t("philosophy.philosophy.imageAlt")}
                   fill
                   className="object-cover"

@@ -31,11 +31,11 @@ const formIcons = [ClipboardList, FileText, FileSignature, Users, FileText];
 
 // Form PDF URLs
 const formPdfUrls = [
-  "/sonnenschein-praxis/formulare/Anmeldebogen_Sonnenschein-2026.pdf",
+  "/formulare/Anmeldebogen_Sonnenschein-2026.pdf",
   "https://baselallozy.de/wp-content/uploads/2024/10/Fragebogen-zur-Entwicklung-des-Kindes_Sorgeberechtigte-2024.pdf",
-  "/sonnenschein-praxis/formulare/Schweigepflichtentbindung-Stand 15.1.26.pdf",
+  "/formulare/Schweigepflichtentbindung-Stand 15.1.26.pdf",
   "https://baselallozy.de/wp-content/uploads/2024/10/Vollmacht-bei-gemeinsamem-Sorgerecht-2024.pdf",
-  "/sonnenschein-praxis/formulare/Behandlungsvertrag Privatpatienten.pdf",
+  "/formulare/Behandlungsvertrag Privatpatienten.pdf",
 ];
 
 // Form tag variants mapped by index

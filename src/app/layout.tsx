@@ -87,9 +87,9 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/sonnenschein-praxis/favicon-32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/sonnenschein-praxis/favicon-16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/sonnenschein-praxis/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         {/* Schema.org JSON-LD for Medical Business */}
         <script
           type="application/ld+json"
