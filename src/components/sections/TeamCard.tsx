@@ -13,7 +13,7 @@ interface TeamCardProps {
 }
 
 export default function TeamCard({ member, index }: TeamCardProps) {
-  const { t, lang } = useTranslation();
+  const { t, locale: lang } = useTranslation();
   const [imageError, setImageError] = useState(false);
   const languages = member.languages ?? [];
   const focus = member.imageFocus ?? DEFAULT_IMAGE_FOCUS;

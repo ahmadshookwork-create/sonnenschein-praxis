@@ -26,7 +26,7 @@ interface LeaderSpotlightProps {
 }
 
 export default function LeaderSpotlight({ member }: LeaderSpotlightProps) {
-  const { t, lang } = useTranslation();
+  const { t, locale: lang } = useTranslation();
   const [imageError, setImageError] = useState(false);
   const [showFullTimeline, setShowFullTimeline] = useState(false);
   const languages = member.languages ?? [];
