@@ -1519,32 +1519,38 @@
         "anna-kosel": {
           "name": "A. Kosel",
           "role": "Kinder- und Jugendlichenpsychotherapeutin",
-          "bio": "Approbierte Psychotherapeutin mit Schwerpunkt auf verhaltenstherapeutische Behandlung von Kindern und Jugendlichen."
+          "bio": "Approbierte Psychotherapeutin mit Schwerpunkt auf verhaltenstherapeutische Behandlung von Kindern und Jugendlichen.",
+          "subtitle": "Approb. Kinder- und Jugendlichenpsychotherapeutin (VT)"
         },
         "linus-sagert": {
           "name": "L. Sagert",
           "role": "Psychotherapeut",
-          "bio": "Psychotherapeut mit Fokus auf moderne, evidenzbasierte Therapieverfahren."
+          "bio": "Psychotherapeut mit Fokus auf moderne, evidenzbasierte Therapieverfahren.",
+          "subtitle": "Approb. Kinder- und Jugendlichenpsychotherapeut (VT)"
         },
         "amina-jeleskovic-ozturk": {
           "name": "A. Jeleskovic-Öztürk",
           "role": "Psychologin B. Sc.",
-          "bio": "Psychologin mit Expertise in psychologischer Diagnostik und Beratung."
+          "bio": "Psychologin mit Expertise in psychologischer Diagnostik und Beratung.",
+          "subtitle": "Kinder- und Jugendlichenpsychotherapeutin (TP) i.A."
         },
         "mahmoud-alsioufy": {
           "name": "M. Alsiofy",
           "role": "Psychologische Fachkraft",
-          "bio": "Unterstützung in psychologischer Betreuung und Beratung."
+          "bio": "Unterstützung in psychologischer Betreuung und Beratung.",
+          "subtitle": "M.Sc. Psychologie, Kinder- und Jugendlichenpsychotherapeut (VT) i.A."
         },
         "lina-prochaska": {
           "name": "L. Prochaska",
           "role": "KJ-Psychotherapeutin VT i.A.",
-          "bio": "Kinder- und Jugendlichenpsychotherapeutin in Ausbildung mit verhaltenstherapeutischer Ausrichtung."
+          "bio": "Kinder- und Jugendlichenpsychotherapeutin in Ausbildung mit verhaltenstherapeutischer Ausrichtung.",
+          "subtitle": "Kinder- und Jugendlichenpsychotherapeutin (VT) i.A."
         },
         "nisreen-arja": {
           "name": "N. Arja",
           "role": "Sprach- und Kommunikationstherapeutin",
-          "bio": "Spezialisiert auf Sprach- und Sprechstörungen bei Kindern und Jugendlichen."
+          "bio": "Spezialisiert auf Sprach- und Sprechstörungen bei Kindern und Jugendlichen.",
+          "subtitle": "Staatlich anerkannte Erzieherin, Elternberatung"
         },
         "amira-muminovic": {
           "name": "A. Muminovic",
@@ -1555,17 +1561,20 @@
         "sana-ammar": {
           "name": "S. Ammar",
           "role": "Kunsttherapeutin i.A.",
-          "bio": "Kunsttherapeutin in Ausbildung mit Fokus auf kreative Therapiemethoden für Kinder und Jugendliche."
+          "bio": "Kunsttherapeutin in Ausbildung mit Fokus auf kreative Therapiemethoden für Kinder und Jugendliche.",
+          "subtitle": "Medizinische Fachangestellte (MFA)"
         },
         "sandra-loeser": {
           "name": "S. Löser",
           "role": "ZFA – Privatsekretariat, Qualitätsmanagement",
-          "bio": "Verantwortlich für das Privatsekretariat und Qualitätsmanagement der Praxis."
+          "bio": "Verantwortlich für das Privatsekretariat und Qualitätsmanagement der Praxis.",
+          "subtitle": "Praxismanagement, Patientenbetreuung"
         },
         "mustafa-algharraa": {
           "name": "M. Algharraa",
           "role": "MFA-Helfer",
-          "bio": "Unterstützung im Praxisalltag und Patientenbetreuung."
+          "bio": "Unterstützung im Praxisalltag und Patientenbetreuung.",
+          "subtitle": "Medizinstudent, Praktikum"
         }
       },
       "leader": {
